@@ -97,8 +97,8 @@ al_folio:
 navbar_fixed: true
 footer_fixed: true
 search_enabled: true
-socials_in_search: true
-posts_in_search: true
+socials_in_search: false
+posts_in_search: false
 bib_search: true
 
 # Dimensions
@@ -198,16 +198,16 @@ newsletter:
 # -----------------------------------------------------------------------------
 
 collections:
-  books:
-    output: true
-  news:
-    defaults:
-      layout: post
-    output: true
+  #books:
+    #output: true
+  #news:
+    #defaults:
+      #layout: post
+    #output: true
   projects:
     output: true
-  teachings:
-    output: true
+  #teachings:
+    #output: true
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
