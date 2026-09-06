@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: joyleeshi.com/sitemap.xml
+Sitemap: joyleeshi.github.io/sitemap.xml
