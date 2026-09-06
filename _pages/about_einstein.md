@@ -1,5 +1,5 @@
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Joy Lee-Shi holds a Master of Arts in Experimental Psychology (Quantitative, Qualitative, and Theoretical Specialization) from Simon Fraser University (SFU), Canada, where her thesis qualitatively examined and adapted the Hybrid Model of Stress Response for Belizean contexts. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+She currently teaches research methods at University of Belize and provides statistical consulting for research teams and postgraduate dissertation research. She serves as a Board Member of the Mental Health Association, Belize. Her research interests span trauma and adversity, resilience, the health inequities and needs of vulnerable populations, and the cross-cultural application of psychological constructs. 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+In her free time, she is a musician.
