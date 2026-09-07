@@ -342,6 +342,7 @@
 
   function render() {
     if (state.finished) return;
+    clearStatus();
 
     if (state.currentStep === 2 && Number(state.age) < 18 && state.parentPermission === null) {
       app.innerHTML = renderParentConsentStep();
@@ -384,6 +385,11 @@
   }
 
   function bindActions() {
+    app.querySelectorAll("input, select, textarea").forEach(input => {
+    input.addEventListener("input", clearStatus);
+    input.addEventListener("change", clearStatus);
+    });
+
     app.querySelectorAll("[data-action]").forEach(btn => {
       btn.addEventListener("click", async () => {
         const action = btn.dataset.action;
@@ -791,6 +797,11 @@
   function renderEnded(message) {
     state.finished = true;
     app.innerHTML = `<div class="survey-card survey-ineligible"><h2>Survey Ended</h2><p>${escapeHtml(message)}</p></div>`;
+  }
+
+  function clearStatus() {
+  statusEl.textContent = "";
+  statusEl.style.fontWeight = "";
   }
 
   function setStatus(message, isError) {

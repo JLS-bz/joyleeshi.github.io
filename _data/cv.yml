@@ -1,99 +1,235 @@
 cv:
   name: Joy Lee-Shi
-  headline: Educator and Researcher
+  label: Educator and Researcher
   email: jleeshi@outlook.com
   location: Belize City, Belize
-  website: https://joyleeshi.com
+  image: ''
+  summary: A Belizean-born educator and researcher.
+  address:
+    city: Belize City
+    region: Belize
+    countryCode: BZ
   sections:
-    Profile:
-    - A Belizean-born educator and researcher with experience in experimental psychology (quantitative, qualitative, computational text-based) research, psychometrics, and tertiary-level teaching.
     Education:
     - institution: Simon Fraser University
-      area: Experimental Psychology (History, Quantitative, Theoretical Specialization)
-      degree: Master of Arts
       location: Burnaby, British Columbia, Canada
+      url: https://www.sfu.ca/
+      area: Experimental Psychology (History, Quantitative, Theoretical Specialization)
+      studyType: MA
       start_date: '2023'
       end_date: '2025'
       highlights:
       - 'Thesis: Adversity and Trauma: Examining and Elaborating the Hybrid Model of Stress Response as Applied to Belizean Contexts'
       - 'Supervisor: Dr. Robert G. Ley'
     - institution: Simon Fraser University
-      area: Psychology (Honours with Distinction)
-      degree: Bachelor of Arts
       location: Burnaby, British Columbia, Canada
+      url: https://www.sfu.ca/
+      area: Psychology (Honours with Distinction)
+      studyType: BA
       start_date: '2018'
       end_date: '2022'
       highlights:
       - 'Thesis: Differences in Flow State and Flow Disposition in Jazz vs. Classical Musicians and their Practice'
       - 'Supervisor: Dr. Robert G. Ley'
     - institution: St. John's College Junior College
-      area: Pure Mathematics
-      degree: Associate of Science
       location: Belize
+      area: Pure Mathematics
+      studyType: Associate of Science
       start_date: '2016'
       end_date: '2018'
-    Academic Positions:
+    Experience:
     - company: University of Belize
       position: Lecturer (Sessional)
       location: Belize
-      date: Fall 2026
+      start_date: '2026'
+      end_date: present
+      summary: Academic position
       highlights:
       - 'Course: Research Methods'
-    - company: St. John's College - University
-      position: Psychology Lecturer (Sessional)
-      location: Belize
-      date: Spring 2026
-      highlights:
-      - 'Courses: Industrial and Organizational Psychology, Behavioral Genetics, Adolescent Development, Neuropsychology, Research in Psychology'
-    - company: Simon Fraser University
-      position: Invited Guest Lecturer - PSYC 770 - Proseminar in Personality
-      location: Burnaby, British Columbia, Canada
-      date: Spring 2024
-      highlights:
-      - 'Instructor: Dr. Robert G. Ley'
-      - 'Lecture topic: The Big Five Personality Traits'
-    - company: Simon Fraser University
-      position: Teaching Assistant and TA Mentor - PSYC 201W - Introduction to Research Methods in Psychology
-      location: Burnaby, British Columbia, Canada
-      date: Spring 2025; Summer 2024
-    - company: Simon Fraser University
-      position: Teaching Assistant - PSYC 201W - Introduction to Research Methods in Psychology
-      location: Burnaby, British Columbia, Canada
-      date: Fall 2024; Spring 2024; Fall 2023
-    Research Experience:
     - company: Freelance
       position: Statistical Analyst
       location: Belize
       start_date: 2026-07
       end_date: present
+      summary: Research experience
       highlights:
       - Conduct analyses for PhD research on Child Protective Services (CPS) workers' experiences with stress, burnout, and trauma.
+    - company: Belize City Lions Club
+      position: 'Program Co-Facilitator, Peer Advocacy & Leadership: Psychological First Aid Training for Youth'
+      location: Belize
+      start_date: '2026-08-29'
+      end_date: '2026-08-29'
+      summary: Clinical experience
+      highlights:
+      - Supervised and co-led a Psychological First Aid training workshop.
+    - company: St. John's College - University
+      position: Conference Organizer, Emerging Scholars Conference
+      location: Belize
+      start_date: 2026-02
+      end_date: 2026-04
+      summary: Professional service
+    - company: St. John's College - University
+      position: Psychology Lecturer (Sessional)
+      location: Belize
+      start_date: '2026'
+      end_date: '2026'
+      summary: Academic position
+      highlights:
+      - 'Courses: Industrial and Organizational Psychology, Behavioral Genetics, Adolescent Development, Neuropsychology, Research in Psychology'
     - company: Belize National Association of Social Workers (BNASW)
-      position: Co-Author and Statistical Analyst
+      position: Co-Author & Statistical Analyst
       location: Belize
       start_date: 2025-09
       end_date: present
+      summary: Research experience
       highlights:
       - Lead the design, analysis, and report writing for a nationwide needs assessment survey.
+    - company: Mental Health Association, Belize
+      position: Board Member
+      location: Belize
+      start_date: 2025-09
+      end_date: present
+      summary: Professional membership
+    - company: Itz'at STEAM Academy
+      position: Special Education Resource Teacher
+      location: Belize
+      start_date: 2025-08
+      end_date: 2025-12
+      summary: Professional service
+      highlights:
+      - Curated evidence-based materials for student accommodations.
+      - Developed and delivered Student Inclusion & Learning to first- and second-year students across six classrooms using evidence-based frameworks.
     - company: Indigenous Peoples Participation in Higher Education Project (IPinHE) - Belizean Branch
-      position: Co-Author and Statistical Analyst
+      position: Co-Author & Statistical Analyst
       location: Belize
       start_date: 2025-07
       end_date: present
+      summary: Research experience
       highlights:
       - 'Principal Investigator: Dr. Filiberto Penados'
       - Conducted statistical analyses and produced a 77-page report.
+    - company: META Belize
+      position: Program Co-Facilitator, Strong Roots, Brave Voices
+      location: Belize
+      start_date: 2025-07
+      end_date: 2025-09
+      summary: Clinical experience
+      highlights:
+      - Co-led a trauma-focused cognitive behavioural therapy (TF-CBT) group adapted for Belizean adolescents in conflict with the law and experiencing grief and traumatic stress.
+      - 'Facilitator: Azalia G. Larrieu, LCSW, MSW, CCTS-I'
+    - company: GOJoven Belize Alumni Association (GOBelize)
+      position: Peer Navigator
+      location: Belize
+      start_date: 2025-05
+      end_date: 2025-10
+      summary: Clinical experience
+      highlights:
+      - Provided HIV testing and pre-/post-test counselling.
+      - Delivered peer counselling to one client, including psychoeducation on stress responses and guidance in identifying coping strategies and sources of stress.
+    - company: Simon Fraser University
+      position: Teaching Assistant and TA Mentor - PSYC 201W - Introduction to Research Methods in Psychology
+      location: Burnaby, British Columbia, Canada
+      start_date: '2024'
+      end_date: '2025'
+      summary: Academic position
+      highlights:
+      - Spring 2025 and Summer 2024
+    - company: 'Simon Fraser University, Psychological Methods in Action: PSYC 201W Spring Conference'
+      position: Conference Organizer
+      location: Burnaby, British Columbia, Canada
+      start_date: 2025-01
+      end_date: 2025-05
+      summary: Professional service
+    - company: Simon Fraser University, Psychology Graduate Caucus
+      position: Experimental Psychology Departmental Representative
+      location: Burnaby, British Columbia, Canada
+      start_date: 2024-07
+      end_date: 2025-04
+      summary: Professional service
+    - company: Journal of Belizean Research
+      position: Peer Reviewer
+      start_date: 2024-08
+      end_date: present
+      summary: Professional service
+    - company: Simon Fraser University, Undergraduate Journal of Psychology
+      position: Graduate Reviewer
+      start_date: 2024-03
+      end_date: 2025-10
+      summary: Professional service
+    - company: Metro Vancouver
+      position: Career Development Mentor in Behaviour Intervention
+      location: Canada
+      start_date: 2024-01
+      end_date: 2025-04
+      summary: Clinical experience
+      highlights:
+      - Facilitated discussions on ethical practices, effective client (parent and child) engagement, and career challenges.
+    - company: Simon Fraser University
+      position: Invited Guest Lecturer - PSYC 770 - Proseminar in Personality
+      location: Burnaby, British Columbia, Canada
+      start_date: '2024'
+      end_date: '2024'
+      summary: Academic position
+      highlights:
+      - 'Instructor: Dr. Robert G. Ley'
+      - 'Lecture topic: The Big Five Personality Traits'
+    - company: Trauma, Coping and Post-traumatic Changes Study in Belize
+      position: Research Interviewer
+      location: Belize
+      start_date: '2024'
+      end_date: '2024'
+      summary: Clinical experience for research purposes
+      highlights:
+      - Based on Grounded Theory and IPA principles, designed, conducted, and analyzed semi-structured interviews with 12 adults (1-3 hours each) on adversity/trauma, coping, and post-stressor changes.
+      - 'Supervisor: Dr. Robert G. Ley'
+    - company: Simon Fraser University
+      position: Teaching Assistant - PSYC 201W - Introduction to Research Methods in Psychology
+      location: Burnaby, British Columbia, Canada
+      start_date: '2023'
+      end_date: '2024'
+      summary: Academic position
+      highlights:
+      - Fall 2024, Spring 2024, and Fall 2023
+    - company: Metro Vancouver
+      position: Senior Behaviour Interventionist
+      location: Canada
+      start_date: 2023-10
+      end_date: 2024-11
+      summary: Clinical experience
+      highlights:
+      - Implemented one-on-one ABA intervention plans to foster adaptive behaviours, communication, social skills, and self-regulation in children aged 4-8 with ASD.
+      - Recruited, supervised, and trained behaviour interventionists.
+      - 'Supervisor: Zoë Liu, M.Ed., BCBA'
     - company: Dr. Robert G. Ley
       position: Literature Review Assistant
       start_date: '2022'
       end_date: '2023'
+      summary: Research experience
       highlights:
       - Conducted scoping reviews in support of forensic clinical psychological expert witness evaluations and reports.
+    - company: Independent Research
+      position: Researcher - Text-Based Big-Data Analyses on Discussions of Dissociation
+      start_date: '2022'
+      end_date: '2023'
+      summary: Research experience
+      highlights:
+      - Developed Python and R scripts to web-scrape and clean Reddit posts.
+      - Used natural language processing methods to analyze text-based big data through topic modelling, term-frequency inverse document frequency, and latent Dirichlet allocation.
+    - company: Metro Vancouver
+      position: Behaviour Interventionist
+      location: Canada
+      start_date: 2022-02
+      end_date: 2023-12
+      summary: Clinical experience
+      highlights:
+      - Implemented individualized ABA- and ESDM-based behaviour interventions for children aged 3-12 with ASD and attention disorders.
+      - 'Supervisors: Zoë Liu, Yvonne Kong, and Karla Suarez (M.Ed., BCBAs)'
     - company: Simon Fraser University, Attention Lab
       position: Research Assistant
       location: Burnaby, British Columbia, Canada
       start_date: '2021'
       end_date: '2023'
+      summary: Research experience
       highlights:
       - 'Lab Director: Dr. Thomas Spalek'
       - Led participant intake and debriefing for Evaluative Space Model and Flanker studies.
@@ -102,191 +238,237 @@ cv:
       location: Burnaby, British Columbia, Canada
       start_date: '2020'
       end_date: '2023'
+      summary: Research experience
       highlights:
       - 'Lab Director: Dr. Rachel T. Fouladi'
       - Transcribed 40+ audio-recorded interviews (30-80 minutes each).
       - Supported three Master's students' projects through qualitative coding and thematic analysis using NVivo and Excel.
-    - company: Independent Research
-      position: Researcher
-      start_date: '2022'
-      end_date: '2023'
-      highlights:
-      - 'Topic: Text-Based Big-Data Analyses on Discussions of Dissociation'
-      - Developed Python and R scripts to web-scrape and clean Reddit posts.
-      - Used natural language processing methods to analyze text-based big data through topic modelling, term-frequency inverse document frequency, and latent Dirichlet allocation.
-    Professional Service:
-    - company: St. John's College - University, Emerging Scholars Conference
-      position: Conference Organizer
-      start_date: 2026-02
-      end_date: 2026-04
-    - company: Itz'at STEAM Academy
-      position: Special Education Resource Teacher
-      location: Belize
-      start_date: 2025-08
-      end_date: 2025-12
-      highlights:
-      - Curated evidence-based materials for student accommodations.
-      - Developed and delivered Student Inclusion & Learning to first- and second-year students across six classrooms using evidence-based frameworks.
-    - company: Journal of Belizean Research
-      position: Peer Reviewer
-      start_date: 2024-08
-      end_date: present
-    - company: Simon Fraser University, Undergraduate Journal of Psychology
-      position: Graduate Reviewer
-      start_date: 2024-03
-      end_date: 2025-10
-    - company: 'Simon Fraser University, Psychological Methods in Action: PSYC 201W Spring Conference'
-      position: Conference Organizer
-      start_date: 2025-01
-      end_date: 2025-05
-    - company: Simon Fraser University, Psychology Graduate Caucus
-      position: Experimental Psychology Departmental Representative
-      start_date: 2024-07
-      end_date: 2025-04
-    Clinical Experience:
-    - company: Belize City Lions Club
-      position: 'Program Co-Facilitator, Peer Advocacy & Leadership: Psychological First Aid Training for Youth'
-      location: Belize
-      date: '2026-08-29'
-      highlights:
-      - Supervised and co-led a Psychological First Aid training workshop.
-    - company: GOJoven Belize Alumni Association
-      position: Peer Navigator
-      location: Belize
-      start_date: 2025-05
-      end_date: 2025-10
-      highlights:
-      - Provided HIV testing and pre-/post-test counselling.
-      - Delivered peer counselling to one client, including psychoeducation on stress responses and guidance in identifying coping strategies and sources of stress.
-    - company: META Belize
-      position: Program Co-Facilitator, Strong Roots, Brave Voices
-      location: Belize
-      start_date: 2025-07
-      end_date: 2025-09
-      highlights:
-      - Co-led a trauma-focused cognitive behavioural therapy (TF-CBT) group adapted for Belizean adolescents in conflict with the law and experiencing grief and traumatic stress.
-      - 'Facilitator: Azalia G. Larrieu, LCSW, MSW, CCTS-I'
-    - company: Metro Vancouver
-      position: Career Development Mentor in Behaviour Intervention
-      location: Canada
-      start_date: 2024-01
-      end_date: 2025-04
-      highlights:
-      - Facilitated discussions on ethical practices, effective client (parent and child) engagement, and career challenges.
-    - company: Metro Vancouver
-      position: Senior Behaviour Interventionist
-      location: Canada
-      start_date: 2023-10
-      end_date: 2024-11
-      highlights:
-      - Implemented one-on-one ABA intervention plans to foster adaptive behaviours, communication, social skills, and self-regulation in children aged 4-8 with ASD.
-      - Recruited, supervised, and trained behaviour interventionists.
-      - 'Supervisor: Zoe Liu, M.Ed., BCBA'
-    - company: Metro Vancouver
-      position: Behaviour Interventionist
-      location: Canada
-      start_date: 2022-02
-      end_date: 2023-12
-      highlights:
-      - Implemented individualized ABA- and ESDM-based behaviour interventions for children aged 3-12 with ASD and attention disorders.
-      - 'Supervisors: Zoe Liu, Yvonne Kong, and Karla Suarez (M.Ed., BCBAs)'
-    Clinical Experience for Research Purposes:
-    - company: Trauma, Coping and Post-traumatic Changes Study in Belize
-      position: Research Interviewer
-      location: Belize
-      date: Summer 2024
-      highlights:
-      - Based on Grounded Theory and IPA principles, designed, conducted, and analyzed semi-structured interviews with 12 adults (1-3 hours each) on adversity/trauma, coping, and post-stressor changes.
-      - 'Supervisor: Dr. Robert G. Ley'
-    Clinical Training:
-    - name: 'Stress and Trauma: An Attachment-Based Perspective'
-      date: 2024-11
-      summary: Training by Gordon Neufeld, Ph.D., R. Psych.
-    - name: Trauma-informed Supports for Autism
-      date: 2024-10
-      summary: Presented by Alexia Stack and Ben Reiman (M.A., BCBAs).
-    - name: Indigenous Approaches to Trauma and Wellness
-      date: 2024-02
-      summary: Training by Karlee Fellner, Ph.D., R. Psych.
-    Books & Book Chapters:
-    - 'Young, L., & Lee-Shi, J. (2026). *Psychological first aid for young peers: A handbook.* Belize City Lions Club Mental Health Committee.'
-    - 'Lee-Shi, J. (2024). In the zone: Understanding the mystique of flow. In D. Lacey & J. Lee-Shi (Eds.), *Beautiful Belize City* (pp. 36–37). Yaoling Lee.'
-    Peer-Reviewed Publications:
-    - 'Young, L., & Lee-Shi, J. (in press). Boots on the ground, cracks in the system: BDF mental health and wellbeing. *Keeping Independence Alive: Belize @45.*'
-    - 'Penados, F., Rosado, L., Tzib, D., Lee-Shi, J., & Gonzalez, G. N. (2026). Indigenous peoples participation in higher education in Belize: Present realities and its implications for policy and practice. *Ichan Tecolotl, 400.* [https://ichan.ciesas.edu.mx/indigenous-peoples-participation-in-higher-education-in-belize-present-realities-and-its-implication-for-policy-and-practice/](https://ichan.ciesas.edu.mx/indigenous-peoples-participation-in-higher-education-in-belize-present-realities-and-its-implication-for-policy-and-practice/)'
-    - Lee-Shi, J., & Ley, R. G. (2022). A critique of the Dispositional Flow Scale-2 (DFS-2) and Flow State Scale-2 (FSS-2). *Frontiers in Psychology, 13*, Article 992813. [https://doi.org/10.3389/fpsyg.2022.992813](https://doi.org/10.3389/fpsyg.2022.992813)
-    Conferences & Symposiums:
-    - Vairez, M., & Lee-Shi, J. (2026, September). *Grit, mental health, and pandemic related adversity among adolescents in Belize* [Conference presentation]. The Belize-Mexico Binational Seminar, Belize.
-    - Vairez, M., & Lee-Shi, J. (2026, September). *Validating the Short Grit Scale (Grit-S) with a sample of adolescents in Belize* [Conference presentation]. The Belize-Mexico Binational Seminar, Belize.
-    - 'Young, L., & Lee-Shi, J. (2026, September). *Boots on the ground, cracks in the system: BDF mental health and wellbeing* [Conference presentation]. Keeping Independence Alive: Belize @45, Belize Policy Research Institute (BELPRI), Belize.'
-    - 'Penados, F., Rosado, L., Lee-Shi, J., Tzib, D., & Gonzalez, N. G. (2025, October). *Indigenous peoples’ participation in higher education in Belize: Present realities and its implications for policy and practice* [Oral presentation]. Belize KULCHA Symposium, Heritage Education Network, Belize.'
-    - 'Penados, F., Rosado, L., Lee-Shi, J., & Tzib, D. (2025, September). *Indigenous peoples in higher education: A diagnostic – Belize* [Oral presentation]. Second General Meeting, Ciencia y Tecnologia, International Development Research Centre, Costa Rica.'
-    - 'Lee-Shi, J., & Ley, R. G. (2025, May). *From adversity to trauma: Examining and elaborating the Hybrid Model of Stress Response as applied to Belizean contexts* [Paper presentation, symposium]. Inaugural Conference on Critical Social Justice in Psychology, Vancouver, British Columbia, Canada.'
-    - 'Lee-Shi, J., & Ley, R. G. (2025, April). *The double-edged sword of social support: Protective and risk factors in trauma recovery in Belize* [Oral presentation]. 22nd Hawai’i International Summit on Preventing, Assessing & Treating Trauma Across the Lifespan, Hawaii, USA.'
-    - 'Lee-Shi, J., & Wong, M. (2024, May). *Cognitive emotion regulation in depression: Potential insights from natural language processing analyses* [Poster presentation]. Association for Behavioral and Cognitive Therapies Annual Student Research Symposium, virtual conference.'
-    - Lee-Shi, J., & Fouladi, R. T. (2024, April). *Defining resilience beyond trauma and violence in Belizean communities* [Poster presentation]. Justice, Reconciliation, Equity, Diversity, Accessibility, and Inclusion (JEDAI) Research Fair, Burnaby, British Columbia, Canada.
-    - Lee-Shi, J. (2024, March). *Exploring the psychology of gang involvement and its impact on the community* [Data blitz presentation]. 2024 Criminal Minds – An Interdisciplinary Conference, Burnaby, British Columbia, Canada.
-    - 'Lee-Shi, J., & Fouladi, R. T. (2023, May). *Manual text feature and machine-learning analyses on think-aloud concussion assessment transcriptions: Who finds what confusing?* [Poster presentation]. Connecting Minds Research Conference, Richmond, British Columbia, Canada.'
-    - 'Lee-Shi, J., Ley, R. G., Cox, D., & Sugarman, J. (2022, June). *A pilot study: Differences in flow state and flow disposition in jazz vs. classical musicians and their practice* [Poster presentation]. Annual Canadian Psychological Association Convention, Calgary, Alberta, Canada.'
-    - Lee-Shi, J., Ley, R. G., Cox, D., & Sugarman, J. (2022, March). *Differences in flow state and flow disposition in jazz vs. classical musicians and their practice* [Symposium presentation]. Simon Fraser University Undergraduate Research Symposium, Burnaby, British Columbia, Canada.
-    Other Presentations:
-    - 'Penados, F., Rosado, L., Tzib, D., & Lee-Shi, J. (2026, June). *Indigenous participation in higher education: Key findings and recommendations* [Roundtable presentation]. Galen University, Belize.'
-    - 'Penados, F., Rosado, L., Tzib, D., & Lee-Shi, J. (2025, October). *Advancing inclusive policies for Indigenous participation in higher education: Present realities and implications* [Oral presentation]. Indigenous Resistance Day Lecture and Workshop, University of Belize, Belmopan, Belize.'
-    - 'Lee-Shi, J., Barrett, R., & Aldenhoven, L. M. (2024, July). *Gender minorities and crisis support in Vancouver: Perceptions and impacts* [Poster presentation]. Burnaby Pride Festival, Burnaby, British Columbia, Canada.'
-    Awards:
-    - name: Selected Author
-      date: '2025'
-      summary: The Annual Celebration of SFU Authors 2024, Simon Fraser University.
-    - name: Graduate Fellowship
-      date: 2023 - 2024
-      summary: Simon Fraser University. $14,000 CAD.
-    - name: Special Graduate Entrance Scholarship
-      date: 2023 - 2024
-      summary: Simon Fraser University. $5,000 CAD.
-    - name: Honourable Mention Winner for Best Psychology Data Blitz Presentation
-      date: '2024'
-      summary: Criminal Minds 2024 - An Interdisciplinary Conference, Simon Fraser University.
-    - name: President's Honour Roll
-      date: 2022, 2020
-      summary: Simon Fraser University.
-    - name: Dean's Honour Roll
-      date: 2022, 2020, 2019
-      summary: Simon Fraser University.
-    - name: Undergraduate Open Scholarship
-      date: '2021'
-      summary: Simon Fraser University. $990 CAD.
-    - name: Dean's Honour List
-      date: 2016 - 2018
-      summary: St. John's College Junior College.
-    - name: National 1st Place in Mathematics
-      date: '2016'
-      summary: Association of Tertiary Level Institutions in Belize (ATLIB).
-    Certificates:
-    - name: 'Teaching License, Level: Secondary [Education] - Counselling'
-      date: July 2025
-      summary: Belize Ministry of Education. Expires July 2027.
-    - name: Peer Navigator
-      date: May 2025
-      summary: GOJoven Belize Alumni Association (GOBelize), for providing HIV Voluntary Counselling.
-    - name: 'TCPS 2: CORE (Tri-Council Policy Statement: Ethical Conduct for Research Involving Humans)'
-      date: 2024, 2020
-      summary: Course on Research Ethics.
-    Languages:
-    - label: Mandarin
-      details: Conversational
-    - label: Spanish
-      details: Basic Conversational
     Volunteer:
     - company: Belize National Orchestra
       position: Wind Section Mentor, Principal Flautist
       location: Belize
-      date: 2025 - Present; 2012 - 2016
-    Professional Memberships:
-    - company: Mental Health Association, Belize
-      position: Board Member
-      start_date: 2025-09
+      start_date: '2025'
       end_date: present
-    - company: American Psychological Association, Division 56 Trauma Psychology
-      position: Graduate Student Member
-      start_date: '2024'
-      end_date: '2025'
+      summary: Also served from 2012 to 2016.
+    Awards:
+    - title: Selected Author
+      date: '2025'
+      awarder: The Annual Celebration of Simon Fraser University Authors 2024
+    - title: Graduate Fellowship
+      date: 2023 - 2024
+      awarder: Simon Fraser University
+      summary: $14,000 CAD
+    - title: Special Graduate Entrance Scholarship
+      date: 2023 - 2024
+      awarder: Simon Fraser University
+      summary: $5,000 CAD
+    - title: Honourable Mention Winner for Best Psychology Data Blitz Presentation
+      date: '2024'
+      awarder: Criminal Minds 2024 - An Interdisciplinary Conference, Simon Fraser University
+    - title: President's Honour Roll
+      date: 2022, 2020
+      awarder: Simon Fraser University
+    - title: Dean's Honour Roll
+      date: 2022, 2020, 2019
+      awarder: Simon Fraser University
+    - title: Undergraduate Open Scholarship
+      date: '2021'
+      awarder: Simon Fraser University
+      summary: $990 CAD
+    - title: Dean's Honour List
+      date: 2016 - 2018
+      awarder: St. John's College Junior College
+    - title: National 1st Place in Mathematics
+      date: '2016'
+      awarder: Association of Tertiary Level Institutions of Belize (ATLIB)
+    Publications:
+    - title: 'Psychological First Aid for Young Peers: A Handbook'
+      authors:
+      - L. Young
+      - Joy Lee-Shi
+      publisher: Belize City Lions Club Mental Health Committee
+      releaseDate: '2026'
+      summary: Book
+    - title: 'In the Zone: Understanding the Mystique of Flow'
+      authors:
+      - Joy Lee-Shi
+      publisher: In D. Lacey & J. Lee-Shi (Eds.), Beautiful Belize City (pp. 36-37). Yaoling Lee
+      releaseDate: '2024'
+      summary: Book chapter
+    - title: 'Boots on the Ground, Cracks in the System: BDF Mental Health and Wellbeing'
+      authors:
+      - L. Young
+      - Joy Lee-Shi
+      publisher: 'Keeping Independence Alive: Belize @45'
+      releaseDate: Accepted
+      summary: Peer-reviewed publication
+    - title: 'Indigenous Peoples Participation in Higher Education in Belize: Present Realities and its Implications for Policy and Practice'
+      authors:
+      - F. Penados
+      - L. Rosado
+      - D. Tzib
+      - Joy Lee-Shi
+      - G. N. Gonzalez
+      publisher: Ichan Tecolotl, 400
+      releaseDate: '2026'
+      url: https://ichan.ciesas.edu.mx/indigenous-peoples-participation-in-higher-education-in-belize-present-realities-and-its-implication-for-policy-and-practice/
+      summary: Peer-reviewed publication
+    - title: A Critique of the Dispositional Flow Scale-2 (DFS-2) and Flow State Scale-2 (FSS-2)
+      authors:
+      - Joy Lee-Shi
+      - R. G. Ley
+      publisher: Frontiers in Psychology, 13
+      releaseDate: '2022'
+      url: https://doi.org/10.3389/fpsyg.2022.992813
+      summary: Peer-reviewed publication
+    - title: Grit, Mental Health, and Pandemic Related Adversity Among Adolescents in Belize
+      authors:
+      - M. Vairez
+      - Joy Lee-Shi
+      publisher: The Belize-Mexico Binational Seminar, Belize
+      releaseDate: 2026-09
+      summary: Conference presentation
+    - title: Validating the Short Grit Scale (Grit-S) with a Sample of Adolescents in Belize
+      authors:
+      - M. Vairez
+      - Joy Lee-Shi
+      publisher: The Belize-Mexico Binational Seminar, Belize
+      releaseDate: 2026-09
+      summary: Conference presentation
+    - title: 'Boots on the Ground, Cracks in the System: BDF Mental Health and Wellbeing'
+      authors:
+      - L. Young
+      - Joy Lee-Shi
+      publisher: 'Keeping Independence Alive: Belize @45, Belize Policy Research Institute (BELPRI), Belize'
+      releaseDate: 2026-09
+      summary: Conference presentation
+    - title: 'Indigenous Peoples'' Participation in Higher Education in Belize: Present Realities and its Implications for Policy and Practice'
+      authors:
+      - F. Penados
+      - L. Rosado
+      - Joy Lee-Shi
+      - D. Tzib
+      - N. G. Gonzalez
+      publisher: Belize KULCHA Symposium, Heritage Education Network, Belize
+      releaseDate: 2025-10
+      summary: Oral presentation
+    - title: 'Indigenous Peoples in Higher Education: A Diagnostic - Belize'
+      authors:
+      - F. Penados
+      - L. Rosado
+      - Joy Lee-Shi
+      - D. Tzib
+      publisher: Second General Meeting, Ciencia y Tecnologia, International Development Research Centre, Costa Rica
+      releaseDate: 2025-09
+      summary: Oral presentation
+    - title: 'From Adversity to Trauma: Examining and Elaborating the Hybrid Model of Stress Response as Applied to Belizean Contexts'
+      authors:
+      - Joy Lee-Shi
+      - R. G. Ley
+      publisher: Inaugural Conference on Critical Social Justice in Psychology, Vancouver, British Columbia, Canada
+      releaseDate: 2025-05
+      summary: Paper presentation, symposium
+    - title: 'The Double-Edged Sword of Social Support: Protective and Risk Factors in Trauma Recovery in Belize'
+      authors:
+      - Joy Lee-Shi
+      - R. G. Ley
+      publisher: 22nd Hawai'i International Summit on Preventing, Assessing & Treating Trauma Across the Lifespan, Hawaii, USA
+      releaseDate: 2025-04
+      summary: Oral presentation
+    - title: 'Cognitive Emotion Regulation in Depression: Potential Insights from Natural Language Processing Analyses'
+      authors:
+      - Joy Lee-Shi
+      - M. Wong
+      publisher: Association for Behavioral and Cognitive Therapies Annual Student Research Symposium, Virtual Conference
+      releaseDate: 2024-05
+      summary: Poster presentation
+    - title: Defining Resilience Beyond Trauma and Violence in Belizean Communities
+      authors:
+      - Joy Lee-Shi
+      - R. T. Fouladi
+      publisher: Justice, Reconciliation, Equity, Diversity, Accessibility, and Inclusion (JEDAI) Research Fair, Burnaby, British Columbia, Canada
+      releaseDate: 2024-04
+      summary: Poster presentation
+    - title: Exploring the Psychology of Gang Involvement and Its Impact on the Community
+      authors:
+      - Joy Lee-Shi
+      publisher: 2024 Criminal Minds - An Interdisciplinary Conference, Burnaby, British Columbia, Canada
+      releaseDate: 2024-03
+      summary: Data Blitz presentation
+    - title: 'Manual Text Feature and Machine-Learning Analyses on Think-Aloud Concussion Assessment Transcriptions: Who Finds What Confusing?'
+      authors:
+      - Joy Lee-Shi
+      - R. T. Fouladi
+      publisher: Connecting Minds Research Conference, Richmond, British Columbia, Canada
+      releaseDate: 2023-05
+      summary: Poster presentation
+    - title: 'A Pilot Study: Differences in Flow State and Flow Disposition in Jazz vs. Classical Musicians and their Practice'
+      authors:
+      - Joy Lee-Shi
+      - R. G. Ley
+      - D. Cox
+      - J. Sugarman
+      publisher: Annual Canadian Psychological Association Convention, Calgary, Alberta, Canada
+      releaseDate: 2022-06
+      summary: Poster presentation
+    - title: Differences in Flow State and Flow Disposition in Jazz vs. Classical Musicians and their Practice
+      authors:
+      - Joy Lee-Shi
+      - R. G. Ley
+      - D. Cox
+      - J. Sugarman
+      publisher: Simon Fraser University Undergraduate Research Symposium, Burnaby, British Columbia, Canada
+      releaseDate: 2022-03
+      summary: Symposium presentation
+    - title: 'Indigenous Participation in Higher Education: Key Findings and Recommendations'
+      authors:
+      - F. Penados
+      - L. Rosado
+      - D. Tzib
+      - Joy Lee-Shi
+      publisher: Galen University, Belize
+      releaseDate: 2026-06
+      summary: Roundtable presentation
+    - title: 'Advancing Inclusive Policies for Indigenous Participation in Higher Education: Present Realities and Implications'
+      authors:
+      - F. Penados
+      - L. Rosado
+      - D. Tzib
+      - Joy Lee-Shi
+      publisher: Indigenous Resistance Day Lecture and Workshop, University of Belize, Belmopan, Belize
+      releaseDate: 2025-10
+      summary: Oral presentation
+    - title: 'Gender Minorities and Crisis Support in Vancouver: Perceptions and Impacts'
+      authors:
+      - Joy Lee-Shi
+      - R. Barrett
+      - L. M. Aldenhoven
+      publisher: Burnaby Pride Festival, Burnaby, British Columbia, Canada
+      releaseDate: 2024-07
+      summary: Poster presentation
+    Languages:
+    - name: Mandarin
+      summary: Conversational
+    - name: Spanish
+      summary: Basic Conversational
+    Certificates:
+    - name: 'Teaching License, Level: Secondary [Education] - Counselling'
+      date: 2025-07
+      issuer: Belize Ministry of Education
+      summary: Expires 2027-07
+    - name: Peer Navigator
+      date: 2025-05
+      issuer: GOJoven Belize Alumni Association (GOBelize)
+      summary: For providing HIV Voluntary Counselling
+    - name: 'TCPS 2: CORE (Tri-Council Policy Statement: Ethical Conduct for Research Involving Humans)'
+      date: 2024, 2020
+      issuer: Course on Research Ethics
+    - name: 'Stress and Trauma: An Attachment-Based Perspective'
+      date: 2024-11
+      issuer: Gordon Neufeld, Ph.D., R. Psych
+    - name: Trauma-informed Supports for Autism
+      date: 2024-10
+      issuer: Alexia Stack and Ben Reiman (M.A., BCBAs)
+    - name: Indigenous Approaches to Trauma and Wellness
+      date: 2024-02
+      issuer: Karlee Fellner, Ph.D., R. Psych
