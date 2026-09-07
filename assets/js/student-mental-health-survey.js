@@ -29,7 +29,7 @@
       [5, "Very much like me"], [4, "Mostly like me"], [3, "Somewhat like me"], [2, "Not much like me"], [1, "Not like me at all"]
     ],
     cope: [
-      [1, "I haven’t been doing this at all"], [2, "A little bit"], [3, "A medium amount"], [4, "I’ve been doing this a lot"]
+      [1, "I haven't been doing this at all"], [2, "A little bit"], [3, "A medium amount"], [4, "I've been doing this a lot"]
     ]
   };
 
@@ -103,7 +103,7 @@
     <p>Even if you provide permission, the student may choose not to participate. If they begin the survey, they may stop at any time without penalty and may skip any question they do not wish to answer.</p>
 
     <h3>Confidentiality</h3>
-    <p>The survey is confidential, so your student’s name and other directly identifying information will not be collected. Survey responses will be transmitted to a secure Google-based data system and stored in private Google Sheets within a Google Drive account controlled by the Principal Investigator. Access to the research files will be restricted to the Principal Investigator and Collaborator. The research dataset will not intentionally record your name, IP address, or device identifier.</p>
+    <p>The survey is confidential, so your student's name and other directly identifying information will not be collected. Survey responses will be transmitted to a secure Google-based data system and stored in private Google Sheets within a Google Drive account controlled by the Principal Investigator. Access to the research files will be restricted to the Principal Investigator and Collaborator. The research dataset will not intentionally record your name, IP address, or device identifier.</p>
     <p>If the student chooses to provide an email address, it will be stored in a separate private file from the survey responses. A randomly generated participant ID will be used to link the email address to the student's survey response only for the purpose of locating and removing the student's data if withdrawal is later requested. The email address will not be included in the research dataset used for analysis and will not appear in reports, presentations, or publications.</p>
     <p>The separate file linking optional email addresses to participant IDs will be retained for six months after data collection closes and will then be permanently deleted. After that linkage file is deleted, it may no longer be possible to identify and remove an individual participant's response.</p>
     <p>De-identified survey data will be retained for at least five years after completion of the study and may be retained beyond that period for future related research.</p>
@@ -140,7 +140,7 @@
     { id: "ethnicity", text: "5. How would you describe your ethnicity? Select all that apply.", type: "checkbox", options: ["Mestizo", "Hispanic/Latino", "Creole", "Garifuna", "Q’eqchi Maya", "Mopan Maya", "Yucatec Maya", "East Indian", "Mennonite", "Chinese", "Caucasian", "Other"] },
     { id: "ethnicity_other", text: "If Other, please specify:", type: "text" },
     { id: "district", text: "6. Where are you based at?", type: "radio", options: ["Corozal", "Orange Walk", "Belize", "Cayes", "Cayo", "Stann Creek", "Toledo"] },
-    { id: "study_level", text: "7. What is your current level of study?", type: "radio", options: ["Certificate", "Associate’s degree", "Bachelor’s degree", "Master’s degree", "PhD"] },
+    { id: "study_level", text: "7. What is your current level of study?", type: "radio", options: ["Certificate", "Associate's degree", "Bachelor's degree", "Master's degree", "PhD"] },
     { id: "enrolment_status", text: "8. What is your current enrolment status?", type: "radio", options: ["Full-time student", "Part-time student", "Other"] },
     { id: "enrolment_status_other", text: "If Other, please specify:", type: "text" },
     { id: "area_of_study", text: "9. What is your main area of study?", type: "radio", options: ["Arts and Humanities", "Business and Management", "Education", "Health Sciences", "Science, Technology, Engineering, and Mathematics", "Social and Behavioural Sciences", "Technical or Vocational Studies", "Other"] },
@@ -674,7 +674,7 @@
       <div class="survey-card">
         <h2>Debriefing Form</h2>
         <p><strong>Study Title:</strong> Mental Health, Coping, Grit, and Perceived Stress Among Tertiary-Level Students in Belize</p>
-        <p>The purpose of this research is to better understand tertiary-level students’ experiences with mental health, coping skills, grit, and perceived stress. The study also aims to examine whether the questionnaires used are reliable and appropriate for use with tertiary-level students.</p>
+        <p>The purpose of this research is to better understand tertiary-level students' experiences with mental health, coping skills, grit, and perceived stress. The study also aims to examine whether the questionnaires used are reliable and appropriate for use with tertiary-level students.</p>
 
         <h3>Your score summary</h3>
         <p>These scores are provided for informational and self-reflection purposes only. They are <strong>not a medical or psychological diagnosis</strong> and cannot replace an assessment by a qualified mental health professional.</p>
@@ -780,7 +780,7 @@
         <p>Your research data will be kept confidential. Survey responses are stored separately from optional email contact information and linked only by a randomly generated participant ID. Access to the research files will be restricted to the Principal Investigator and Collaborator. When findings are shared, they will be presented as general patterns and summaries across participants. Identifying information will not be included in presentations, reports, or publications.</p>
 
         <h3>Questions About the Study</h3>
-        <p>If you have questions about this study, or if you would like to receive a copy of this study’s findings, please contact Joy Lee-Shi, M.A., Faculty of Management &amp; Social Sciences, University of Belize at <a href="mailto:joy.lee-shi@ub.edu.bz">joy.lee-shi@ub.edu.bz</a>.</p>
+        <p>If you have questions about this study, or if you would like to receive a copy of this study's findings, please contact the Principal Investigator, Joy Lee-Shi, M.A., Faculty of Management &amp; Social Sciences, University of Belize at <a href="mailto:joy.lee-shi@ub.edu.bz">joy.lee-shi@ub.edu.bz</a>.</p>
         <p>You may also contact the Principal Investigator to request that your data be removed.</p>
         <p>For questions about your rights as a research participant, or any complaints you may have, contact the Institutional Review Board (IRB), The Research Office, University of Belize, <a href="mailto:researchoffice@ub.edu.bz">researchoffice@ub.edu.bz</a>, (501) 822-1000.</p>
         <p><strong>Thank you for your participation and for contributing to research on student mental health and well-being.</strong></p>
