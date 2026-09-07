@@ -57,10 +57,10 @@ Participation is entirely voluntary. Before beginning the survey, you will be pr
 
 After completing the survey, you will receive a personalized summary of selected scores related to stress, psychological well-being, grit, and coping. These results are provided for informational and self-reflection purposes only and do not constitute a clinical diagnosis.
 
-<div class="text-center mt-4 mb-4">
+<div class="text-center my-4">
   <a
     href="{{ '/survey/' | relative_url }}"
-    class="btn btn-primary btn-lg"
+    class="survey-button"
   >
     Take the Survey
   </a>
