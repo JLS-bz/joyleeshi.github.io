@@ -95,21 +95,21 @@
     <p><strong>Collaborator:</strong><br>Mathias R. Vairez Jr., PhD<br>Department of Education, University of Belize<br>Email: <a href="mailto:mvairez@ub.edu.bz">mvairez@ub.edu.bz</a></p>
 
     <h3>Invitation to Participate</h3>
-    <p>You are being asked to provide permission for a student under the age of 18 to participate in a research study. The purpose of this study is to examine relationships among perceived stress, symptoms of anxiety and depression, grit, and coping strategies among tertiary level students. The study will also examine how well commonly used questionnaires measure these constructs within the study population.</p>
-    <p>Because the student is under the age of 18, your permission is required before they may participate in the study.</p>
+    <p>You are being asked to provide permission for your teenager to participate in a research study. The purpose of this study is to examine relationships among perceived stress, symptoms of anxiety and depression, grit, and coping strategies among tertiary level students. The study will also examine how well commonly used questionnaires measure these constructs within the study population.</p>
+    <p>Because your teenager is under the age of 18, your permission is required before they may participate in the study.</p>
 
     <h3>Voluntary Participation</h3>
-    <p>Participation is entirely voluntary. Your decision about whether to provide permission will not affect the student's grades, academic standing, access to services, relationship with the institution, or any other benefits to which they are entitled.</p>
-    <p>Even if you provide permission, the student may choose not to participate. If they begin the survey, they may stop at any time without penalty and may skip any question they do not wish to answer.</p>
+    <p>Participation is entirely voluntary. Your decision about whether to provide permission will not affect your teenager's grades, academic standing, access to services, relationship with the institution, or any other benefits to which they are entitled.</p>
+    <p>Even if you provide permission, your teenager may choose not to participate. If they begin the survey, they may stop at any time without penalty and may skip any question they do not wish to answer.</p>
 
     <h3>Confidentiality</h3>
-    <p>The survey is confidential, so your student's name and other directly identifying information will not be collected. Survey responses will be transmitted to a secure Google-based data system and stored in private Google Sheets within a Google Drive account controlled by the Principal Investigator. Access to the research files will be restricted to the Principal Investigator and Collaborator. The research dataset will not intentionally record your name, IP address, or device identifier.</p>
-    <p>If the student chooses to provide an email address, it will be stored in a separate private file from the survey responses. A randomly generated participant ID will be used to link the email address to the student's survey response only for the purpose of locating and removing the student's data if withdrawal is later requested. The email address will not be included in the research dataset used for analysis and will not appear in reports, presentations, or publications.</p>
+    <p>The survey is confidential, so your teenager's name and other directly identifying information will not be collected. Survey responses will be transmitted to a secure Google-based data system and stored in private Google Sheets within a Google Drive account controlled by the Principal Investigator. Access to the research files will be restricted to the Principal Investigator and Collaborator. The research dataset will not intentionally record your name, IP address, or device identifier.</p>
+    <p>If your teenager chooses to provide an email address, it will be stored in a separate private file from the survey responses. A randomly generated participant ID will be used to link the email address to your teenager's survey response only for the purpose of locating and removing your teenager's data if withdrawal is later requested. The email address will not be included in the research dataset used for analysis and will not appear in reports, presentations, or publications.</p>
     <p>The separate file linking optional email addresses to participant IDs will be retained for six months after data collection closes and will then be permanently deleted. After that linkage file is deleted, it may no longer be possible to identify and remove an individual participant's response.</p>
     <p>De-identified survey data will be retained for at least five years after completion of the study and may be retained beyond that period for future related research.</p>
 
-    <h3>What Will the Student Be Asked to Do?</h3>
-    <p>If you provide permission and the student agrees to participate, they will be asked to complete an online survey about their experiences and well-being.</p>
+    <h3>What Will Your Teenager Be Asked to Do?</h3>
+    <p>If you provide permission and your teenager agrees to participate, they will be asked to complete an online survey about their experiences and well-being.</p>
     <p>The survey will include demographic and background questions; perceived stress; mental health diagnoses and symptoms related to anxiety and depression; grit; and coping strategies. The survey is expected to take about <strong>10 to 20 minutes</strong>.</p>
 
     <h3>Statement of Parent/Guardian Permission</h3>
@@ -117,28 +117,30 @@
     <ul>
       <li>You have read and understood the information provided about the study.</li>
       <li>You understand that participation is voluntary.</li>
-      <li>You understand that the student may decline to participate even if you provide permission.</li>
-      <li>You understand that the student may stop participating at any time without penalty.</li>
+      <li>You understand that your teenager may decline to participate even if you provide permission.</li>
+      <li>You understand that your teenager may stop participating at any time without penalty.</li>
       <li>You understand that some questions concern potentially sensitive topics, including stress, mental health, and coping.</li>
-      <li>You understand that you will not have access to the student's individual survey responses.</li>
-      <li>You are the parent or legal guardian of the student and are authorized to provide permission for their participation.</li>
+      <li>You understand that you will not have access to your teenager's individual survey responses.</li>
+      <li>You are the parent or legal guardian of the teenager and are authorized to provide permission for their participation.</li>
     </ul>
     <fieldset class="survey-question">
       <legend>Parent/guardian permission</legend>
       <div class="survey-options">
-        ${radio("parent_permission", "give", "I GIVE permission for the student to participate in this research study.")}
-        ${radio("parent_permission", "do_not_give", "I DO NOT GIVE permission for the student to participate in this research study.")}
+        ${radio("parent_permission", "give", "I GIVE permission for my teenager to participate in this research study.")}
+        ${radio("parent_permission", "do_not_give", "I DO NOT GIVE permission for my teenager to participate in this research study.")}
       </div>
     </fieldset>
     ${cfg.previewMode ? `<p class="survey-note">Technical draft only: please confirm with the IRB that this same-device online parent/guardian permission process is acceptable before using it for recruitment.</p>` : ""}
   `;
 
   const demographics = [
-    { id: "gender", text: "3. What is your gender?", type: "text" },
+    {id: "gender", text: "3. What is your gender?", type: "radio",
+      options: ["Female", "Male", "Transgender female", "Transgender male", "Non-binary", "Prefer to self-describe"]},
+    {id: "gender_self_describe", text: "If you selected “Prefer to self-describe,” please specify:", type: "text"},
     { id: "mental_health_diagnosis", text: "4. Have you ever been diagnosed with a mental health condition by a licensed healthcare or mental health professional? Select all that apply.", type: "checkbox", options: ["No", "Anxiety disorder", "Depressive disorder", "Bipolar disorder", "Trauma- or stressor-related disorder (e.g., PTSD)", "Obsessive-compulsive or related disorder", "Eating disorder", "Attention-deficit/hyperactivity disorder (ADHD)", "Substance use disorder", "Other"] },
     { id: "mental_health_diagnosis_other", text: "If Other, please specify:", type: "text" },
-    { id: "ethnicity", text: "5. How would you describe your ethnicity? Select all that apply.", type: "checkbox", options: ["Mestizo", "Hispanic/Latino", "Creole", "Garifuna", "Q’eqchi Maya", "Mopan Maya", "Yucatec Maya", "East Indian", "Mennonite", "Chinese", "Caucasian", "Other"] },
-    { id: "ethnicity_other", text: "If Other, please specify:", type: "text" },
+    { id: "ethnicity", text: "5. How would you describe your ethnicity? Select one.", type: "radio", options: ["Mestizo", "Hispanic/Latino", "Creole", "Garifuna", "Q'eqchi Maya", "Mopan Maya", "Yucatec Maya", "East Indian", "Mennonite", "Chinese", "Caucasian", "Prefer to self-describe"] },
+    { id: "ethnicity_other", text: "If you selected “Prefer to self-describe,” please specify:", type: "text" },
     { id: "district", text: "6. Where are you based at?", type: "radio", options: ["Corozal", "Orange Walk", "Belize", "Cayes", "Cayo", "Stann Creek", "Toledo"] },
     { id: "study_level", text: "7. What is your current level of study?", type: "radio", options: ["Certificate", "Associate's degree", "Bachelor's degree", "Master's degree", "PhD"] },
     { id: "enrolment_status", text: "8. What is your current enrolment status?", type: "radio", options: ["Full-time student", "Part-time student", "Other"] },

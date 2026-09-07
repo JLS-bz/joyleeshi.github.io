@@ -14,6 +14,6 @@ nav_order: 2
 
 <div class="publications">
 
-{% bibliography %}
+{% bibliography --query @*[site_section!=study_reference] %}
 
 </div>
