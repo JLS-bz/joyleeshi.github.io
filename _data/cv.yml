@@ -186,7 +186,7 @@ cv:
         keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
 
     Certificates:
-      - name: Teaching License, Level: Secondary [Education] - Counselling
+      - name: "Teaching License, Level: Secondary [Education] - Counselling"
         date: 2025-07
         issuer: Belize Ministry of Education
         #icon: fa-solid fa-location-dot
@@ -196,7 +196,7 @@ cv:
         issuer: GOJoven Belize Alumni Association (GOBelize)
         #icon: fa-solid fa-tag
 
-      - name: TCPS 2: CORE (Tri-Council Policy Statement: Ethical Conduct for Research Involving Humans)
+      - name: "TCPS 2: CORE (Tri-Council Policy Statement: Ethical Conduct for Research Involving Humans)"
         date: 2024, 2020
         issuer: Social Sciences and Humanitis Research Council of Canada
         #icon: fa-solid fa-envelope
