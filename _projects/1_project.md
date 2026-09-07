@@ -9,9 +9,15 @@ related_publications: true
 
 ## Project Overview
 
-**Principal Investigator**: Joy Lee-Shi, MA, Department of Management and Social Sciences, University of Belize
+**Principal Investigators**: 
 
-**Collaborator**: Dr. First Last name
+Joy Lee-Shi, MA\
+Faculty of Management & Social Sciences, University of Belize\
+Email: joy.lee-shi@ub.edu.bz
+
+Mathias R. Vairez Jr., PhD\
+Department of Education, University of Belize\
+Email: mvairez@ub.edu.bz
 
 **Status**: Pre-data collection
 

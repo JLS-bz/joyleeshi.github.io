@@ -51,7 +51,6 @@
     <h3>Purpose of the Study</h3>
     <p>You are invited to participate in a research study about student mental health and well-being. The purpose of this study is to better understand <strong>tertiary level students’</strong> experiences with mental health, coping skills, grit, and perceived stress.</p>
     <p>This study also aims to evaluate whether the questionnaires used are appropriate and reliable for assessing these experiences among tertiary-level students in Belize.</p>
-    <p>You are eligible to participate in this study if you are a student at a tertiary level institution in Belize.</p>
 
     <h3>What You Will Be Asked to Do</h3>
     <p>If you agree to participate, you will be asked to complete a survey containing questions about your demographic details, experiences with stress, coping strategies, perseverance or grit, and mental health.</p>
@@ -81,8 +80,13 @@
     <p>There is no financial compensation for participating in this study.</p>
 
     <h3>Questions About the Study</h3>
-    <p>If you have questions about this study, please contact the Principal Investigator:</p>
-    <p>Joy Lee-Shi, M.A.<br>Faculty of Management &amp; Social Sciences, University of Belize<br><a href="mailto:joy.lee-shi@ub.edu.bz">joy.lee-shi@ub.edu.bz</a></p>
+    <p>If you have questions about this study, please contact the Principal Investigators:</p>
+    Joy Lee-Shi, MA<br>
+    Faculty of Management &amp; Social Sciences, University of Belize<br>
+    Email: <a href="mailto:joy.lee-shi@ub.edu.bz">joy.lee-shi@ub.edu.bz</a></p>
+    <p>Mathias R. Vairez Jr., PhD<br>
+    Department of Education, University of Belize<br>
+    Email: <a href="mailto:mvairez@ub.edu.bz">mvairez@ub.edu.bz</a></p>
     <p>For questions about your rights as a research participant, you may contact:</p>
     <p>Institutional Review Board (IRB)<br>The Research Office, University of Belize<br><a href="mailto:researchoffice@ub.edu.bz">researchoffice@ub.edu.bz</a><br>(501) 822-1000</p>
 
@@ -142,9 +146,9 @@
     <p>Even if you provide permission, your teenager may choose not to participate. If they begin the survey, they may stop at any time without penalty and may skip any question they do not wish to answer.</p>
 
     <h3>Confidentiality</h3>
-    <p>The survey is confidential, so your teenager's name and other directly identifying information will not be collected. Survey responses will be transmitted to a secure Google-based data system and stored in private Google Sheets within a Google Drive account controlled by the Principal Investigators. Access to the research files will be restricted to the Principal Investigators. The research dataset will not intentionally record your name, IP address, or device identifier.</p>
-    <p>A parent/guardian electronic signature will be collected to document permission for participation. The signature will be stored separately from the participant's survey responses and will not be included in the research dataset used for analysis.</p>
-    <p>If your teenager chooses to provide an email address, it will be stored in a separate private file from the survey responses. A randomly generated participant ID will be used to link the email address to your teenager's survey response only for the purpose of locating and removing your teenager's data if withdrawal is later requested. The email address will not be included in the research dataset used for analysis and will not appear in reports, presentations, or publications.</p>
+    <p>The survey is confidential, so your teenager's name and other directly identifying information will not be collected. Survey responses will be transmitted to a secure Google-based data system and stored in private Google Sheets within a Google Drive account controlled by the Principal Investigators. Access to the research files will be restricted to the Principal Investigators. The research dataset will not record your teenager's name, IP address, or device identifier.</p>
+    <p>A parent/guardian electronic signature will be collected to document permission for participation. The signature will be stored separately from your teenager's survey responses and will not be included in the research dataset used for analysis.</p>
+    <p>If your teenager chooses to provide an email address, it will be stored in a separate private file from the survey responses. A randomly generated participant ID will be used to link their email address to their survey response only for the purpose of locating and removing their data if withdrawal is later requested. The email address will not be included in the research dataset used for analysis and will not appear in reports, presentations, or publications.</p>
     <p>The separate file linking optional email addresses to participant IDs will be retained for six months after data collection closes and will then be permanently deleted. After that linkage file is deleted, it may no longer be possible to identify and remove an individual participant's response.</p>
     <p>De-identified survey data will be retained for at least five years after completion of the study and may be retained beyond that period for future related research.</p>
 
@@ -203,7 +207,7 @@
     {id: "gender_self_describe", text: "If you selected “Prefer to self-describe,” please specify:", type: "text"},
     { id: "mental_health_diagnosis", text: "4. Have you ever been diagnosed with a mental health condition by a licensed healthcare or mental health professional? Select all that apply.", type: "checkbox", options: ["No", "Anxiety disorder", "Depressive disorder", "Bipolar disorder", "Trauma- or stressor-related disorder (e.g., PTSD)", "Obsessive-compulsive or related disorder", "Eating disorder", "Attention-deficit/hyperactivity disorder (ADHD)", "Substance use disorder", "Other"] },
     { id: "mental_health_diagnosis_other", text: "If Other, please specify:", type: "text" },
-    { id: "ethnicity", text: "5. How would you describe your ethnicity? Select one.", type: "radio", options: ["Mestizo", "Hispanic/Latino", "Creole", "Garifuna", "Q'eqchi Maya", "Mopan Maya", "Yucatec Maya", "East Indian", "Mennonite", "Chinese", "Caucasian", "Prefer to self-describe"] },
+    { id: "ethnicity", text: "5. How would you describe your ethnicity? Select one.", type: "radio", options: ["Mestizo", "Hispanic/Latino", "Creole", "Garifuna", "Q'eqchi Maya", "Mopan Maya", "Yucatec Maya", "East Indian", "Mennonite", "Chinese", "Caucasian", "Multi-Ethnic","Prefer to self-describe"] },
     { id: "ethnicity_other", text: "If you selected “Prefer to self-describe,” please specify:", type: "text" },
     { id: "district", text: "6. Where are you based at?", type: "radio", options: ["Corozal", "Orange Walk", "Belize", "Cayes", "Cayo", "Stann Creek", "Toledo"] },
     { id: "study_level", text: "7. What is your current level of study?", type: "radio", options: ["Certificate", "Associate's degree", "Bachelor's degree", "Master's degree", "PhD"] },
@@ -536,7 +540,7 @@ function setupSignaturePads() {
 
     const step = steps[state.currentStep];
     const pct = Math.round(((state.currentStep + 1) / steps.length) * 100);
-    const nextLabel = step.id === "submit" ? (cfg.submissionsEnabled ? "Submit Survey" : "Preview Debrief") : "NEXT";
+    const nextLabel = step.id === "submit" ? (cfg.submissionsEnabled ? "Submit and View Scores" : "View Score Summary") : "NEXT";
 
     app.innerHTML = `
       ${cfg.previewMode ? `<div class="survey-banner warning">Preview mode: submissions are disabled.</div>` : ""}
@@ -845,6 +849,83 @@ function setupSignaturePads() {
       : "Below the screening threshold";
   }
 
+  function renderPhqSupport(phq) {
+  const total = phq.total;
+  const anxiety = phq.anxiety;
+  const depression = phq.depression;
+
+  const anxietyThresholdMet =
+    anxiety !== null &&
+    anxiety !== undefined &&
+    anxiety >= 3;
+
+  const depressionThresholdMet =
+    depression !== null &&
+    depression !== undefined &&
+    depression >= 3;
+
+  // Stronger message for PHQ-4 total scores in the severe range (9–12).
+  if (
+    total !== null &&
+    total !== undefined &&
+    total >= 9
+  ) {
+    return `
+      <div class="survey-banner">
+        <h5>A note about your mental health responses</h5>
+
+        <p>
+          Your responses indicate a relatively high level of psychological
+          distress over the past two weeks. This result is not a diagnosis, but if you have been feeling overwhelmed or these experiences are
+          interfering with your daily life, consider reaching out for support.
+          Support resources are provided below.
+        </p>
+
+        <p class="survey-note">
+          The PHQ-4 is a brief screening questionnaire and cannot determine
+          whether you have an anxiety or depressive disorder.
+        </p>
+      </div>
+    `;
+  }
+
+  // No additional message if neither subscale reaches the screening threshold.
+  if (!anxietyThresholdMet && !depressionThresholdMet) {
+    return "";
+  }
+
+  let thresholdText = "";
+
+  if (anxietyThresholdMet && depressionThresholdMet) {
+    thresholdText =
+      "both the anxiety and depression subscales reached the screening threshold";
+  } else if (anxietyThresholdMet) {
+    thresholdText =
+      "the anxiety subscale reached the screening threshold";
+  } else {
+    thresholdText =
+      "the depression subscale reached the screening threshold";
+  }
+
+  return `
+    <div class="survey-banner">
+      <h5>A note about your mental health responses</h5>
+
+      <p>
+        Based on your responses, ${thresholdText}. This does not mean that
+        you have an anxiety or depressive disorder. The PHQ-4 is a brief
+        screening questionnaire rather than a diagnostic assessment.
+      </p>
+
+      <p>
+        If these feelings have been troubling you or affecting your daily
+        life, you may find it helpful to speak with a qualified mental health
+        professional. Mental health resources are provided below.
+      </p>
+    </div>
+  `;
+}
+
   function renderBriefCopeTable(scores) {
     const rows = briefCopeScales
       .map((scale, index) => ({
@@ -885,6 +966,63 @@ function setupSignaturePads() {
       </div>
     `;
   }
+
+  function renderSubstanceUseSupport(score) {
+  if (score === null || score === undefined || score <= 2) {
+    return "";
+  }
+
+  if (score <= 4) {
+    return `
+      <div class="survey-banner">
+        <h5>A note about substance use as a coping strategy</h5>
+
+        <p>
+          Your responses suggest that you have used alcohol or other drugs
+          to some extent as a way of coping with stress. People sometimes
+          turn to substances when they are dealing with difficult emotions
+          or circumstances.
+        </p>
+
+        <p>
+          If this is something you are concerned about, you may find it
+          helpful to speak with a trusted healthcare or mental health
+          professional about what you have been experiencing and about
+          other ways of managing stress.
+        </p>
+
+        <p class="survey-note">
+          This result does not mean that you have a substance-use disorder.
+          The Brief COPE is not designed to diagnose a substance-use disorder.
+        </p>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="survey-banner">
+      <h5>A note about substance use as a coping strategy</h5>
+
+      <p>
+        Your responses suggest that alcohol or other drugs have been a
+        more frequently used way of coping with stress. Using substances
+        to manage difficult feelings or stressful situations can sometimes
+        create additional difficulties over time.
+      </p>
+
+      <p>
+        You may wish to speak with a healthcare or mental health professional
+        about what you have been experiencing and about other coping strategies
+        that may be helpful. Support resources are also provided below.
+      </p>
+
+      <p class="survey-note">
+        This result does not mean that you have a substance-use disorder.
+        The Brief COPE is not designed to diagnose a substance-use disorder.
+      </p>
+    </div>
+  `;
+}
 
   function renderDebrief() {
     const s = scoreSummary();
@@ -943,7 +1081,12 @@ function setupSignaturePads() {
               <span class="survey-score-interpretation">${escapeHtml(screeningText(s.phq4.depression))}</span>
             </div>
           </div>
-          <p class="survey-note">On the anxiety and depression subscales, a score of 3 or greater is considered positive for screening purposes. A screening result does <strong>not</strong> mean that you have an anxiety or depressive disorder.</p>
+          <p class="survey-note">On the anxiety and depression subscales, a score of 3 or 
+          greater is considered positive for screening purposes. 
+          A screening result does <strong>not</strong> mean that you have an anxiety 
+          or depressive disorder.</p>
+
+          ${renderPhqSupport(s.phq4)}
         </section>
 
         <section class="survey-result-section" aria-labelledby="grit-result-heading">
@@ -973,6 +1116,8 @@ function setupSignaturePads() {
           <p>The Brief COPE does not produce one overall coping score. Each strategy is scored separately from 2 to 8. Higher scores indicate greater reported use of that coping strategy.</p>
           ${renderBriefCopeTable(s.brief_cope)}
           <p class="survey-note">A higher or lower score is not automatically “good” or “bad.” The usefulness of a coping strategy can depend on the person, the situation, and the demands they are facing.</p>
+
+          ${renderSubstanceUseSupport(s.brief_cope.substance_use)}
         </section>
 
         <h3>About the questionnaires</h3>
