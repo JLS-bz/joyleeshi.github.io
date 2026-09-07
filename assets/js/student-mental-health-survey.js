@@ -130,6 +130,7 @@
         ${radio("parent_permission", "do_not_give", "I DO NOT GIVE permission for the student to participate in this research study.")}
       </div>
     </fieldset>
+    ${cfg.previewMode ? `<p class="survey-note">Technical draft only: please confirm with the IRB that this same-device online parent/guardian permission process is acceptable before using it for recruitment.</p>` : ""}
   `;
 
   const demographics = [
@@ -208,6 +209,23 @@
     "I’ve been blaming myself for things that happened.",
     "I've been praying or meditating.",
     "I've been making fun of the situation."
+  ];
+
+  const briefCopeScales = [
+    { key: "self_distraction", label: "Self-distraction", items: [1, 19] },
+    { key: "active_coping", label: "Active coping", items: [2, 7] },
+    { key: "denial", label: "Denial", items: [3, 8] },
+    { key: "substance_use", label: "Substance use", items: [4, 11] },
+    { key: "emotional_support", label: "Emotional support", items: [5, 15] },
+    { key: "instrumental_support", label: "Instrumental support", items: [10, 23] },
+    { key: "behavioral_disengagement", label: "Behavioural disengagement", items: [6, 16] },
+    { key: "venting", label: "Venting", items: [9, 21] },
+    { key: "positive_reframing", label: "Positive reframing", items: [12, 17] },
+    { key: "planning", label: "Planning", items: [14, 25] },
+    { key: "humor", label: "Humour", items: [18, 28] },
+    { key: "acceptance", label: "Acceptance", items: [20, 24] },
+    { key: "religion", label: "Religion", items: [22, 27] },
+    { key: "self_blame", label: "Self-blame", items: [13, 26] }
   ];
 
   const steps = [
@@ -449,7 +467,9 @@
       submitted_at: submittedAt,
       age: state.age,
       parent_permission: state.parentPermission,
+      scoring_version: "v1-2026-09-07",
       responses: surveyResponses,
+      derived_scores: scoreSummary(),
       contact: withdrawalEmail ? {
         participant_id: state.participant_id,
         email: withdrawalEmail,
@@ -480,29 +500,176 @@
   }
 
   function scoreSummary() {
-    // PSS-10 scoring is implemented only as a raw research total where all 10 items are present.
-    // Items 4, 5, 7, and 8 are reverse-scored (0<->4, 1<->3, 2 stays 2).
-    const pssVals = Array.from({ length: 10 }, (_, i) => state.responses[`pss${i + 1}`]);
-    let pss = null;
-    if (pssVals.every(v => v !== undefined && v !== "")) {
-      pss = pssVals.map(Number).reduce((sum, v, idx) => sum + ([3,4,6,7].includes(idx) ? 4 - v : v), 0);
+    const getNumber = key => {
+      const value = state.responses[key];
+      if (value === undefined || value === null || value === "") return null;
+      const number = Number(value);
+      return Number.isFinite(number) ? number : null;
+    };
+
+    const sumIfComplete = (keys, transform = (value) => value) => {
+      const values = keys.map(getNumber);
+      if (values.some(value => value === null)) return null;
+      return values.reduce((sum, value, index) => sum + transform(value, index), 0);
+    };
+
+    const meanIfComplete = (keys, transform = (value) => value) => {
+      const total = sumIfComplete(keys, transform);
+      return total === null ? null : Math.round((total / keys.length) * 100) / 100;
+    };
+
+    // PSS-10
+    // Total: items 4, 5, 7, and 8 are reverse-scored.
+    const pssKeys = Array.from({ length: 10 }, (_, i) => `pss${i + 1}`);
+    const pssReverseItems = new Set([4, 5, 7, 8]);
+    const pssTotal = sumIfComplete(
+      pssKeys,
+      (value, index) => pssReverseItems.has(index + 1) ? 4 - value : value
+    );
+
+    // Perceived helplessness: items 1, 2, 3, 6, 9, 10.
+    const pssPerceivedHelplessness = sumIfComplete(
+      [1, 2, 3, 6, 9, 10].map(i => `pss${i}`)
+    );
+
+    // Lack of self-efficacy: items 4, 5, 7, 8, reverse-scored so higher scores
+    // reflect greater difficulty / lower perceived self-efficacy.
+    const pssLackSelfEfficacy = sumIfComplete(
+      [4, 5, 7, 8].map(i => `pss${i}`),
+      value => 4 - value
+    );
+
+    // PHQ-4
+    const phqTotal = sumIfComplete([1, 2, 3, 4].map(i => `phq${i}`));
+    const anxiety = sumIfComplete([1, 2].map(i => `phq${i}`));
+    const depression = sumIfComplete([3, 4].map(i => `phq${i}`));
+
+    let phqDistressCategory = null;
+    if (phqTotal !== null) {
+      if (phqTotal <= 2) phqDistressCategory = "None";
+      else if (phqTotal <= 5) phqDistressCategory = "Mild";
+      else if (phqTotal <= 8) phqDistressCategory = "Moderate";
+      else phqDistressCategory = "Severe";
     }
 
-    // PHQ-4 raw total and two 2-item subscales, only where all relevant items are present.
-    const phqVals = Array.from({ length: 4 }, (_, i) => state.responses[`phq${i + 1}`]);
-    let phqTotal = null, anxiety = null, depression = null;
-    if (phqVals.every(v => v !== undefined && v !== "")) {
-      const nums = phqVals.map(Number);
-      phqTotal = nums.reduce((a, b) => a + b, 0);
-      anxiety = nums[0] + nums[1];
-      depression = nums[2] + nums[3];
-    }
+    // Grit-S
+    // The response values stored by the form are:
+    // 5 = Very much like me ... 1 = Not like me at all.
+    //
+    // Study-specific wording change:
+    // Item 2 is "Setbacks discourage me." and is intentionally reverse-scored.
+    //
+    // Consistency of Interest items 1, 3, 5, 6 are also reverse-scored.
+    const gritReverseItems = new Set([1, 2, 3, 5, 6]);
+    const gritScoredValue = (itemNumber) => {
+      const raw = getNumber(`grit${itemNumber}`);
+      if (raw === null) return null;
+      return gritReverseItems.has(itemNumber) ? 6 - raw : raw;
+    };
 
-    return { pss, phqTotal, anxiety, depression };
+    const gritMean = itemNumbers => {
+      const values = itemNumbers.map(gritScoredValue);
+      if (values.some(value => value === null)) return null;
+      return Math.round((values.reduce((a, b) => a + b, 0) / values.length) * 100) / 100;
+    };
+
+    const gritOverall = gritMean([1, 2, 3, 4, 5, 6, 7, 8]);
+    const gritPerseverance = gritMean([2, 4, 7, 8]);
+    const gritConsistency = gritMean([1, 3, 5, 6]);
+    const gritItem2Scored = gritScoredValue(2);
+
+    // Brief COPE
+    // No reversals. Each two-item strategy ranges from 2 to 8.
+    const briefCope = {};
+    briefCopeScales.forEach(scale => {
+      briefCope[scale.key] = sumIfComplete(scale.items.map(i => `cope${i}`));
+    });
+
+    return {
+      pss: {
+        total: pssTotal,
+        perceived_helplessness: pssPerceivedHelplessness,
+        lack_self_efficacy: pssLackSelfEfficacy
+      },
+      phq4: {
+        total: phqTotal,
+        distress_category: phqDistressCategory,
+        anxiety: anxiety,
+        anxiety_screen_threshold_met: anxiety === null ? null : anxiety >= 3,
+        depression: depression,
+        depression_screen_threshold_met: depression === null ? null : depression >= 3
+      },
+      grit: {
+        overall: gritOverall,
+        perseverance_of_effort: gritPerseverance,
+        consistency_of_interest: gritConsistency,
+        item2_scored: gritItem2Scored
+      },
+      brief_cope: briefCope
+    };
+  }
+
+  function formatScore(value, max, digits = 0) {
+    if (value === null || value === undefined) {
+      return `<span class="survey-score-missing">Not calculated because one or more items were skipped.</span>`;
+    }
+    const displayed = digits > 0 ? Number(value).toFixed(digits) : String(value);
+    return `<span class="survey-score-number">${escapeHtml(displayed)}</span><span class="survey-score-denominator"> / ${escapeHtml(max)}</span>`;
+  }
+
+  function screeningText(value) {
+    if (value === null || value === undefined) {
+      return "Not calculated because one or more items were skipped.";
+    }
+    return value >= 3
+      ? "At or above the screening threshold"
+      : "Below the screening threshold";
+  }
+
+  function renderBriefCopeTable(scores) {
+    const rows = briefCopeScales
+      .map((scale, index) => ({
+        ...scale,
+        index,
+        score: scores[scale.key]
+      }))
+      .sort((a, b) => {
+        if (a.score === null && b.score === null) return a.index - b.index;
+        if (a.score === null) return 1;
+        if (b.score === null) return -1;
+        if (b.score !== a.score) return b.score - a.score;
+        return a.index - b.index;
+      })
+      .map(scale => `
+        <tr>
+          <td>${escapeHtml(scale.label)}</td>
+          <td class="survey-score-table-value">${
+            scale.score === null
+              ? `<span class="survey-score-missing">Not calculated</span>`
+              : `<strong>${escapeHtml(scale.score)} / 8</strong>`
+          }</td>
+        </tr>
+      `)
+      .join("");
+
+    return `
+      <div class="survey-table-wrap">
+        <table class="survey-score-table">
+          <thead>
+            <tr>
+              <th scope="col">Coping strategy</th>
+              <th scope="col">Your score</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    `;
   }
 
   function renderDebrief() {
     const s = scoreSummary();
+
     return `
       <div class="survey-card">
         <h2>Debriefing Form</h2>
@@ -511,19 +678,89 @@
 
         <h3>Your score summary</h3>
         <p>These scores are provided for informational and self-reflection purposes only. They are <strong>not a medical or psychological diagnosis</strong> and cannot replace an assessment by a qualified mental health professional.</p>
-        <div class="survey-score-grid">
-          <div class="survey-score-box"><strong>PSS-10 raw total</strong>${s.pss === null ? "Not calculated because one or more items were skipped." : escapeHtml(s.pss)}</div>
-          <div class="survey-score-box"><strong>PHQ-4 raw total</strong>${s.phqTotal === null ? "Not calculated because one or more items were skipped." : escapeHtml(s.phqTotal)}</div>
-          <div class="survey-score-box"><strong>PHQ-4 anxiety subscale</strong>${s.anxiety === null ? "Not calculated because one or more items were skipped." : escapeHtml(s.anxiety)}</div>
-          <div class="survey-score-box"><strong>PHQ-4 depression subscale</strong>${s.depression === null ? "Not calculated because one or more items were skipped." : escapeHtml(s.depression)}</div>
-        </div>
-        <div class="survey-banner warning">Grit-S and Brief COPE score reporting is intentionally not automated in this draft. Your instrument includes a study-specific Grit-S reversal note, and the exact participant-facing scoring/reporting rules should be finalized before launch.</div>
+
+        <section class="survey-result-section" aria-labelledby="pss-result-heading">
+          <h4 id="pss-result-heading">Perceived Stress — PSS-10</h4>
+          <div class="survey-score-grid">
+            <div class="survey-score-box">
+              <strong>Total perceived stress</strong>
+              ${formatScore(s.pss.total, 40)}
+              <span class="survey-score-caption">Higher scores indicate greater perceived stress during the past month.</span>
+            </div>
+            <div class="survey-score-box">
+              <strong>Perceived helplessness</strong>
+              ${formatScore(s.pss.perceived_helplessness, 24)}
+              <span class="survey-score-caption">Feelings that circumstances or reactions may be difficult to control.</span>
+            </div>
+            <div class="survey-score-box">
+              <strong>Lack of self-efficacy</strong>
+              ${formatScore(s.pss.lack_self_efficacy, 16)}
+              <span class="survey-score-caption">Perceived difficulty handling problems or demands.</span>
+            </div>
+          </div>
+          <p class="survey-note">The PSS-10 is presented as a continuous score. No low, moderate, or high category is assigned here.</p>
+        </section>
+
+        <section class="survey-result-section" aria-labelledby="phq-result-heading">
+          <h4 id="phq-result-heading">Psychological Distress — PHQ-4</h4>
+          <div class="survey-score-grid">
+            <div class="survey-score-box">
+              <strong>PHQ-4 total</strong>
+              ${formatScore(s.phq4.total, 12)}
+              ${
+                s.phq4.distress_category === null
+                  ? ""
+                  : `<span class="survey-score-interpretation">${escapeHtml(s.phq4.distress_category)} psychological distress</span>`
+              }
+            </div>
+            <div class="survey-score-box">
+              <strong>Anxiety subscale</strong>
+              ${formatScore(s.phq4.anxiety, 6)}
+              <span class="survey-score-interpretation">${escapeHtml(screeningText(s.phq4.anxiety))}</span>
+            </div>
+            <div class="survey-score-box">
+              <strong>Depression subscale</strong>
+              ${formatScore(s.phq4.depression, 6)}
+              <span class="survey-score-interpretation">${escapeHtml(screeningText(s.phq4.depression))}</span>
+            </div>
+          </div>
+          <p class="survey-note">On the anxiety and depression subscales, a score of 3 or greater is considered positive for screening purposes. A screening result does <strong>not</strong> mean that you have an anxiety or depressive disorder.</p>
+        </section>
+
+        <section class="survey-result-section" aria-labelledby="grit-result-heading">
+          <h4 id="grit-result-heading">Grit — Grit-S</h4>
+          <div class="survey-score-grid">
+            <div class="survey-score-box">
+              <strong>Overall grit</strong>
+              ${formatScore(s.grit.overall, 5, 2)}
+              <span class="survey-score-caption">Higher scores indicate greater grit.</span>
+            </div>
+            <div class="survey-score-box">
+              <strong>Perseverance of Effort</strong>
+              ${formatScore(s.grit.perseverance_of_effort, 5, 2)}
+              <span class="survey-score-caption">Persistence and continued effort toward goals despite challenges or setbacks.</span>
+            </div>
+            <div class="survey-score-box">
+              <strong>Consistency of Interest</strong>
+              ${formatScore(s.grit.consistency_of_interest, 5, 2)}
+              <span class="survey-score-caption">The tendency to maintain interests and focus on goals over time.</span>
+            </div>
+          </div>
+          <p class="survey-note">Grit-S scores range from 1 to 5. These scores are intended for self-reflection and should not be treated as a fixed description of your personality or ability.</p>
+        </section>
+
+        <section class="survey-result-section" aria-labelledby="cope-result-heading">
+          <h4 id="cope-result-heading">Your Coping Patterns — Brief COPE</h4>
+          <p>The Brief COPE does not produce one overall coping score. Each strategy is scored separately from 2 to 8. Higher scores indicate greater reported use of that coping strategy.</p>
+          ${renderBriefCopeTable(s.brief_cope)}
+          <p class="survey-note">A higher or lower score is not automatically “good” or “bad.” The usefulness of a coping strategy can depend on the person, the situation, and the demands they are facing.</p>
+        </section>
 
         <h3>About the questionnaires</h3>
-        <p><strong>Perceived Stress Scale (PSS-10):</strong> asks about how stressful, unpredictable, or overwhelming you have found situations in your life recently, including perceived helplessness and perceived self-efficacy.</p>
+        <p><strong>Perceived Stress Scale (PSS-10):</strong> asks about how stressful, unpredictable, or overwhelming you have found situations in your life recently. The score summary above includes perceived helplessness and lack of self-efficacy.</p>
         <p><strong>Patient Health Questionnaire-4 (PHQ-4):</strong> asks about symptoms related to anxiety and depression. It is a brief screening tool and does not provide a clinical diagnosis.</p>
         <p><strong>Short Grit Scale (Grit-S):</strong> assesses perseverance of effort and consistency of interest toward long-term goals.</p>
-        <p><strong>Brief COPE:</strong> explores coping strategies including active coping, planning, positive reframing, acceptance, emotional support, instrumental support, self-distraction, venting, denial, behavioural disengagement, self-blame, humour, religion, and substance use.</p>
+        <p><strong>Brief COPE:</strong> explores 14 coping strategies: active coping, planning, positive reframing, acceptance, emotional support, instrumental support, self-distraction, venting, denial, behavioural disengagement, self-blame, humour, religion, and substance use.</p>
 
         <h3>Emotional Well-being and Support</h3>
         <p>In this study, we asked about your experiences relating to mental health, coping, grit, and perceived stress, which may have brought up strong emotions. We encourage you to reach out to a friend, family member, or a mental health professional if you feel distressed.</p>
@@ -540,18 +777,12 @@
         <p>If you believe you are in immediate danger or may harm yourself or someone else, please contact your local emergency services or go to the nearest emergency department.</p>
 
         <h3>Confidentiality and Privacy</h3>
-        <p>Your research data will be kept confidential. Survey responses are stored separately from optional email contact information and linked only by a randomly generatedparticipant ID. Access to the research files will be restricted to the Principal Investigator and Collaborator. When findings are shared, they will be presented as general patterns and summaries across participants. Identifying information will not be included in presentations, reports, or publications.</p>
+        <p>Your research data will be kept confidential. Survey responses are stored separately from optional email contact information and linked only by a randomly generated participant ID. Access to the research files will be restricted to the Principal Investigator and Collaborator. When findings are shared, they will be presented as general patterns and summaries across participants. Identifying information will not be included in presentations, reports, or publications.</p>
 
         <h3>Questions About the Study</h3>
-        <p>If you have questions about this study, or if you would like to receive a copy of this study’s findings, please contact the Principal Investigator: </p> 
-        <p> Joy Lee-Shi, M.A., Faculty of Management &amp; Social Sciences, University of Belize </p>
-        <p> <a href="mailto:joy.lee-shi@ub.edu.bz">joy.lee-shi@ub.edu.bz</a>.</p>
+        <p>If you have questions about this study, or if you would like to receive a copy of this study’s findings, please contact Joy Lee-Shi, M.A., Faculty of Management &amp; Social Sciences, University of Belize at <a href="mailto:joy.lee-shi@ub.edu.bz">joy.lee-shi@ub.edu.bz</a>.</p>
         <p>You may also contact the Principal Investigator to request that your data be removed.</p>
-        <p>For questions about your rights as a research participant, or any complaints you may have, you may contact: </p>
-        <p>Institutional Review Board (IRB) </p>
-        <p>The Research Office, University of Belize </p>
-        <p> <a href="mailto:researchoffice@ub.edu.bz">researchoffice@ub.edu.bz</a> </p>
-        <p><strong>(501) 822-1000.</strong></p>
+        <p>For questions about your rights as a research participant, or any complaints you may have, contact the Institutional Review Board (IRB), The Research Office, University of Belize, <a href="mailto:researchoffice@ub.edu.bz">researchoffice@ub.edu.bz</a>, (501) 822-1000.</p>
         <p><strong>Thank you for your participation and for contributing to research on student mental health and well-being.</strong></p>
       </div>
     `;

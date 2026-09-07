@@ -154,3 +154,72 @@
     width: 100%;
   }
 }
+
+
+/* Participant score report */
+.survey-result-section {
+  margin: 2rem 0;
+  padding-top: 0.25rem;
+}
+
+.survey-result-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.85rem;
+}
+
+.survey-score-number {
+  display: inline-block;
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0.15rem;
+}
+
+.survey-score-denominator {
+  font-size: 1rem;
+  opacity: 0.75;
+}
+
+.survey-score-caption,
+.survey-score-interpretation,
+.survey-score-missing {
+  display: block;
+  margin-top: 0.45rem;
+  line-height: 1.4;
+}
+
+.survey-score-interpretation {
+  font-weight: 650;
+}
+
+.survey-score-missing {
+  font-size: 0.92rem;
+  opacity: 0.8;
+}
+
+.survey-table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.survey-score-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 420px;
+}
+
+.survey-score-table th,
+.survey-score-table td {
+  text-align: left;
+  padding: 0.7rem 0.75rem;
+  border-bottom: 1px solid var(--global-divider-color, #ddd);
+}
+
+.survey-score-table th {
+  font-weight: 700;
+}
+
+.survey-score-table-value {
+  width: 150px;
+  white-space: nowrap;
+}

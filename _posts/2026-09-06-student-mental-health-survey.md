@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Student Mental Health and Well-Being Survey
 date: 2026-09-06 00:00:00-0600
 description: Research survey on mental health, coping, grit, and perceived stress among tertiary-level students in Belize.
