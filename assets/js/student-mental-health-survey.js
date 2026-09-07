@@ -15,6 +15,10 @@
     eligible: null,
     age: null,
     parentPermission: null,
+    participantSignature: null,
+    participantSignedAt: null,
+    guardianSignature: null,
+    guardianSignedAt: null,
     finished: false,
   };
 
@@ -36,9 +40,14 @@
   const consentHtml = `
     <h2>Consent Form</h2>
     <p><strong>Study Title:</strong> Mental Health, Coping, Grit, and Perceived Stress Among Tertiary-Level Students in Belize</p>
-    <p><strong>Principal Investigator:</strong><br>Joy Lee-Shi, MA<br>Faculty of Management &amp; Social Sciences, University of Belize<br>Email: <a href="mailto:joy.lee-shi@ub.edu.bz">joy.lee-shi@ub.edu.bz</a></p>
-    <p><strong>Collaborator:</strong><br>Mathias R. Vairez Jr., PhD<br>Department of Education, University of Belize<br>Email: <a href="mailto:mvairez@ub.edu.bz">mvairez@ub.edu.bz</a></p>
-
+    <p><strong>Principal Investigators:</strong><br>
+    Joy Lee-Shi, MA<br>
+    Faculty of Management &amp; Social Sciences, University of Belize<br>
+    Email: <a href="mailto:joy.lee-shi@ub.edu.bz">joy.lee-shi@ub.edu.bz</a></p>
+    <p>Mathias R. Vairez Jr., PhD<br>
+    Department of Education, University of Belize<br>
+    Email: <a href="mailto:mvairez@ub.edu.bz">mvairez@ub.edu.bz</a></p>
+    
     <h3>Purpose of the Study</h3>
     <p>You are invited to participate in a research study about student mental health and well-being. The purpose of this study is to better understand <strong>tertiary level students’</strong> experiences with mental health, coping skills, grit, and perceived stress.</p>
     <p>This study also aims to evaluate whether the questionnaires used are appropriate and reliable for assessing these experiences among tertiary-level students in Belize.</p>
@@ -58,7 +67,8 @@
     <p>Your participation may also contribute to a better understanding of student mental health and well-being and may help inform future programs or resources designed to support students. Your participation may also help researchers determine whether the scales used in this study are suitable and reliable for tertiary-level students in Belize.</p>
 
     <h3>Confidentiality</h3>
-    <p>The survey is confidential, so your name and other directly identifying information will not be collected. Survey responses will be transmitted to a secure Google-based data system and stored in private Google Sheets within a Google Drive account controlled by the Principal Investigator. Access to the research files will be restricted to the Principal Investigator and Collaborator. The research dataset will not intentionally record your name, IP address, or device identifier.</p>
+    <p>The survey is confidential, so your name and other directly identifying information will not be collected. Survey responses will be transmitted to a secure Google-based data system and stored in private Google Sheets within a Google Drive account controlled by the Principal Investigators. Access to the research files will be restricted to the Principal Investigators. The research dataset will not intentionally record your name, IP address, or device identifier.</p>
+    <p>An electronic signature will be collected to document your consent to participate. Your signature will be stored separately from your survey responses and will not be included in the research dataset used for analysis. </p>
     <p>We advise against using an employer-issued device to complete this study, as we cannot guarantee the confidentiality of your data regarding the interception of data sent via Internet by third parties (such as your employer).</p>
     <p>If you choose to provide an email address, it will be stored in a separate private file from your survey responses. A randomly generated participant ID will be used to link your email address to your survey response only for the purpose of locating and removing your data if you later request withdrawal. Your email address will not be included in the research dataset used for analysis and will not appear in reports, presentations, or publications.</p>
     <p>The separate file linking optional email addresses to participant IDs will be retained for six months after data collection closes and will then be permanently deleted. After that linkage file is deleted, it may no longer be possible to identify and remove an individual participant's response.</p>
@@ -77,7 +87,7 @@
     <p>Institutional Review Board (IRB)<br>The Research Office, University of Belize<br><a href="mailto:researchoffice@ub.edu.bz">researchoffice@ub.edu.bz</a><br>(501) 822-1000</p>
 
     <h3>Consent to Participate</h3>
-    <p>By clicking “NEXT” to proceed with the survey, you confirm that:</p>
+    <p>By signing below and clicking “NEXT” to proceed with the survey, you confirm that:</p>
     <ul>
       <li>You have read and understood the information provided above.</li>
       <li>You have had the opportunity to ask questions about the study.</li>
@@ -85,14 +95,43 @@
       <li>You understand that you may skip questions or stop participating at any time.</li>
       <li>You voluntarily agree to participate in this research study.</li>
     </ul>
+
+    <div class="survey-question">
+      <label for="participant_signature"><strong>Electronic signature</strong></label>
+      <p>Please sign below to indicate your consent to participate.</p>
+
+      <canvas
+        id="participant_signature"
+        class="survey-signature-pad"
+        aria-label="Participant signature pad"
+      ></canvas>
+
+      <button
+        type="button"
+        class="btn btn-outline-secondary btn-sm survey-signature-clear"
+        data-clear-signature="participant_signature"
+      >
+        Clear signature
+      </button>
+
+      <p class="survey-note">
+        You may sign using a mouse, trackpad, stylus, or your finger on a touchscreen.
+      </p>
+    </div>
+
     <p>If you do not consent to participating in this study, please close the current browser tab.</p>
   `;
 
   const parentConsentHtml = `
     <h2>Parent/Guardian Consent Form</h2>
     <p><strong>Study Title:</strong> Mental Health, Coping, Grit, and Perceived Stress Among Tertiary-Level Students in Belize</p>
-    <p><strong>Principal Investigator:</strong><br>Joy Lee-Shi, M.A.<br>Faculty of Management &amp; Social Sciences, University of Belize<br>Email: <a href="mailto:joy.lee-shi@ub.edu.bz">joy.lee-shi@ub.edu.bz</a></p>
-    <p><strong>Collaborator:</strong><br>Mathias R. Vairez Jr., PhD<br>Department of Education, University of Belize<br>Email: <a href="mailto:mvairez@ub.edu.bz">mvairez@ub.edu.bz</a></p>
+    <p><strong>Principal Investigators:</strong><br>
+    Joy Lee-Shi, MA<br>
+    Faculty of Management &amp; Social Sciences, University of Belize<br>
+    Email: <a href="mailto:joy.lee-shi@ub.edu.bz">joy.lee-shi@ub.edu.bz</a></p>
+    <p>Mathias R. Vairez Jr., PhD<br>
+    Department of Education, University of Belize<br>
+    Email: <a href="mailto:mvairez@ub.edu.bz">mvairez@ub.edu.bz</a></p>
 
     <h3>Invitation to Participate</h3>
     <p>You are being asked to provide permission for your teenager to participate in a research study. The purpose of this study is to examine relationships among perceived stress, symptoms of anxiety and depression, grit, and coping strategies among tertiary level students. The study will also examine how well commonly used questionnaires measure these constructs within the study population.</p>
@@ -103,7 +142,8 @@
     <p>Even if you provide permission, your teenager may choose not to participate. If they begin the survey, they may stop at any time without penalty and may skip any question they do not wish to answer.</p>
 
     <h3>Confidentiality</h3>
-    <p>The survey is confidential, so your teenager's name and other directly identifying information will not be collected. Survey responses will be transmitted to a secure Google-based data system and stored in private Google Sheets within a Google Drive account controlled by the Principal Investigator. Access to the research files will be restricted to the Principal Investigator and Collaborator. The research dataset will not intentionally record your name, IP address, or device identifier.</p>
+    <p>The survey is confidential, so your teenager's name and other directly identifying information will not be collected. Survey responses will be transmitted to a secure Google-based data system and stored in private Google Sheets within a Google Drive account controlled by the Principal Investigators. Access to the research files will be restricted to the Principal Investigators. The research dataset will not intentionally record your name, IP address, or device identifier.</p>
+    <p>A parent/guardian electronic signature will be collected to document permission for participation. The signature will be stored separately from the participant's survey responses and will not be included in the research dataset used for analysis.</p>
     <p>If your teenager chooses to provide an email address, it will be stored in a separate private file from the survey responses. A randomly generated participant ID will be used to link the email address to your teenager's survey response only for the purpose of locating and removing your teenager's data if withdrawal is later requested. The email address will not be included in the research dataset used for analysis and will not appear in reports, presentations, or publications.</p>
     <p>The separate file linking optional email addresses to participant IDs will be retained for six months after data collection closes and will then be permanently deleted. After that linkage file is deleted, it may no longer be possible to identify and remove an individual participant's response.</p>
     <p>De-identified survey data will be retained for at least five years after completion of the study and may be retained beyond that period for future related research.</p>
@@ -130,7 +170,31 @@
         ${radio("parent_permission", "do_not_give", "I DO NOT GIVE permission for my teenager to participate in this research study.")}
       </div>
     </fieldset>
-    ${cfg.previewMode ? `<p class="survey-note">Technical draft only: please confirm with the IRB that this same-device online parent/guardian permission process is acceptable before using it for recruitment.</p>` : ""}
+
+    <div class="survey-question">
+      <label for="guardian_signature"><strong>Parent/guardian electronic signature</strong></label>
+      <p>If you give permission, please sign below.</p>
+
+      <canvas
+        id="guardian_signature"
+        class="survey-signature-pad"
+        aria-label="Parent or guardian signature pad"
+      ></canvas>
+
+      <button
+        type="button"
+        class="btn btn-outline-secondary btn-sm survey-signature-clear"
+        data-clear-signature="guardian_signature"
+      >
+        Clear signature
+      </button>
+
+      <p class="survey-note">
+        You may sign using a mouse, trackpad, stylus, or your finger on a touchscreen.
+      </p>
+    </div>
+
+
   `;
 
   const demographics = [
@@ -328,6 +392,123 @@
     `;
   }
 
+  function setupSignaturePad(canvasId, signatureStateKey, signedAtStateKey) {
+  const canvas = app.querySelector(`#${canvasId}`);
+  if (!canvas) return;
+
+  const ctx = canvas.getContext("2d");
+  const height = 180;
+  const dpr = window.devicePixelRatio || 1;
+
+  const resizeCanvas = () => {
+    const width = canvas.getBoundingClientRect().width;
+
+    canvas.width = Math.round(width * dpr);
+    canvas.height = Math.round(height * dpr);
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.lineWidth = 2;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+    ctx.strokeStyle = "#222";
+
+    if (state[signatureStateKey]) {
+      const img = new Image();
+      img.onload = () => {
+        ctx.drawImage(img, 0, 0, width, height);
+      };
+      img.src = state[signatureStateKey];
+    }
+  };
+
+  resizeCanvas();
+
+  let drawing = false;
+
+  function pointFromEvent(event) {
+    const rect = canvas.getBoundingClientRect();
+
+    return {
+      x: event.clientX - rect.left,
+      y: event.clientY - rect.top
+    };
+  }
+
+  canvas.addEventListener("pointerdown", event => {
+    event.preventDefault();
+
+    drawing = true;
+    canvas.setPointerCapture(event.pointerId);
+
+    const point = pointFromEvent(event);
+
+    ctx.beginPath();
+    ctx.moveTo(point.x, point.y);
+
+    clearStatus();
+  });
+
+  canvas.addEventListener("pointermove", event => {
+    if (!drawing) return;
+
+    event.preventDefault();
+
+    const point = pointFromEvent(event);
+
+    ctx.lineTo(point.x, point.y);
+    ctx.stroke();
+  });
+
+  function finishSignature(event) {
+    if (!drawing) return;
+
+    drawing = false;
+
+    if (event && canvas.hasPointerCapture(event.pointerId)) {
+      canvas.releasePointerCapture(event.pointerId);
+    }
+
+    state[signatureStateKey] = canvas.toDataURL("image/png");
+    state[signedAtStateKey] = new Date().toISOString();
+  }
+
+  canvas.addEventListener("pointerup", finishSignature);
+  canvas.addEventListener("pointercancel", finishSignature);
+
+  const clearButton = app.querySelector(
+    `[data-clear-signature="${canvasId}"]`
+  );
+
+  if (clearButton) {
+    clearButton.addEventListener("click", () => {
+      ctx.clearRect(
+        0,
+        0,
+        canvas.width / dpr,
+        canvas.height / dpr
+      );
+
+      state[signatureStateKey] = null;
+      state[signedAtStateKey] = null;
+
+      clearStatus();
+    }); }
+  }
+
+function setupSignaturePads() {
+  setupSignaturePad(
+    "participant_signature",
+    "participantSignature",
+    "participantSignedAt"
+  );
+
+  setupSignaturePad(
+    "guardian_signature",
+    "guardianSignature",
+    "guardianSignedAt"
+  );
+}
+
   function renderParentConsentStep() {
     return `
       <div class="survey-progress-wrap">
@@ -348,6 +529,7 @@
 
     if (state.currentStep === 2 && Number(state.age) < 18 && state.parentPermission === null) {
       app.innerHTML = renderParentConsentStep();
+      setupSignaturePads();
       bindActions();
       return;
     }
@@ -368,6 +550,7 @@
         <button class="btn btn-primary" type="button" data-action="next">${nextLabel}</button>
       </div>
     `;
+    setupSignaturePads();
     bindActions();
   }
 
@@ -413,22 +596,38 @@
 
         if (action === "parent-next") {
           const permission = state.responses.parent_permission;
+
           if (!permission) {
             setStatus("Please select whether permission is given before continuing.", true);
             return;
           }
+
+          if (permission === "give" && !state.guardianSignature) {
+            setStatus( "Please provide the parent/guardian signature before continuing.", true);
+            return;
+          }
+
           state.parentPermission = permission;
+
           if (permission !== "give") {
             renderEnded("Parent/guardian permission was not provided. The survey has ended.");
             return;
           }
+
           state.currentStep = 2;
           render();
           return;
-        }
+      }
 
         if (action === "next") {
           const step = steps[state.currentStep];
+
+          if (step.id === "consent") {
+            if (!state.participantSignature) {
+              setStatus("Please provide your signature to indicate your consent before continuing.", true);
+              return;
+            }
+          }
 
           if (step.id === "eligibility") {
             const enrolled = state.responses.currently_enrolled;
@@ -478,11 +677,23 @@
       scoring_version: "v1-2026-09-07",
       responses: surveyResponses,
       derived_scores: scoreSummary(),
+
       contact: withdrawalEmail ? {
         participant_id: state.participant_id,
         email: withdrawalEmail,
         submitted_at: submittedAt
-      } : null
+      } : null,
+
+      consent: {
+        participant: {
+          participant_signature: state.participantSignature,
+          participant_signed_at: state.participantSignedAt,
+        },
+        guardian: state.guardianSignature ? {
+          guardian_signature: state.guardianSignature,
+          guardian_signed_at: state.guardianSignedAt} : null
+        }
+      },
     };
 
     if (cfg.submissionsEnabled && cfg.submissionUrl) {
@@ -785,11 +996,18 @@
         <p>If you believe you are in immediate danger or may harm yourself or someone else, please contact your local emergency services or go to the nearest emergency department.</p>
 
         <h3>Confidentiality and Privacy</h3>
-        <p>Your research data will be kept confidential. Survey responses are stored separately from optional email contact information and linked only by a randomly generated participant ID. Access to the research files will be restricted to the Principal Investigator and Collaborator. When findings are shared, they will be presented as general patterns and summaries across participants. Identifying information will not be included in presentations, reports, or publications.</p>
+        <p>Your research data will be kept confidential. Survey responses are stored separately from optional email contact information and linked only by a randomly generated participant ID. Access to the research files will be restricted to the Principal Investigators. When findings are shared, they will be presented as general patterns and summaries across participants. Identifying information will not be included in presentations, reports, or publications.</p>
 
         <h3>Questions About the Study</h3>
-        <p>If you have questions about this study, or if you would like to receive a copy of this study's findings, please contact the Principal Investigator, Joy Lee-Shi, M.A., Faculty of Management &amp; Social Sciences, University of Belize at <a href="mailto:joy.lee-shi@ub.edu.bz">joy.lee-shi@ub.edu.bz</a>.</p>
-        <p>You may also contact the Principal Investigator to request that your data be removed.</p>
+        <p>If you have questions about this study, or if you would like to receive a copy of this study's findings, please contact a Principal Investigator: </p> 
+        Joy Lee-Shi, MA<br>
+        Faculty of Management &amp; Social Sciences, University of Belize<br>
+        Email: <a href="mailto:joy.lee-shi@ub.edu.bz">joy.lee-shi@ub.edu.bz</a></p>
+        <p>Mathias R. Vairez Jr., PhD<br>
+        Department of Education, University of Belize<br>
+        Email: <a href="mailto:mvairez@ub.edu.bz">mvairez@ub.edu.bz</a></p>
+        
+        <p>You may also contact a Principal Investigator to request that your data be removed.</p>
         <p>For questions about your rights as a research participant, or any complaints you may have, contact the Institutional Review Board (IRB), The Research Office, University of Belize, <a href="mailto:researchoffice@ub.edu.bz">researchoffice@ub.edu.bz</a>, (501) 822-1000.</p>
         <p><strong>Thank you for your participation and for contributing to research on student mental health and well-being.</strong></p>
       </div>

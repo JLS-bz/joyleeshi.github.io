@@ -18,7 +18,7 @@ permalink: /survey/
 <script>
   window.MH_SURVEY_CONFIG = {
     submissionsEnabled: false,
-    submissionUrl: "https://script.google.com/macros/s/AKfycbzgM-BcWDQiPTnuOrUd8i2555iOb5Bx4tFKZPq8kYvCVatq5u_qdlD8kLPnP_iG6tRE/exec",
+    submissionUrl: "https://script.google.com/macros/s/AKfycbyxdl2IjFybkJgn8y-9DzsJ6VybtWSZFHotMFQBiICoacv-0D-3h_xQefUlvAluVA4b/exec",
     previewMode: true
   };
 </script>
