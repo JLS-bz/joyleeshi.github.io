@@ -3,12 +3,224 @@
   margin: 0 auto;
 }
 
+.survey-card {
+  border: 1px solid var(--global-divider-color, #ddd);
+  border-radius: 14px;
+  padding: 1.25rem;
+  margin: 1rem 0 1.5rem;
+  background: var(--global-bg-color, #fff);
+}
+
+.survey-card h2,
+.survey-card h3 {
+  margin-top: 0;
+}
+
 .survey-status {
   margin: 0.75rem 0;
 }
 
+.survey-banner {
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--global-divider-color, #ddd);
+}
+
+.survey-banner.warning {
+  font-weight: 600;
+}
+
+.survey-progress-wrap {
+  margin: 1rem 0 1.5rem;
+}
+
+.survey-progress-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.92rem;
+}
+
+.survey-progress {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--global-divider-color, #e5e5e5);
+}
+
+.survey-progress > div {
+  height: 100%;
+  background: var(--global-theme-color, currentColor);
+  transition: width 160ms ease;
+}
+
+.survey-question {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--global-divider-color, #eee);
+}
+
+.survey-question:last-child {
+  border-bottom: 0;
+}
+
+.survey-question legend,
+.survey-question > label:first-child {
+  font-weight: 650;
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+.survey-options {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.survey-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+}
+
+.survey-option input {
+  margin-top: 0.3rem;
+}
+
+.survey-text,
+.survey-number {
+  width: 100%;
+  max-width: 680px;
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--global-divider-color, #bbb);
+  background: var(--global-bg-color, #fff);
+  color: var(--global-text-color, inherit);
+}
+
+.survey-actions {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.survey-actions .btn {
+  min-width: 120px;
+}
+
+.survey-note {
+  font-size: 0.92rem;
+  opacity: 0.86;
+}
+
+.survey-ineligible {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.survey-score-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+
+.survey-score-box {
+  border: 1px solid var(--global-divider-color, #ddd);
+  border-radius: 10px;
+  padding: 0.9rem;
+}
+
+.survey-score-box strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 600px) {
+  .survey-card {
+    padding: 1rem;
+  }
+
+  .survey-actions {
+    flex-direction: column-reverse;
+  }
+
+  .survey-actions .btn {
+    width: 100%;
+  }
+}
+
 
 /* Participant score report */
+.survey-result-section {
+  margin: 2rem 0;
+  padding-top: 0.25rem;
+}
+
+.survey-result-section h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.85rem;
+}
+
+.survey-score-number {
+  display: inline-block;
+  font-size: 1.65rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 0.15rem;
+}
+
+.survey-score-denominator {
+  font-size: 1rem;
+  opacity: 0.75;
+}
+
+.survey-score-caption,
+.survey-score-interpretation,
+.survey-score-missing {
+  display: block;
+  margin-top: 0.45rem;
+  line-height: 1.4;
+}
+
+.survey-score-interpretation {
+  font-weight: 650;
+}
+
+.survey-score-missing {
+  font-size: 0.92rem;
+  opacity: 0.8;
+}
+
+.survey-table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.survey-score-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 420px;
+}
+
+.survey-score-table th,
+.survey-score-table td {
+  text-align: left;
+  padding: 0.7rem 0.75rem;
+  border-bottom: 1px solid var(--global-divider-color, #ddd);
+}
+
+.survey-score-table th {
+  font-weight: 700;
+}
+
+.survey-score-table-value {
+  width: 150px;
+  white-space: nowrap;
+}
 
 .survey-button {
   display: inline-block;
@@ -26,4 +238,20 @@
   color: #ffffff !important;
   opacity: 0.88;
   transform: translateY(-1px);
+}
+
+.survey-signature-pad {
+  display: block;
+  width: 100%;
+  height: 180px;
+  margin: 0.75rem 0;
+  border: 2px solid var(--global-divider-color, #bbb);
+  border-radius: 10px;
+  background: #ffffff;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+.survey-signature-clear {
+  margin-bottom: 0.5rem;
 }
