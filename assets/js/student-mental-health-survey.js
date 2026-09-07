@@ -686,13 +686,13 @@ function setupSignaturePads() {
 
       consent: {
         participant: {
-          participant_signature: state.participantSignature,
-          participant_signed_at: state.participantSignedAt,
+          signature: state.participantSignature,
+          signed_at: state.participantSignedAt
         },
         guardian: state.guardianSignature ? {
-          guardian_signature: state.guardianSignature,
-          guardian_signed_at: state.guardianSignedAt} : null
-        }
+          signature: state.guardianSignature,
+          signed_at: state.guardianSignedAt
+        } : null
       }
     };
 
