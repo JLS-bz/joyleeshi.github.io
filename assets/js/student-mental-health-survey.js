@@ -693,7 +693,7 @@ function setupSignaturePads() {
           guardian_signature: state.guardianSignature,
           guardian_signed_at: state.guardianSignedAt} : null
         }
-      },
+      }
     };
 
     if (cfg.submissionsEnabled && cfg.submissionUrl) {
