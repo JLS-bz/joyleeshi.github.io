@@ -1153,7 +1153,8 @@ function setupSignaturePads() {
         Email: <a href="mailto:mvairez@ub.edu.bz">mvairez@ub.edu.bz</a></p>
         
         <p>You may also contact a Principal Investigator to request that your data be removed.</p>
-        <p>For questions about your rights as a research participant, or any complaints you may have, contact the Institutional Review Board (IRB), The Research Office, University of Belize, <a href="mailto:researchoffice@ub.edu.bz">researchoffice@ub.edu.bz</a>, (501) 822-1000.</p>
+        <p>For questions about your rights as a research participant, you may contact:</p>
+        <p>Institutional Review Board (IRB)<br>The Research Office, University of Belize<br><a href="mailto:researchoffice@ub.edu.bz">researchoffice@ub.edu.bz</a><br>(501) 822-1000</p>
         <p><strong>Thank you for your participation and for contributing to research on student mental health and well-being.</strong></p>
       </div>
     `;
