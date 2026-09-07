@@ -27,10 +27,10 @@ This study examines perceived stress, symptoms of anxiety and depression, grit, 
 
 A second major aim is to examine whether several widely used psychological measures demonstrate appropriate psychometric properties when used with tertiary-level students in Belize. The study will evaluate the reliability and factor structure of the:
 
-- Perceived Stress Scale (PSS-10)
-- Patient Health Questionnaire-4 (PHQ-4)
-- Short Grit Scale (Grit-S)
-- Brief COPE 
+- Perceived Stress Scale {% cite Cohen1983-ar --file references %}
+- Patient Health Questionnaire-4 {% cite KROENKE2009613 --file references %}
+- Short Grit Scale {% cite Duckworth2009-ee --file references %}
+- Brief COPE {% cite carver1997you --file references %}
 
 Establishing evidence for how these measures function within the Belizean context may support future psychological research, program evaluation, and the development or selection of student mental health initiatives.
 
