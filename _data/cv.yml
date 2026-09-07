@@ -1,50 +1,50 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Joy Lee-Shi
+  label: Educator and Researcher
+  email: jleeshi@outlook.com
+  location: Belize City, Belize
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
+  summary: A Belizean-born educator and researcher.
 
-  social_networks:
-    - network: X
-      username: AlbertEinstein
-    - network: GitHub
-      username: example
-    - network: LinkedIn
-      username: example
+  #social_networks:
+    #- network: X
+    #  username: AlbertEinstein
+    #- network: GitHub
+    #  username: example
+    #- network: LinkedIn
+    #  username: example
 
   address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+    #street: 2712 Broadway St
+    city: Belize City
+    region: Belize
+    #postalCode: CA 94115
+    countryCode: BZ
 
   sections:
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
-        highlights:
-          - Description 1.
-          - Description 2.
+      - institution: Simon Fraser University
+        location: Burnaby, British Columbia, Canada
+        url: https://www.sfu.ca/
+        area: Research Psychology
+        studyType: MA
+        start_date: 2023
+        end_date: 2025
+        #score: ""
+        #courses: "Theory of Relativity"
+        #highlights:
+          #- Description 1.
+          #- Description 2.
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
-        highlights:
-          - Description 1.
-          - Description 2.
+      - institution: Simon Fraser University
+        location: Burnaby, British Columbia, Canada
+        area: Psychology
+        studyType: BA
+        start_date: 2018
+        end_date: 2022
+        #highlights:
+          #- Description 1.
+          #- Description 2.
 
     Experience:
       - company: Institute for Advanced Study, Princeton University
@@ -96,20 +96,48 @@ cv:
           - "Men of the year 2014 by Time magazine"
 
     Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
+      - title: Selected Author
+        #authors:
+          #- "Royal Swedish Academy of Sciences"
+        date: 2025
+        awarder: The Annual Celebration of Simon Fraser University Authors
+        url: https://www.lib.sfu.ca/about/initiatives/authors-event
+        #summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
 
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+      - title: Graduate Fellowship
+        date: 2023 - 2024
+        awarder: Simon Fraser University
+        url: https://www.sfu.ca/gls/current/fellowships-awards.html
+
+      - title: Special Graduate Entrance Scholarship
+        date: 2023 - 2024
+        awarder: Simon Fraser University
+        url: https://www.sfu.ca/gradstudies/awards-funding.html
+      
+      - title: Honourable Mention Winner for Best Psychology Data Blitz Presentation
+        date: 2023 - 2024
+        awarder: Criminal Minds 2024 - An Interdisciplinary Conference, Simon Fraser University
+
+      - title: President's Honour Roll
+        date: 2022, 2020
+        awarder: Simon Fraser University
+
+      - title: Dean's Honour Roll
+        date: 2022, 2020, 2019
+        awarder: Simon Fraser University
+
+      - title: Undergraduate Open Scholarship
+        date: 2021
+        awarder: Simon Fraser University
+
+      - title: Dean's Honour List
+        date: 2016 - 2018
+        awarder: St. John's College Junior College
+
+      - title: National 1st Place in Mathematics
+        date: 2016
+        awarder: Association of Tertiary Level Institutions of Belize (ATLIB)
+
 
     Publications:
       - title: Zur Elektrodynamik bewegter Körper
@@ -143,11 +171,14 @@ cv:
         keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
 
     Languages:
-      - name: German
+      - name: English
         summary: "Native speaker"
 
-      - name: English
+      - name: Mandarin
         summary: "Fluent"
+
+      - name: Spanish
+        summary: "Basic Conversational"
 
     Interests:
       - name: Physics
@@ -155,20 +186,20 @@ cv:
         keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
 
     Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
+      - name: Teaching License, Level: Secondary [Education] - Counselling
+        date: 2025-07
+        issuer: Belize Ministry of Education
+        #icon: fa-solid fa-location-dot
 
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
+      - name: Peer Navigator
+        date: 2025-05
+        issuer: GOJoven Belize Alumni Association (GOBelize)
+        #icon: fa-solid fa-tag
 
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
+      - name: TCPS 2: CORE (Tri-Council Policy Statement: Ethical Conduct for Research Involving Humans)
+        date: 2024, 2020
+        issuer: Social Sciences and Humanitis Research Council of Canada
+        #icon: fa-solid fa-envelope
 
     Projects:
       - name: Quantum Computing
@@ -179,11 +210,11 @@ cv:
         start_date: 2018-01-01
         end_date: 2018-01-01
 
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+    #References:
+      #- name: Professor John Doe
+        #icon: fa-solid fa-laptop
+        #reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
 
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+      #- name: Professor Jane Smith
+        #icon: fa-solid fa-thumbtack
+        #reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
