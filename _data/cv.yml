@@ -1,3 +1,4 @@
+```yaml
 cv:
   name: Joy Lee-Shi
   label: Educator and Researcher
@@ -6,52 +7,53 @@ cv:
   image: ""
   summary: A Belizean-born educator and researcher.
 
-  #social_networks:
-    #- network: X
-    #  username: AlbertEinstein
-    #- network: GitHub
-    #  username: example
-    #- network: LinkedIn
-    #  username: example
+  # social_networks:
+  #   - network: X
+  #     username: AlbertEinstein
+  #   - network: GitHub
+  #     username: example
+  #   - network: LinkedIn
+  #     username: example
 
   address:
-    #street: 2712 Broadway St
+    # street: 2712 Broadway St
     city: Belize City
     region: Belize
-    #postalCode: CA 94115
+    # postalCode: CA 94115
     countryCode: BZ
 
   sections:
+
     Education:
       - institution: Simon Fraser University
         location: Burnaby, British Columbia, Canada
         url: https://www.sfu.ca/
         area: Research Psychology
         studyType: MA
-        start_date: 2023
-        end_date: 2025
-        #score: ""
-        #courses: "Theory of Relativity"
-        #highlights:
-          #- Description 1.
-          #- Description 2.
+        start_date: "2023"
+        end_date: "2025"
+        # score: ""
+        # courses: "Theory of Relativity"
+        # highlights:
+        #   - Description 1.
+        #   - Description 2.
 
       - institution: Simon Fraser University
         location: Burnaby, British Columbia, Canada
         area: Psychology
         studyType: BA
-        start_date: 2018
-        end_date: 2022
-        #highlights:
-          #- Description 1.
-          #- Description 2.
+        start_date: "2018"
+        end_date: "2022"
+        # highlights:
+        #   - Description 1.
+        #   - Description 2.
 
     Experience:
       - company: Institute for Advanced Study, Princeton University
         position: Professor of Theoretical Physics
         location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
+        start_date: "1933"
+        end_date: "1955"
         summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
         highlights:
           - Relativity
@@ -60,8 +62,8 @@ cv:
       - company: California Institute of Technology
         position: Visiting Professor
         location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
+        start_date: "1933"
+        end_date: "1933"
         highlights:
           - Description 1.
           - Description 2.
@@ -69,82 +71,81 @@ cv:
       - company: Kaiser Wilhelm Institute for Physics
         position: Director
         location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
+        start_date: "1917"
+        end_date: "1933"
 
       - company: Karl-Ferdinand University
         position: Professor of Theoretical Physics
         location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
+        start_date: "1911"
+        end_date: "1917"
 
       - company: University of Zurich
         position: Associate Professor of Theoretical Physics
         location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
+        start_date: "1909"
+        end_date: "1911"
 
     Volunteer:
-      - company: People's Climate March
+      - company: "People's Climate March"
         position: Lead Organizer
         location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
+        start_date: "2014-04-01"
+        end_date: "2015-07-01"
+        summary: "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history."
         highlights:
           - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
           - "Men of the year 2014 by Time magazine"
 
     Awards:
       - title: Selected Author
-        #authors:
-          #- "Royal Swedish Academy of Sciences"
-        date: 2025
+        # authors:
+        #   - "Royal Swedish Academy of Sciences"
+        date: "2025"
         awarder: The Annual Celebration of Simon Fraser University Authors
         url: https://www.lib.sfu.ca/about/initiatives/authors-event
-        #summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
+        # summary: "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
 
       - title: Graduate Fellowship
-        date: 2023 - 2024
+        date: "2023 - 2024"
         awarder: Simon Fraser University
         url: https://www.sfu.ca/gls/current/fellowships-awards.html
 
       - title: Special Graduate Entrance Scholarship
-        date: 2023 - 2024
+        date: "2023 - 2024"
         awarder: Simon Fraser University
         url: https://www.sfu.ca/gradstudies/awards-funding.html
-      
+
       - title: Honourable Mention Winner for Best Psychology Data Blitz Presentation
-        date: 2023 - 2024
+        date: "2023 - 2024"
         awarder: Criminal Minds 2024 - An Interdisciplinary Conference, Simon Fraser University
 
-      - title: President's Honour Roll
-        date: 2022, 2020
+      - title: "President's Honour Roll"
+        date: "2022, 2020"
         awarder: Simon Fraser University
 
-      - title: Dean's Honour Roll
-        date: 2022, 2020, 2019
+      - title: "Dean's Honour Roll"
+        date: "2022, 2020, 2019"
         awarder: Simon Fraser University
 
       - title: Undergraduate Open Scholarship
-        date: 2021
+        date: "2021"
         awarder: Simon Fraser University
 
-      - title: Dean's Honour List
-        date: 2016 - 2018
+      - title: "Dean's Honour List"
+        date: "2016 - 2018"
         awarder: St. John's College Junior College
 
       - title: National 1st Place in Mathematics
-        date: 2016
+        date: "2016"
         awarder: Association of Tertiary Level Institutions of Belize (ATLIB)
-
 
     Publications:
       - title: Zur Elektrodynamik bewegter Körper
         authors:
           - Albert Einstein
         publisher: Annalen der Physik
-        releaseDate: 1905-06-30
+        releaseDate: "1905-06-30"
         url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
         summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
 
@@ -152,7 +153,7 @@ cv:
         authors:
           - Albert Einstein
         publisher: Annalen der Physik
-        releaseDate: 1905-03-18
+        releaseDate: "1905-03-18"
         url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
         summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
 
@@ -160,7 +161,7 @@ cv:
         authors:
           - Albert Einstein
         publisher: Annalen der Physik
-        releaseDate: 1916-03-20
+        releaseDate: "1916-03-20"
         url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
         summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
 
@@ -187,19 +188,19 @@ cv:
 
     Certificates:
       - name: "Teaching License, Level: Secondary [Education] - Counselling"
-        date: 2025-07
+        date: "2025-07"
         issuer: Belize Ministry of Education
-        #icon: fa-solid fa-location-dot
+        # icon: fa-solid fa-location-dot
 
       - name: Peer Navigator
-        date: 2025-05
+        date: "2025-05"
         issuer: GOJoven Belize Alumni Association (GOBelize)
-        #icon: fa-solid fa-tag
+        # icon: fa-solid fa-tag
 
       - name: "TCPS 2: CORE (Tri-Council Policy Statement: Ethical Conduct for Research Involving Humans)"
-        date: 2024, 2020
+        date: "2024, 2020"
         issuer: Social Sciences and Humanitis Research Council of Canada
-        #icon: fa-solid fa-envelope
+        # icon: fa-solid fa-envelope
 
     Projects:
       - name: Quantum Computing
@@ -207,14 +208,15 @@ cv:
         highlights:
           - Quantum Teleportation
           - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
+        start_date: "2018-01-01"
+        end_date: "2018-01-01"
 
-    #References:
-      #- name: Professor John Doe
-        #icon: fa-solid fa-laptop
-        #reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+    # References:
+    #   - name: Professor John Doe
+    #     icon: fa-solid fa-laptop
+    #     reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
 
-      #- name: Professor Jane Smith
-        #icon: fa-solid fa-thumbtack
-        #reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+    #   - name: Professor Jane Smith
+    #     icon: fa-solid fa-thumbtack
+    #     reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+```
