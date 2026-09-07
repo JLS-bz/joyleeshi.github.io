@@ -130,7 +130,6 @@
         ${radio("parent_permission", "do_not_give", "I DO NOT GIVE permission for the student to participate in this research study.")}
       </div>
     </fieldset>
-    ${cfg.previewMode ? `<p class="survey-note">Technical draft only: please confirm with the IRB that this same-device online parent/guardian permission process is acceptable before using it for recruitment.</p>` : ""}
   `;
 
   const demographics = [
@@ -296,7 +295,6 @@
         <label for="withdrawal_email">Email address (optional)</label>
         <input class="survey-text" id="withdrawal_email" name="withdrawal_email" type="email" autocomplete="email" inputmode="email" value="${escapeHtml(email)}" placeholder="name@example.com">
       </div>
-      <p class="survey-note">If you do not provide an email address, you may still use the participant ID shown after submission when contacting the Principal Investigator about withdrawal.</p>
     `;
   }
 
@@ -307,7 +305,6 @@
       ${cfg.submissionsEnabled && cfg.submissionUrl
         ? `<p>When you submit, your responses will be transmitted to the study's configured data endpoint.</p>`
         : `<div class="survey-banner warning">Data collection is currently disabled. This is an ethics-review/testing build and will not send responses anywhere.</div>`}
-      <p class="survey-note">Participant ID for this browser session: <code>${escapeHtml(state.participant_id)}</code></p>
     `;
   }
 
@@ -542,16 +539,19 @@
         </ul>
         <p>If you believe you are in immediate danger or may harm yourself or someone else, please contact your local emergency services or go to the nearest emergency department.</p>
 
-        <h3>Your Participant ID</h3>
-        <p>Your participant ID is <code>${escapeHtml(state.participant_id)}</code>. You may save this ID if you think you may later wish to request withdrawal of your response.</p>
-
         <h3>Confidentiality and Privacy</h3>
-        <p>Your research data will be kept confidential. Survey responses are stored separately from optional email contact information and linked only by the participant ID above. Access to the research files will be restricted to the Principal Investigator and Collaborator. When findings are shared, they will be presented as general patterns and summaries across participants. Identifying information will not be included in presentations, reports, or publications.</p>
+        <p>Your research data will be kept confidential. Survey responses are stored separately from optional email contact information and linked only by a randomly generatedparticipant ID. Access to the research files will be restricted to the Principal Investigator and Collaborator. When findings are shared, they will be presented as general patterns and summaries across participants. Identifying information will not be included in presentations, reports, or publications.</p>
 
         <h3>Questions About the Study</h3>
-        <p>If you have questions about this study, or if you would like to receive a copy of this study’s findings, please contact Joy Lee-Shi, M.A., Faculty of Management &amp; Social Sciences, University of Belize at <a href="mailto:joy.lee-shi@ub.edu.bz">joy.lee-shi@ub.edu.bz</a>.</p>
+        <p>If you have questions about this study, or if you would like to receive a copy of this study’s findings, please contact the Principal Investigator: </p> 
+        <p> Joy Lee-Shi, M.A., Faculty of Management &amp; Social Sciences, University of Belize </p>
+        <p> <a href="mailto:joy.lee-shi@ub.edu.bz">joy.lee-shi@ub.edu.bz</a>.</p>
         <p>You may also contact the Principal Investigator to request that your data be removed.</p>
-        <p>For questions about your rights as a research participant, or any complaints you may have, contact the Institutional Review Board (IRB), The Research Office, University of Belize, <a href="mailto:researchoffice@ub.edu.bz">researchoffice@ub.edu.bz</a>, (501) 822-1000.</p>
+        <p>For questions about your rights as a research participant, or any complaints you may have, you may contact: </p>
+        <p>Institutional Review Board (IRB) </p>
+        <p>The Research Office, University of Belize </p>
+        <p> <a href="mailto:researchoffice@ub.edu.bz">researchoffice@ub.edu.bz</a> </p>
+        <p><strong>(501) 822-1000.</strong></p>
         <p><strong>Thank you for your participation and for contributing to research on student mental health and well-being.</strong></p>
       </div>
     `;

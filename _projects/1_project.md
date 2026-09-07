@@ -7,7 +7,7 @@ importance: 1
 related_publications: true
 ---
 
-# Project Overview
+## Project Overview
 
 **Principal Investigator**: Joy Lee-Shi, MA, Department of Management and Social Sciences, University of Belize
 
@@ -34,7 +34,7 @@ A second major aim is to examine whether several widely used psychological measu
 
 Establishing evidence for how these measures function within the Belizean context may support future psychological research, program evaluation, and the development or selection of student mental health initiatives.
 
-# Research Aims 
+## Research Aims 
 
 This project seeks to: 
 
