@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Student Mental Health and Well-Being Study
-description: with background image
 img: assets/img/belizean_students.png
 importance: 1
 #category: work
@@ -11,10 +10,15 @@ related_publications: true
 # Project Overview
 
 **Principal Investigator**: Joy Lee-Shi, MA, Department of Management and Social Sciences, University of Belize
-**Collaborators**: Dr. First Last name, Ms First last name 
+
+**Collaborator**: Dr. First Last name
+
 **Status**: Pre-data collection
+
 **Population**: Tertiary-level students in Belize
+
 **Design**: Online cross-sectional quantitative survey 
+
 **Target sample**: About 600 participants 
 
 Mental health and well-being are important concerns among tertiary-level students, who may experience academic, financial, social, and personal demands while pursuing their education. Despite growing international attention to student mental health, comparatively little research has examined these experiences within the Belizean tertiary education context.
@@ -55,10 +59,8 @@ After completing the survey, you will receive a personalized summary of selected
 
 <div class="text-center mt-4 mb-4">
   <a
-    href="YOUR-SURVEY-URL"
+    href="{{ '/survey/' | relative_url }}"
     class="btn btn-primary btn-lg"
-    target="_blank"
-    rel="noopener noreferrer"
   >
     Take the Survey
   </a>

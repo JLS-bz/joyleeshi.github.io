@@ -7,6 +7,7 @@ tags: research survey
 categories: research
 related_posts: false
 giscus_comments: false
+permalink: /survey/
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/student-mental-health-survey.css' | relative_url }}">
