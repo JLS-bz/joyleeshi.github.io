@@ -880,11 +880,6 @@ function setupSignaturePads() {
           interfering with your daily life, consider reaching out for support.
           Support resources are provided below.
         </p>
-
-        <p class="survey-note">
-          The PHQ-4 is a brief screening questionnaire and cannot determine
-          whether you have an anxiety or depressive disorder.
-        </p>
       </div>
     `;
   }
@@ -920,7 +915,7 @@ function setupSignaturePads() {
       <p>
         If these feelings have been troubling you or affecting your daily
         life, you may find it helpful to speak with a qualified mental health
-        professional. Mental health resources are provided below.
+        professional. Support resources are provided below.
       </p>
     </div>
   `;
