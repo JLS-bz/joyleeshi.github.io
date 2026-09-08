@@ -722,11 +722,63 @@ function setupSignaturePads() {
 
     const pdfButton = app.querySelector("#download-debrief-pdf");
 
-    if (pdfButton) {
-      pdfButton.addEventListener("click", () => {
-      window.print();
-    });
-  }
+if (pdfButton) {
+  pdfButton.addEventListener("click", async () => {
+    const debrief = app.querySelector(".survey-card");
+
+    if (!debrief) return;
+
+    const originalText = pdfButton.textContent;
+
+    pdfButton.disabled = true;
+    pdfButton.textContent = "Preparing PDF...";
+
+    try {
+      const options = {
+        margin: [0.5, 0.5, 0.5, 0.5],
+
+        filename: "student-mental-health-debrief-and-scores.pdf",
+
+        image: {
+          type: "jpeg",
+          quality: 0.98
+        },
+
+        html2canvas: {
+          scale: 2,
+          useCORS: true
+        },
+
+        jsPDF: {
+          unit: "in",
+          format: "letter",
+          orientation: "portrait"
+        },
+
+        pagebreak: {
+          mode: ["avoid-all", "css", "legacy"]
+        }
+      };
+
+      await html2pdf()
+        .set(options)
+        .from(debrief)
+        .save();
+
+    } catch (error) {
+      console.error("PDF generation failed:", error);
+
+      setStatus(
+        "The PDF could not be created. Please try again.",
+        true
+      );
+
+    } finally {
+      pdfButton.disabled = false;
+      pdfButton.textContent = originalText;
+    }
+  });
+}
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -1124,7 +1176,7 @@ function setupSignaturePads() {
         </section>
 
         <p class="survey-note">
-          You may save a copy of this debriefing form and your score summary for your personal records.
+        You can download a copy of this debriefing form and your score summary for your personal records.
         </p>
 
         <div class="survey-debrief-actions">

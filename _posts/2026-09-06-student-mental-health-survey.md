@@ -22,4 +22,7 @@ permalink: /survey/
     previewMode: true
   };
 </script>
+<script src="{{ '/assets/js/html2pdf.bundle.min.js' | relative_url }}"></script>
 <script src="{{ '/assets/js/student-mental-health-survey.js' | relative_url }}"></script>
+
+
