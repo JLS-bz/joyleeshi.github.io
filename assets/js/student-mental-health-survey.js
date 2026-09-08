@@ -719,6 +719,14 @@ function setupSignaturePads() {
 
     state.finished = true;
     app.innerHTML = renderDebrief(payload);
+
+    const pdfButton = app.querySelector("#download-debrief-pdf");
+
+    if (pdfButton) {
+      pdfButton.addEventListener("click", () => {
+      window.print();
+    });
+  }
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
@@ -1114,6 +1122,20 @@ function setupSignaturePads() {
 
           ${renderSubstanceUseSupport(s.brief_cope.substance_use)}
         </section>
+
+        <p class="survey-note">
+          You may save a copy of this debriefing form and your score summary for your personal records.
+        </p>
+
+        <div class="survey-debrief-actions">
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="download-debrief-pdf"
+          >
+            Save Score Summary as PDF
+          </button>
+        </div>
 
         <h3>About the questionnaires</h3>
         <p><strong>Perceived Stress Scale (PSS-10):</strong> asks about how stressful, unpredictable, or overwhelming you have found situations in your life recently. The score summary above includes perceived helplessness and lack of self-efficacy.</p>

@@ -257,3 +257,51 @@
 .survey-signature-clear {
   margin-bottom: 0.5rem;
 }
+
+.survey-debrief-actions {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+@media print {
+
+  body * {
+    visibility: hidden;
+  }
+
+  #mh-survey-app,
+  #mh-survey-app * {
+    visibility: visible;
+  }
+
+  #mh-survey-app {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .survey-debrief-actions {
+    display: none !important;
+  }
+
+  .survey-card {
+    border: none;
+    box-shadow: none;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .survey-result-section {
+    break-inside: avoid;
+  }
+
+  .survey-score-box {
+    break-inside: avoid;
+  }
+
+  .survey-banner {
+    break-inside: avoid;
+  }
+}
