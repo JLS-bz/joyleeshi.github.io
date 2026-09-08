@@ -913,7 +913,7 @@ function setupSignaturePads() {
 
       <p>
         Based on your responses, ${thresholdText}. This does not mean that
-        you have an anxiety or depressive disorder. The PHQ-4 is a brief
+        you have a disorder. The PHQ-4 is a brief
         screening questionnaire rather than a diagnostic assessment.
       </p>
 
