@@ -50,7 +50,7 @@
     
     <h3>Purpose of the Study</h3>
     <p>You are invited to participate in a research study about student mental health and well-being. The purpose of this study is to better understand <strong>tertiary level students’</strong> experiences with mental health, coping skills, grit, and perceived stress.</p>
-    <p>This study also aims to evaluate whether the questionnaires used are appropriate and reliable for assessing these experiences among tertiary-level students in Belize.</p>
+    <p>This study also aims to evaluate whether the instruments used are appropriate and valid for assessing these experiences among tertiary-level students in Belize.</p>
 
     <h3>What You Will Be Asked to Do</h3>
     <p>If you agree to participate, you will be asked to complete a survey containing questions about your demographic details, experiences with stress, coping strategies, perseverance or grit, and mental health.</p>
@@ -63,11 +63,11 @@
     <h3>Potential Benefits</h3>
     <p>As a participant, you will receive a summary of your survey scores related to mental health, coping, grit, and perceived stress. This may help you better understand your mental health, personal strengths, coping patterns, and experiences with stress.</p>
     <p>These scores are intended for informational and self-reflection purposes only and should not be considered a clinical diagnosis or a substitute for professional mental health evaluation or treatment.</p>
-    <p>Your participation may also contribute to a better understanding of student mental health and well-being and may help inform future programs or resources designed to support students. Your participation may also help researchers determine whether the scales used in this study are suitable and reliable for tertiary-level students in Belize.</p>
+    <p>Your participation may also contribute to a better understanding of student mental health and well-being and may help inform future programs or resources designed to support students. Your participation may also help researchers determine whether the scales used in this study are suitable and valid for tertiary-level students in Belize.</p>
 
     <h3>Confidentiality</h3>
-    <p>The survey is confidential, so your name and other directly identifying information will not be collected. Survey responses will be transmitted to a secure Google-based data system and stored in private Google Sheets within a Google Drive account controlled by the Principal Investigators. Access to the research files will be restricted to the Principal Investigators. The research dataset will not intentionally record your name, IP address, or device identifier.</p>
-    <p>An electronic signature will be collected to document your consent to participate. Your signature will be stored separately from your survey responses and will not be included in the research dataset used for analysis. </p>
+    <p>The survey is confidential, so your name and other directly identifying information will not be collected. Survey responses will be transmitted to a secure Google-based data system and stored in private Google Sheets within a Google Drive folder controlled by the Principal Investigators. Access to the research files will be restricted to the Principal Investigators. The research dataset will not record your name, IP address, or device identifier.</p>
+    <p>An electronic signature will be collected to document your consent to participate. If you are under the age of 18, your parent or guardian must also provide consent. Signatures will be stored separately from your survey responses and will not be included in the research dataset used for analysis. </p>
     <p>We advise against using an employer-issued device to complete this study, as we cannot guarantee the confidentiality of your data regarding the interception of data sent via Internet by third parties (such as your employer).</p>
     <p>If you choose to provide an email address, it will be stored in a separate private file from your survey responses. A randomly generated participant ID will be used to link your email address to your survey response only for the purpose of locating and removing your data if you later request withdrawal. Your email address will not be included in the research dataset used for analysis and will not appear in reports, presentations, or publications.</p>
     <p>The separate file linking optional email addresses to participant IDs will be retained for six months after data collection closes and will then be permanently deleted. After that linkage file is deleted, it may no longer be possible to identify and remove an individual participant's response.</p>
@@ -76,7 +76,7 @@
 
     <h3>Voluntary Participation</h3>
     <p>Your participation in this study is completely voluntary. You may choose not to participate or may stop participating at any time without penalty. Your decision will not affect your grades, academic standing, relationship with your school, or access to services.</p>
-    <p>If you wish to withdraw while completing the survey, you may simply exit the survey at any time. If you decide to withdraw after submitting your responses, you may contact the Principal Investigator to request that your data be removed, provided that your responses can still be identified and linked to you.</p>
+    <p>If you wish to withdraw while completing the survey, you may simply exit the survey at any time. If you decide to withdraw after submitting your responses, you may contact the Principal Investigators to request that your data be removed, provided that your responses can still be identified and linked to you.</p>
     <p>There is no financial compensation for participating in this study.</p>
 
     <h3>Questions About the Study</h3>
@@ -210,13 +210,15 @@
     { id: "ethnicity", text: "5. How would you describe your ethnicity? Select one.", type: "radio", options: ["Mestizo", "Hispanic/Latino", "Creole", "Garifuna", "Q'eqchi Maya", "Mopan Maya", "Yucatec Maya", "East Indian", "Mennonite", "Chinese", "Caucasian", "Multi-Ethnic","Prefer to self-describe"] },
     { id: "ethnicity_other", text: "If you selected “Prefer to self-describe,” please specify:", type: "text" },
     { id: "district", text: "6. Where are you based at?", type: "radio", options: ["Corozal", "Orange Walk", "Belize", "Cayes", "Cayo", "Stann Creek", "Toledo"] },
-    { id: "study_level", text: "7. What is your current level of study?", type: "radio", options: ["Certificate", "Associate's degree", "Bachelor's degree", "Master's degree", "PhD"] },
-    { id: "enrolment_status", text: "8. What is your current enrolment status?", type: "radio", options: ["Full-time student", "Part-time student", "Other"] },
+    { id: "area", text: "7. How would you describe your area?", type: "radio", options: ["Rural", "Urban"] },
+    { id: "study_level", text: "8. What is your current level of study?", type: "radio", options: ["Certificate", "Associate's degree", "Bachelor's degree", "Master's degree", "PhD"] },
+    { id: "enrolment_status", text: "9. What is your current enrolment status?", type: "radio", options: ["Full-time student", "Part-time student", "Other"] },
     { id: "enrolment_status_other", text: "If Other, please specify:", type: "text" },
-    { id: "area_of_study", text: "9. What is your main area of study?", type: "radio", options: ["Arts and Humanities", "Business and Management", "Education", "Health Sciences", "Science, Technology, Engineering, and Mathematics", "Social and Behavioural Sciences", "Technical or Vocational Studies", "Other"] },
+    { id: "institution", text: "10. What is the name of your current institution?", type: "text" },
+    { id: "area_of_study", text: "11. What is your main area of study?", type: "radio", options: ["Arts and Humanities", "Business and Management", "Education", "Health Sciences", "Science, Technology, Engineering, and Mathematics", "Social and Behavioural Sciences", "Technical or Vocational Studies", "Other"] },
     { id: "area_of_study_other", text: "If Other, please specify:", type: "text" },
-    { id: "employment", text: "10. Are you currently employed while attending school?", type: "radio", options: ["No", "Yes, part-time", "Yes, full-time"] },
-    { id: "financial_situation", text: "11. How would you describe your current household or family financial situation?", type: "radio", options: ["Very difficult to meet basic expenses", "Somewhat difficult to meet basic expenses", "Able to meet basic expenses, but with little money left over", "Comfortable, with some money available beyond basic expenses", "Very comfortable financially"] }
+    { id: "employment", text: "12. Are you currently employed while attending school?", type: "radio", options: ["No", "Yes, part-time", "Yes, full-time"] },
+    { id: "financial_situation", text: "13. How would you describe your current household or family financial situation?", type: "radio", options: ["Very difficult to meet basic expenses", "Somewhat difficult to meet basic expenses", "Able to meet basic expenses, but with little money left over", "Comfortable, with some money available beyond basic expenses", "Very comfortable financially"] }
   ];
 
   const pssItems = [
@@ -1185,15 +1187,12 @@ if (pdfButton) {
           </p>
           <button
             type="button"
-            class="btn btn-primary"
+            class="survey-download-button"
             id="download-debrief-pdf"
           >
             ↓ Download Your Score Summary (PDF)
           </button>
 
-          <p class="survey-download-note">
-          The PDF will be downloaded directly to your device.
-          </p>
         </div>
 
         <h3>About the questionnaires</h3>
