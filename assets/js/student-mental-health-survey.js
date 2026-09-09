@@ -1175,18 +1175,25 @@ if (pdfButton) {
           ${renderSubstanceUseSupport(s.brief_cope.substance_use)}
         </section>
 
-        <p class="survey-note">
-        You can download a copy of this debriefing form and your score summary for your personal records.
-        </p>
+        <div class="survey-debrief-download">
 
-        <div class="survey-debrief-actions">
+          <h4>Keep a Copy of Your Results</h4>
+
+          <p>
+              You can download this debriefing form and your personalized score
+              summary for your personal records.
+          </p>
           <button
             type="button"
             class="btn btn-primary"
             id="download-debrief-pdf"
           >
-            Save Score Summary as PDF
+            ↓ Download Your Score Summary (PDF)
           </button>
+
+          <p class="survey-download-note">
+          The PDF will be downloaded directly to your device.
+          </p>
         </div>
 
         <h3>About the questionnaires</h3>
