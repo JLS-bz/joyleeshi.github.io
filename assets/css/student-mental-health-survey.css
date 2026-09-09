@@ -222,24 +222,6 @@
   white-space: nowrap;
 }
 
-.survey-button {
-  display: inline-block;
-  background-color: var(--global-theme-color);
-  color: #ffffff !important;
-  padding: 0.95rem 2rem;
-  border-radius: 12px;
-  font-size: 1.15rem;
-  font-weight: 600;
-  text-decoration: none !important;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-.survey-button:hover {
-  color: #ffffff !important;
-  opacity: 0.88;
-  transform: translateY(-1px);
-}
-
 .survey-signature-pad {
   display: block;
   width: 100%;
@@ -317,6 +299,55 @@
   max-width: 650px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.survey-download-button {
+  display: inline-block;
+  width: 100%;
+  max-width: 480px;
+
+  margin: 0.75rem auto;
+  padding: 1rem 1.5rem;
+
+  border: 2px solid var(--global-theme-color);
+  border-radius: 12px;
+
+  background-color: var(--global-theme-color) !important;
+  color: #ffffff !important;
+
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+
+  text-align: center;
+  text-decoration: none !important;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.survey-download-button:hover {
+  color: #ffffff !important;
+  opacity: 0.9;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+}
+
+.survey-download-button:focus {
+  outline: 3px solid var(--global-text-color, #222);
+  outline-offset: 3px;
+}
+
+.survey-download-button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+  transform: none;
 }
 
 .survey-download-note {
