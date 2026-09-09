@@ -49,8 +49,9 @@
     Email: <a href="mailto:mvairez@ub.edu.bz">mvairez@ub.edu.bz</a></p>
     
     <h3>Purpose of the Study</h3>
-    <p>You are invited to participate in a research study about student mental health and well-being. The purpose of this study is to better understand <strong>tertiary level students’</strong> experiences with mental health, coping skills, grit, and perceived stress.</p>
-    <p>This study also aims to evaluate whether the instruments used are appropriate and valid for assessing these experiences among tertiary-level students in Belize.</p>
+    <p>You are invited to participate in a research study about student mental health and well-being. 
+    The purpose of this study is to better understand <strong>tertiary level students'</strong> experiences with mental health, coping skills, grit, and perceived stress.
+    This study also aims to evaluate whether the instruments used are appropriate and valid for assessing these experiences among tertiary-level students in Belize.</p>
 
     <h3>What You Will Be Asked to Do</h3>
     <p>If you agree to participate, you will be asked to complete a survey containing questions about your demographic details, experiences with stress, coping strategies, perseverance or grit, and mental health.</p>
@@ -1177,20 +1178,14 @@ if (pdfButton) {
           ${renderSubstanceUseSupport(s.brief_cope.substance_use)}
         </section>
 
-        <div class="survey-debrief-download">
+        <div class="text-center my-4">
 
-          <h4>Keep a Copy of Your Results</h4>
-
-          <p>
-              You can download this debriefing form and your personalized score
-              summary for your personal records.
-          </p>
           <button
             type="button"
             class="survey-download-button"
             id="download-debrief-pdf"
           >
-            ↓ Download Your Score Summary (PDF)
+            Download Your Score Summary (PDF)
           </button>
 
         </div>
