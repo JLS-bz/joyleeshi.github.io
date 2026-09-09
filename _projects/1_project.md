@@ -67,7 +67,7 @@ After completing the survey, you will receive a personalized summary of selected
 
 <div class="text-center my-4">
   <a
-    href="{{ '/survey/' | relative_url }}"
+    href="{{ '/student-mental-health-and-well-being-survey/' | relative_url }}"
     class="survey-download-button"
   >
     Take the Survey
