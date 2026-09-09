@@ -13,13 +13,13 @@ related_publications: true
 
 **Principal Investigators**: 
 
-Joy Lee-Shi, MA\
-Faculty of Management & Social Sciences, University of Belize\
-Email: joy.lee-shi@ub.edu.bz
-
-Mathias R. Vairez Jr., PhD\
-Department of Education, University of Belize\
-Email: mvairez@ub.edu.bz
+<p><strong>Principal Investigators:</strong><br>
+    Joy Lee-Shi, MA<br>
+    Faculty of Management &amp; Social Sciences, University of Belize<br>
+    Email: <a href="mailto:joy.lee-shi@ub.edu.bz">joy.lee-shi@ub.edu.bz</a></p>
+    <p>Mathias R. Vairez Jr., PhD<br>
+    Department of Education, University of Belize<br>
+    Email: <a href="mailto:mvairez@ub.edu.bz">mvairez@ub.edu.bz</a></p>
 
 **Status**: Pre-data collection
 
