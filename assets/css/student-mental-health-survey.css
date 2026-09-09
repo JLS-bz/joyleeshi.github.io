@@ -256,11 +256,6 @@
   margin-bottom: 0.5rem;
 }
 
-.survey-debrief-actions {
-  margin-top: 2rem;
-  text-align: center;
-}
-
 @media print {
 
   body * {
@@ -277,10 +272,6 @@
     left: 0;
     top: 0;
     width: 100%;
-  }
-
-  .survey-debrief-actions {
-    display: none !important;
   }
 
   .survey-card {
@@ -302,4 +293,34 @@
   .survey-banner {
     break-inside: avoid;
   }
+}
+
+/* Debrief PDF download */
+
+.survey-debrief-download {
+  margin: 2rem 0;
+  padding: 1.4rem;
+  border: 2px solid var(--global-theme-color);
+  border-radius: 14px;
+  text-align: center;
+  background: var(--global-bg-color, #fff);
+}
+
+.survey-debrief-download h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.survey-debrief-download p {
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.survey-download-note {
+  margin-bottom: 0 !important;
+  font-size: 0.9rem;
+  opacity: 0.75;
 }
