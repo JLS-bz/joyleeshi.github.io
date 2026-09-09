@@ -5,7 +5,7 @@ date: 2026-09-06 00:00:00-0600
 description: Research survey on mental health, coping, grit, and perceived stress among tertiary-level students in Belize.
 related_posts: false
 giscus_comments: false
-permalink: /survey/
+permalink: /student-mental-health-and-well-being-survey/
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/student-mental-health-survey.css' | relative_url }}">
