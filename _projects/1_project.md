@@ -7,6 +7,8 @@ importance: 1
 related_publications: true
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/student-mental-health-survey.css' | relative_url }}">
+
 ## Project Overview
 
 **Principal Investigators**: 
@@ -66,7 +68,7 @@ After completing the survey, you will receive a personalized summary of selected
 <div class="text-center my-4">
   <a
     href="{{ '/survey/' | relative_url }}"
-    class="survey-button"
+    class="survey-download-button"
   >
     Take the Survey
   </a>
