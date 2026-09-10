@@ -216,7 +216,7 @@
     { id: "study_level", text: "8. What is your current level of study?", type: "radio", options: ["Certificate", "Associate's degree", "Bachelor's degree", "Master's degree", "PhD"] },
     { id: "enrolment_status", text: "9. What is your current enrolment status?", type: "radio", options: ["Full-time student", "Part-time student", "Other"] },
     { id: "enrolment_status_other", text: "If Other, please specify:", type: "text" },
-    { id: "institution", text: "10. What is the name of your current institution?", type: "radio", options: 
+    { id: "institution", text: "10. At which institution are you currently enrolled?", type: "radio", options: 
       ["Belize Adventist Junior College", "Centro Escolar Mexico Junior College", 
         "Corozal Junior College", "Stann Creek Ecumenical Junior College", "Galen University",
         "Independence Junior College", "John Paul The Great College", "Muffles Junior College",
