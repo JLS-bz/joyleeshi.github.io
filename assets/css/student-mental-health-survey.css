@@ -327,3 +327,57 @@
   cursor: wait;
   transform: none;
 }
+
+/* Submission progress state */
+
+.survey-actions button.is-submitting {
+  position: relative;
+  overflow: hidden;
+  cursor: wait;
+  opacity: 0.9;
+}
+
+.survey-actions button.is-submitting::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 0.6rem;
+
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+
+  vertical-align: -3px;
+  animation: survey-submit-spin 0.8s linear infinite;
+}
+
+.survey-actions button.is-submitting::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 35%;
+  height: 4px;
+
+  background: rgba(255, 255, 255, 0.85);
+
+  animation: survey-submit-progress 1.4s ease-in-out infinite;
+}
+
+@keyframes survey-submit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes survey-submit-progress {
+  0% {
+    transform: translateX(-110%);
+  }
+
+  100% {
+    transform: translateX(320%);
+  }
+}
