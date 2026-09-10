@@ -67,7 +67,8 @@
     <p>Your participation may also contribute to a better understanding of student mental health and well-being and may help inform future programs or resources designed to support students. Your participation may also help researchers determine whether the scales used in this study are suitable and valid for tertiary-level students in Belize.</p>
 
     <h3>Confidentiality</h3>
-    <p>The survey is confidential, so your name and other directly identifying information will not be collected. Survey responses will be transmitted to a secure Google-based data system and stored in private Google Sheets within a Google Drive folder controlled by the Principal Investigators. Access to the research files will be restricted to the Principal Investigators. The research dataset will not record your name, IP address, or device identifier.</p>
+    <p>The survey is confidential, so your name and other directly identifying information will not be collected. Survey responses will be transmitted to a secure Google-based data system and stored in private Google Sheets within a Google Drive folder controlled by the Principal Investigators. 
+    Access to this folder will be restricted to the Principal Investigators. The research dataset will not record your name, IP address, or device identifier.</p>
     <p>An electronic signature will be collected to document your consent to participate. If you are under the age of 18, your parent or guardian must also provide consent. Signatures will be stored separately from your survey responses and will not be included in the research dataset used for analysis. </p>
     <p>We advise against using an employer-issued device to complete this study, as we cannot guarantee the confidentiality of your data regarding the interception of data sent via Internet by third parties (such as your employer).</p>
     <p>If you choose to provide an email address, it will be stored in a separate private file from your survey responses. A randomly generated participant ID will be used to link your email address to your survey response only for the purpose of locating and removing your data if you later request withdrawal. Your email address will not be included in the research dataset used for analysis and will not appear in reports, presentations, or publications.</p>
@@ -147,7 +148,7 @@
     <p>Even if you provide permission, your teenager may choose not to participate. If they begin the survey, they may stop at any time without penalty and may skip any question they do not wish to answer.</p>
 
     <h3>Confidentiality</h3>
-    <p>The survey is confidential, so your teenager's name and other directly identifying information will not be collected. Survey responses will be transmitted to a secure Google-based data system and stored in private Google Sheets within a Google Drive account controlled by the Principal Investigators. Access to the research files will be restricted to the Principal Investigators. The research dataset will not record your teenager's name, IP address, or device identifier.</p>
+    <p>The survey is confidential, so your teenager's name and other directly identifying information will not be collected. Survey responses will be transmitted to a secure Google-based data system and stored in private Google Sheets within a Google Drive folder controlled by the Principal Investigators. Access to this folder will be restricted to the Principal Investigators. The research dataset will not record your teenager's name, IP address, or device identifier.</p>
     <p>A parent/guardian electronic signature will be collected to document permission for participation. The signature will be stored separately from your teenager's survey responses and will not be included in the research dataset used for analysis.</p>
     <p>If your teenager chooses to provide an email address, it will be stored in a separate private file from the survey responses. A randomly generated participant ID will be used to link their email address to their survey response only for the purpose of locating and removing their data if withdrawal is later requested. The email address will not be included in the research dataset used for analysis and will not appear in reports, presentations, or publications.</p>
     <p>The separate file linking optional email addresses to participant IDs will be retained for six months after data collection closes and will then be permanently deleted. After that linkage file is deleted, it may no longer be possible to identify and remove an individual participant's response.</p>
@@ -380,7 +381,7 @@
     const email = state.responses.withdrawal_email || "";
     return `
       <h2>Optional Contact Information</h2>
-      <p>You may provide an email address if you would like the Principal Investigator to be able to locate your survey response if you later request to withdraw your data. Providing an email address is <strong>optional</strong>.</p>
+      <p>You may provide an email address if you would like the Principal Investigators to be able to locate your survey response if you later request to withdraw your data. Providing an email address is <strong>optional</strong>.</p>
       <p>Your email address will be stored separately from your survey responses and linked only through your random participant ID. It will be used only for withdrawal-related purposes and will not be included in the research dataset used for analysis.</p>
       <div class="survey-question">
         <label for="withdrawal_email">Email address (optional)</label>
@@ -1185,7 +1186,7 @@ if (pdfButton) {
             class="survey-download-button"
             id="download-debrief-pdf"
           >
-            Download Your Score Summary (PDF)
+            Download This Report (PDF)
           </button>
 
         </div>
