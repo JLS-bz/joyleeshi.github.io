@@ -393,7 +393,7 @@
   function renderSubmit() {
     return `
       <h2>Submit Survey</h2>
-      <p>You may review previous sections using the Back button. Questions may be skipped.</p>
+      <p>You may review previous sections using the Back button to check if you have skipped any questions.</p>
       ${cfg.submissionsEnabled && cfg.submissionUrl
         ? `<p>  </p>`
         : `<div class="survey-banner warning">Data collection is currently disabled. This is an ethics-review/testing build and will not send responses anywhere.</div>`}
