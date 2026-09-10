@@ -680,11 +680,9 @@ function setupSignaturePads() {
       participant_id: state.participant_id,
       started_at: state.started_at,
       submitted_at: submittedAt,
-      age: state.age,
       parent_permission: state.parentPermission,
-      scoring_version: "v1-2026-09-07",
+
       responses: surveyResponses,
-      derived_scores: scoreSummary(),
 
       contact: withdrawalEmail ? {
         participant_id: state.participant_id,

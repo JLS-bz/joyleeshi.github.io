@@ -18,7 +18,7 @@ permalink: /student-mental-health-and-well-being-survey/
 <script>
   window.MH_SURVEY_CONFIG = {
     submissionsEnabled: false,
-    submissionUrl: "https://script.google.com/macros/s/AKfycbyiTmm0I6MKQgvMEYVktXtck4LH9bOXqhMZti2EmS81_ju27Fpq3BllvkVZf7LnhOIx/exec",
+    submissionUrl: "https://script.google.com/macros/s/AKfycbxdhMr9YY1kIIzGzdgCUnLu_IRkiT9RrtTdVSZ5Co0yriX2xVTQDDWmZf8JNx47noIk/exec",
     previewMode: true
   };
 </script>
