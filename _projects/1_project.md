@@ -13,8 +13,8 @@ related_publications: true
 
 **Principal Investigators**:
 
-Joy Lee-Shi, MA
-Faculty of Management & Social Sciences, University of Belize
+Joy Lee-Shi, MA  
+Faculty of Management & Social Sciences, University of Belize  
 Email: [joy.lee-shi@ub.edu.bz](mailto:joy.lee-shi@ub.edu.bz)
 
 Mathias R. Vairez Jr., PhD  
