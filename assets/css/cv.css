@@ -1,66 +1,19 @@
-/* CV PDF viewer */
-
 .cv-pdf-viewer {
   width: 100%;
-  height: 85vh;
-  min-height: 750px;
-  margin-top: 1.5rem;
-
-  border: 1px solid var(--global-divider-color, #ddd);
-  border-radius: 12px;
-  overflow: hidden;
-
-  background: #f5f5f5;
+  height: 90vh;
+  min-height: 850px;
+  margin-top: 1rem;
 }
 
-.cv-pdf-viewer iframe {
-  display: block;
+.cv-pdf-viewer object {
   width: 100%;
   height: 100%;
   border: 0;
 }
 
-.cv-pdf-actions {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin: 1rem 0;
-}
-
-.cv-pdf-button {
-  display: inline-block;
-  padding: 0.8rem 1.4rem;
-
-  background: var(--global-theme-color);
-  color: #ffffff !important;
-
-  border: 2px solid var(--global-theme-color);
-  border-radius: 10px;
-
-  font-weight: 650;
-  text-decoration: none !important;
-}
-
-.cv-pdf-button:hover {
-  color: #ffffff !important;
-  opacity: 0.9;
-}
-
-.cv-pdf-fallback {
-  margin-top: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
 @media (max-width: 768px) {
   .cv-pdf-viewer {
-    height: 75vh;
-    min-height: 550px;
-  }
-
-  .cv-pdf-button {
-    width: 100%;
-    text-align: center;
+    height: 85vh;
+    min-height: 650px;
   }
 }
