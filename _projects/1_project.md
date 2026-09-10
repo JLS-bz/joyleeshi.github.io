@@ -11,8 +11,7 @@ related_publications: true
 
 ## Project Overview
 
-**Principal Investigators**:
-
+**Principal Investigators**:  
 Joy Lee-Shi, MA  
 Faculty of Management & Social Sciences, University of Belize  
 Email: [joy.lee-shi@ub.edu.bz](mailto:joy.lee-shi@ub.edu.bz)
@@ -24,8 +23,6 @@ Email: [mvairez@ub.edu.bz](mailto:mvairez@ub.edu.bz)
 **Status**: Pre-data collection
 
 **Population**: Tertiary-level students in Belize
-
-**Design**: Online cross-sectional quantitative survey 
 
 **Target sample**: About 600 participants 
 
