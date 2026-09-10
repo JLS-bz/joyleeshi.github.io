@@ -395,7 +395,7 @@
       <h2>Submit Survey</h2>
       <p>You may review previous sections using the Back button. Questions may be skipped.</p>
       ${cfg.submissionsEnabled && cfg.submissionUrl
-        ? `<p>When you submit, your responses will be transmitted to the study's configured data endpoint.</p>`
+        ? `<p>  </p>`
         : `<div class="survey-banner warning">Data collection is currently disabled. This is an ethics-review/testing build and will not send responses anywhere.</div>`}
     `;
   }
@@ -674,6 +674,33 @@ function setupSignaturePads() {
   }
 
   async function finishSurvey() {
+
+    const submitButton = app.querySelector('[data-action="next"]');
+    const backButton = app.querySelector('[data-action="back"]');
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.classList.add("is-submitting");
+      submitButton.textContent = "Submitting...";
+      submitButton.setAttribute("aria-busy", "true");
+    }
+
+    if (backButton) {
+      backButton.disabled = true;
+    }
+
+    setStatus(
+      "Please wait while your responses are securely submitted.",
+      false
+    );
+
+// Allow the browser to paint the progress state before starting fetch.
+    await new Promise(resolve =>
+    requestAnimationFrame(() =>
+    requestAnimationFrame(resolve)
+  )
+);
+
     const submittedAt = new Date().toISOString();
     const { withdrawal_email: withdrawalEmail, ...surveyResponses } = state.responses;
     const payload = {
@@ -714,7 +741,23 @@ function setupSignaturePads() {
         setStatus("Your response was submitted.", false);
       } catch (err) {
         console.error(err);
-        setStatus("The survey could not confirm submission. Please do not resubmit until the study team checks the data system.", true);
+
+        setStatus(
+          "The survey could not confirm submission. Please do not resubmit until the study team checks the data system.",
+          true
+        );
+
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.classList.remove("is-submitting");
+          submitButton.textContent = "Submit and View Scores";
+          submitButton.removeAttribute("aria-busy");
+        }
+
+        if (backButton) {
+          backButton.disabled = false;
+        }
+
         return;
       }
     }
