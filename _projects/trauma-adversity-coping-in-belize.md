@@ -1,13 +1,15 @@
 ---
 layout: page
-title: Adversity and Trauma: Examining and Elaborating the Hybrid Model of Stress Response as Applied to Belizean Contexts 
+title: Examining and Elaborating the Hybrid Model of Stress Response as Applied to Belizean Contexts 
 img: assets/img/12.jpg
-importance: 3
+importance: 4
 #category: work
 related_publications: true
+description: 2024-2025
+
 images:
   slider: true
-description: 2024-2025
+  
 ---
 
 ## Project Overview
@@ -97,10 +99,6 @@ This project aimed to not only advance theoretical knowledge of trauma but also 
   <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-42.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
   <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-43.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
 </swiper-container>
-<div class="caption">
-    Lee-Shi, J., & Ley, R. G. (2025, May). From Adversity to Trauma: Examining and Elaborating the Hybrid Model of Stress Response as Applied to Belizean Contexts [Paper presentation, Symposium]. Inaugural Conference on Critical Social Justice in Psychology, Vancouver, BC, Canada.
-</div>
-
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
