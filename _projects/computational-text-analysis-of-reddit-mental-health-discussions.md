@@ -120,7 +120,7 @@ Converts and processes subreddit specific .zst files into decompressed .csv file
 
 ## Topic Modeling of r/dpdr with TF-IDF and LDA
 
-Large segments of code were adapted from Obedkova's {% cite obedkova2020topic -A %} tutorial, namely in the following sections: SparkNLP Pipelines, PoS-based Filtering, and Vectorization.
+Large segments of code were adapted from Obedkova's tutorial {% cite obedkova2020topic %}, namely in the following sections: SparkNLP Pipelines, PoS-based Filtering, and Vectorization.
 
 #### Datasets
 
@@ -199,7 +199,7 @@ Unigram and n-gram data as shown above are first combined. Then, **TF** (term fr
 
 *LDA {% cite blei2003latent %} is one of the most popular topic modeling methods. Each document is made up of various words, and each topic also has various words belonging to it. The aim of LDA is to find topics a document belongs to, based on the words in it.*
 
-*Direct quotation from Kulshrestha {% cite kulshrestha2020lda -A %}*
+*Direct quotation: {% cite kulshrestha2020lda %}*
 
 When performing LDA, the number of topics is fixed and predetermined. To find the optimal number of topics, LDA models with x number of topics are trained and their corresponding logLikelihood and logPerplexity calculated. This is an expensive operation to run, in terms of time and computing resources, so dataset **dpdr** was used here. 
 
