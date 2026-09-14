@@ -5,7 +5,6 @@ img: assets/img/belizean_students.png
 importance: 1
 #category: work
 related_publications: true
-description: Status: Ongoing
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/student-mental-health-survey.css' | relative_url }}">

@@ -5,10 +5,11 @@ img: assets/img/dissociation.jpg
 importance: 5
 #category: work
 related_publications: true
-description: Status: Archived
 ---
 
 ## Project Overview
+
+**Status**: Archived 
 
 This project explored the use of computational methods for analyzing large-scale online discussions of mental health. Using publicly available Reddit data, I experimented with approaches for collecting, processing, analyzing, and visualizing text from communities focused on mental health and related experiences.
 
