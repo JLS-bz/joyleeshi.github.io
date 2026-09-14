@@ -108,7 +108,7 @@ Lee-Shi, J., & Ley, R. G. (2025, March). *The Double-Edged Sword of Social Suppo
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/JLS-JEDAI-2025.png" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/JLS-JEDAI-2025.png" class="img-fluid rounded z-depth-1" zoomable=true %}
     </div>
 </div>
 
