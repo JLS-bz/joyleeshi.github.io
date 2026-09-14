@@ -39,7 +39,7 @@ As a result, files.PushShift.io is utilized due to its 100% operational status a
     </div>
 </div>
 
-## The following scripts were used:
+#### The following scripts were used:
 
 **1.**  [filePushshiftpull.py](https://github.com/JLS-bz/JLS-bz.github.io/blob/main/scripts/filePushshiftpull.py)
   - Automates the downloading of compressed .zst files from [files.pushshift.io](https://files.pushshift.io/reddit/submissions/). 
@@ -59,7 +59,7 @@ Converts and processes subreddit specific .zst files into decompressed .csv file
   - Columns 'title' and 'selftext' are combined to create column 'post', then dropped.
   - Combines individual subreddit specific .zst files according to general topics of interest.
 
-## List of general topics and their respective subreddits:
+#### List of general topics and their respective subreddits:
 
   - **Autism/ADHD**: adhd_anxiety, ADHD, adhdwomen, asd, autism, AutisticWithADHD, aspergers
   - **Anxiety/Depression**: SuicideWatch, depression, depression_help, Anxiety, AnxietyDepression, Anxietyhelp, socialanxiety, HealthAnxiety, anxietysuccess
@@ -74,14 +74,14 @@ Converts and processes subreddit specific .zst files into decompressed .csv file
 
 *2022-03-25*
 
-### Description of raw data:
+#### Description of raw data:
 
 -   Webscraped using PRAW, Reddit’s API
 -   From forum about depersonalization/derealization.
 -   Contains post title, post content, post date
 -   Data date range: 2022-03-01 to 2022-03-27
 
-### Most commonly used words:
+#### Most commonly used words:
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -92,7 +92,7 @@ Converts and processes subreddit specific .zst files into decompressed .csv file
     </div>
 </div>
 
-### Most common positive and negative words:
+#### Most common positive and negative words:
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -100,9 +100,9 @@ Converts and processes subreddit specific .zst files into decompressed .csv file
     </div>
 </div>
 
-### Relationships between words: n-grams and correlations
+#### Relationships between words: n-grams and correlations
 
-#### Visualizing a network of bigrams:
+##### Visualizing a network of bigrams:
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -110,7 +110,7 @@ Converts and processes subreddit specific .zst files into decompressed .csv file
     </div>
 </div>
 
-### Centrality of Words
+#### Centrality of Words
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -120,9 +120,9 @@ Converts and processes subreddit specific .zst files into decompressed .csv file
 
 ## Topic Modeling of r/dpdr with TF-IDF and LDA
 
-Large segments of code were adapted from Obedkova's [-@obedkova2020topic] tutorial, namely in the following sections: SparkNLP Pipelines, PoS-based Filtering, and Vectorization.
+Large segments of code were adapted from Obedkova's {% cite obedkova2020topic -A %} tutorial, namely in the following sections: SparkNLP Pipelines, PoS-based Filtering, and Vectorization.
 
-### Datasets
+#### Datasets
 
 1. **Dissociation**: dpdr, dpdrhelp, Dissociation, Depersonalization, derealization, DPDRecoveryStories, OSDD, anhedonia, BrainFog, Psychosis. 
   - Date range: 2019-11 to 2022-04
@@ -136,8 +136,8 @@ Large segments of code were adapted from Obedkova's [-@obedkova2020topic] tutori
 </div>
 
 
-### SparkNLP Pipelines
-#### No.1: Unigrams & PoS
+#### SparkNLP Pipelines
+##### No.1: Unigrams & PoS
 
 First, a basic pipeline is used to transform the dataset **Dissociation** into unigrams and their respective Parts of Speech (PoS) labels. N-grams are also found, but may contain questionable combinations; this output will be further processed in the next pipeline.
 
@@ -151,7 +151,7 @@ This pipeline uses the following annotators:
 6. **POSTagger**: Averaged Perceptron model to tag words part-of-speech.
 7. **Finisher**: Converts annotation results into a format that easier to use. It is useful to extract the results from Spark NLP Pipelines.
 
-*From the official SparkNLP website [@johnsnowlabs2021annotators].*
+*From the official SparkNLP website {% cite johnsnowlabs2021annotators %}.*
 
 Contrary to commonly used NLP pipelines, a Lemmatizer Annotator is not used, in order to preserve the various uses of verb tenses. This affects generated n-grams. 
 
@@ -163,7 +163,7 @@ Output:
     </div>
 </div>
 
-#### No.2: N-Grams
+##### No.2: N-Grams
 
 PoS-based filtering is used in this pipeline to remove strange word combinations and reduce vocab size.
 
@@ -173,7 +173,7 @@ The following pipeline is used to correspond PoS tag n-grams with word n-grams:
 3. NGram Generator
 4. Finisher
 
-### PoS-based Filtering
+#### PoS-based Filtering
 
 Unigrams: 
 
@@ -191,15 +191,15 @@ Bigrams and Trigrams:
     </div>
 </div>
 
-### Vectorization: TF-IDF
+#### Vectorization: TF-IDF
 
 Unigram and n-gram data as shown above are first combined. Then, **TF** (term frequency) vectorization is performed with **CountVectorizer** in PySpark. Finally, **IDF**(inverse document frequency) is used to lower word frequency scores.
 
-### Unsupervised Topic Modeling with LDA (Latent Dirichlet Allocation)
+#### Unsupervised Topic Modeling with LDA (Latent Dirichlet Allocation)
 
-*LDA [@blei2003latent] is one of the most popular topic modeling methods. Each document is made up of various words, and each topic also has various words belonging to it. The aim of LDA is to find topics a document belongs to, based on the words in it.*
+*LDA {% cite blei2003latent %} is one of the most popular topic modeling methods. Each document is made up of various words, and each topic also has various words belonging to it. The aim of LDA is to find topics a document belongs to, based on the words in it.*
 
-*Direct quotation from Kulshrestha [-@kulshrestha2020lda]*
+*Direct quotation from Kulshrestha {% cite kulshrestha2020lda -A %}*
 
 When performing LDA, the number of topics is fixed and predetermined. To find the optimal number of topics, LDA models with x number of topics are trained and their corresponding logLikelihood and logPerplexity calculated. This is an expensive operation to run, in terms of time and computing resources, so dataset **dpdr** was used here. 
 
@@ -215,15 +215,15 @@ When performing LDA, the number of topics is fixed and predetermined. To find th
 Thus, it seems that an eye estimated optimal number of topics is NumTopic = 5.
 
 Given that the LDA algorithm is probabilistic in nature, the following two parameters will be set for further topic modeling:
+
 1. Max iterations = 200.
+2. Seed = 123
 
 The previous LDA was set to maxIter = 10. Increasing the number of iterations can help improve result stability, at the cost of increased computational resources.
 
-2. Seed = 123
-
 LDA relies on a random number generator for initialization, and using a seed can help ensure consistency across multiple runs.
 
-### Topics based on Unigrams & N-Grams
+#### Topics based on Unigrams & N-Grams
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -246,7 +246,7 @@ LDA relies on a random number generator for initialization, and using a seed can
     </div>
 </div>
 
-### Topics based on Unigrams
+#### Topics based on Unigrams
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -269,7 +269,7 @@ LDA relies on a random number generator for initialization, and using a seed can
     </div>
 </div>
 
-### Topics based on N-Grams
+#### Topics based on N-Grams
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
@@ -316,7 +316,7 @@ Using python, time series graphs are used to visualize the frequency of posts wi
 
 ## What is sentiment analysis? Proposed Research
 
-When humans read documents, we are able to infer the emotional valence behind words and phrases. It can be a generally negative or positive sentiment, such as: "I'm having a terrible day" or "My day was fantastic". More complex emotions can also be understood, i.e., surprise: "Oh wow!". According to Silge and Robinson [-silge2017text], sentiment analysis allows one to programmatically analyse emotional sentiments within large amounts of text, quickly and without manual input or supervision. In qualitative quantitative mixed methods studies, the application of this approach within the qualitative side may prove invaluable and significantly reduce time and resources spent. 
+When humans read documents, we are able to infer the emotional valence behind words and phrases. It can be a generally negative or positive sentiment, such as: "I'm having a terrible day" or "My day was fantastic". More complex emotions can also be understood, i.e., surprise: "Oh wow!". According to Silge and Robinson {% cite silge2017text -A %}, sentiment analysis allows one to programmatically analyse emotional sentiments within large amounts of text, quickly and without manual input or supervision. In qualitative quantitative mixed methods studies, the application of this approach within the qualitative side may prove invaluable and significantly reduce time and resources spent. 
 
 When sentiment analysis is performed, a lexicon is used to compare and assign emotional sentiment to the text. Three general purpose lexicons are [AFINN](http://www2.imm.dtu.dk/pubdb/views/publication_details.php?id=6010), [bing](https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html), and [nrc](http://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm). However, according to Hamilton et al. (2016), the emotional sentiment of words or phrases often varies according to the domain or context. The following figure illustrates this:
 
@@ -326,11 +326,11 @@ When sentiment analysis is performed, a lexicon is used to compare and assign em
     </div>
 </div>
 <div class="caption">
-    Word sentiment differences between a sports subreddit and a subreddit dedicated to female perspectives and struggles [@hamilton2016inducing].
+    Word sentiment differences between a sports subreddit and a subreddit dedicated to female perspectives and struggles {% cite hamilton2016inducing}.
 </div>
 
 
-### Proposed Research Questions
+#### Proposed Research Questions
 
 1. Are there differences between the domain specific lexicons of various mental health subreddit groups?
 
@@ -340,7 +340,7 @@ When sentiment analysis is performed, a lexicon is used to compare and assign em
 
 4. Do the major differences in the aspect-based sentiment analysis of each group relate to differences within DSM-V criteria?
 
-### Description of groups of subreddits
+#### Description of groups of subreddits
 
 1. **Anxiety**: Anxiety, Anxietyhelp, socialanxiety, HealthAnxiety, anxietysuccess
 2. **BPD** (Borderline Personality Disorder): BPD, BPDlovedones, BorderlinePDisorder, BPD4BPD, BPDParterns
@@ -350,7 +350,7 @@ When sentiment analysis is performed, a lexicon is used to compare and assign em
 6. **PTSD**: CPTSD, PTSD, Ptsdrecovery
 7. **Substances**: addiction, benzorecovery, Drugs, HPPD, leaves, opiates, Psychonaut, REDDITORSINRECOVERY, zoloft
 
-### General To do
+#### General To do
 
 **End product:**
 
@@ -366,9 +366,9 @@ When sentiment analysis is performed, a lexicon is used to compare and assign em
 3. Perform sentiment analysis - looking at units beyond just words, sentiment of sentence.
 4. Visualize sentiment analysis output with plotnine
 
-### Methodology
+#### Methodology
 
-#### A. Creating lexicons
+##### A. Creating lexicons
 
 **Tools**: socialsent library
 
@@ -378,7 +378,7 @@ When sentiment analysis is performed, a lexicon is used to compare and assign em
 2. Dataset preparation: split selected dataset into *training*, *validation*, and *testing* sets.
 3. Using *socialsent*, run on dataset.
 
-#### B. Fine-tune pretrained models
+##### B. Fine-tune pretrained models
 
 To perform sentiment analysis on a specific dataset, fine-tune the model on that dataset by providing it with its respective lexicon produced in **Step A**.
 
@@ -398,7 +398,7 @@ To perform sentiment analysis on a specific dataset, fine-tune the model on that
 6. Evaluation: Evaluate performance of model on validation set. This helps fine-tune model hyperparameters to optimize performance
 7. Testing: Test fine-tuned model on testing set to evaluate performance on unseen data.
 
-#### C. Aspect Modelling in Sentiment Analysis 
+##### C. Aspect Modelling in Sentiment Analysis 
 
 Aspect Modelling in Sentiment Analysis (ABSA): 
 
