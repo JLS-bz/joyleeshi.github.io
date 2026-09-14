@@ -5,6 +5,7 @@ img: assets/img/dissociation.jpg
 importance: 5
 #category: work
 related_publications: true
+description: 2022-2023
 ---
 
 ## Project Overview
