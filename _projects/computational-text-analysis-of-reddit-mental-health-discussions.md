@@ -197,7 +197,7 @@ Unigram and n-gram data as shown above are first combined. Then, **TF** (term fr
 
 #### Unsupervised Topic Modeling with LDA (Latent Dirichlet Allocation)
 
-*LDA {% cite blei2003latent %} is one of the most popular topic modeling methods. Each document is made up of various words, and each topic also has various words belonging to it. The aim of LDA is to find topics a document belongs to, based on the words in it.*
+*LDA  is one of the most popular topic modeling methods {% cite blei2003latent %}. Each document is made up of various words, and each topic also has various words belonging to it. The aim of LDA is to find topics a document belongs to, based on the words in it.*
 
 *Direct quotation: {% cite kulshrestha2020lda %}*
 
@@ -326,7 +326,7 @@ When sentiment analysis is performed, a lexicon is used to compare and assign em
     </div>
 </div>
 <div class="caption">
-    Word sentiment differences between a sports subreddit and a subreddit dedicated to female perspectives and struggles {% cite hamilton2016inducing}.
+    Word sentiment differences between a sports subreddit and a subreddit dedicated to female perspectives and struggles {% cite hamilton2016inducing %}.
 </div>
 
 
