@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Adversity and Trauma: Examining and Elaborating the Hybrid Model of Stress Response as Applied to Belizean Contexts 
-img: assets/img/trauma_coping.jpg
+img: assets/img/12.jpg
 importance: 3
 #category: work
 related_publications: true
