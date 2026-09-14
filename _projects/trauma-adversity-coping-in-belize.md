@@ -12,17 +12,19 @@ images:
 
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/student-mental-health-survey.css' | relative_url }}">
+
 ## Project Overview
 
 **Investigator**:  
 Joy Lee-Shi, MA  
-Graduate Student (currently graduated)
-Department of Psychology, Simon Fraser University
+Graduate Student (currently graduated)  
+Department of Psychology, Simon Fraser University  
 Email: [jleeshi@outlook.com](mailto:jleeshi@outlook.com)
 
 **Thesis Supervisor**:  
 Robert G. Ley, PhD  
-Professor (currently retired)
+Professor (currently retired)  
 Department of Psychology, Simon Fraser University  
  
 **Status**: Completed  
