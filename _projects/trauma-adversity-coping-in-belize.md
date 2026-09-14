@@ -5,6 +5,8 @@ img: assets/img/12.jpg
 importance: 3
 #category: work
 related_publications: true
+images:
+  slider: true
 description: 2024-2025
 ---
 
@@ -50,32 +52,51 @@ This project aimed to not only advance theoretical knowledge of trauma but also 
 
 #### Conference Presentations 
 
-<div class="pswp-gallery pswp-gallery--single-column" id="gallery--getting-started">
-  <div>
-        {% include figure.liquid loading="eager" path="assets/img/Masters Thesis Defence Presentation-01.png" class="img-fluid rounded z-depth-1" %}
-    </div>
-  <div>
-        {% include figure.liquid loading="eager" path="assets/img/Masters Thesis Defence Presentation-02.png" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div>
-        {% include figure.liquid loading="eager" path="assets/img/Masters Thesis Defence Presentation-03.png" class="img-fluid rounded z-depth-1" %}
-    </div>
-  <div>
-        {% include figure.liquid loading="eager" path="assets/img/Masters Thesis Defence Presentation-04.png" class="img-fluid rounded z-depth-1" %}
-    </div>
-  <div>
-        {% include figure.liquid loading="eager" path="assets/img/Masters Thesis Defence Presentation-05.png" class="img-fluid rounded z-depth-1" %}
-    </div>
-  <div>
-        {% include figure.liquid loading="eager" path="assets/img/Masters Thesis Defence Presentation-06.png" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div>
-        {% include figure.liquid loading="eager" path="assets/img/Masters Thesis Defence Presentation-07.png" class="img-fluid rounded z-depth-1" %}
-    </div>
-  <div>
-        {% include figure.liquid loading="eager" path="assets/img/Masters Thesis Defence Presentation-08.png" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
+<swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
+  <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/Masters Thesis Defence Presentation-01.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-02.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-03.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-04.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-05.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-06.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-07.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-08.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-09.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-10.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-11.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-12.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-13.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-14.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-15.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-16.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-17.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-18.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-19.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-20.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-21.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-22.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-23.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-24.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-25.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-26.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-27.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-28.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-29.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-30.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-31.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-32.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-33.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-34.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-35.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-36.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-37.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-38.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-39.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-40.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-41.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-42.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+  <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-43.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
+</swiper-container>
 <div class="caption">
     Lee-Shi, J., & Ley, R. G. (2025, May). From Adversity to Trauma: Examining and Elaborating the Hybrid Model of Stress Response as Applied to Belizean Contexts [Paper presentation, Symposium]. Inaugural Conference on Critical Social Justice in Psychology, Vancouver, BC, Canada.
 </div>
