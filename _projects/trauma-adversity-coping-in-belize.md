@@ -9,7 +9,7 @@ description: 2024-2025
 
 images:
   slider: true
-  
+
 ---
 
 ## Project Overview
@@ -20,15 +20,13 @@ Graduate Student (currently graduated)
 Department of Psychology, Simon Fraser University
 Email: [jleeshi@outlook.com](mailto:jleeshi@outlook.com)
 
-**Thesis Supervisor**: 
+**Thesis Supervisor**:  
 Robert G. Ley, PhD  
 Professor (currently retired)
-Department of Psychology, Simon Fraser University
+Department of Psychology, Simon Fraser University  
  
-**Status**: Completed
-
-**Population**: Adults in Belize
-
+**Status**: Completed  
+**Population**: Adults in Belize  
 **Sample**: 12 participants 
 
 This project was my Master's thesis in Psychology at Simon Fraser University and examined how Belizeans understand experiences of trauma and adversity, the psychological and emotional responses that can follow these experiences, and the ways people cope.
@@ -40,19 +38,20 @@ A central issue emerging from the research was the boundary between adversity an
 This project aimed to not only advance theoretical knowledge of trauma but also create a more culturally relevant framework for describing trauma in Belize, a diverse under-represented population in research. To achieve this, this study had two main objectives: 
 
 1. Explore the experiences of adversity and trauma among Belizeans: types encountered, perceptions, and interpretations, including post-stressor changes and coping.
-2. Expand upon the Hybrid Model of Stress Response (% cite krupnik_model %).
+2. Expand upon the Hybrid Model of Stress Response {% cite krupnik_model %}.
 
 <div class="text-center my-4">
   <a
     href="{{ '/assets/pdf/ma_thesis.pdf' | relative_url }}"
     class="survey-download-button"
-    download
   >
     Download Master's Thesis
   </a>
 </div>
 
 #### Conference Presentations 
+
+Lee-Shi, J., & Ley, R. G. (2025, May). *From Adversity to Trauma: Examining and Elaborating the Hybrid Model of Stress Response as Applied to Belizean Contexts* [Paper presentation, Symposium]. Inaugural Conference on Critical Social Justice in Psychology, Vancouver, BC, Canada.
 
 <swiper-container keyboard="true" navigation="true" pagination="true" pagination-clickable="true" pagination-dynamic-bullets="true" rewind="true">
   <swiper-slide>{% include figure.liquid loading="eager" path="assets/img/Masters Thesis Defence Presentation-01.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
@@ -100,15 +99,16 @@ This project aimed to not only advance theoretical knowledge of trauma but also 
   <swiper-slide>{% include figure.liquid loading="lazy" path="assets/img/Masters Thesis Defence Presentation-43.png" class="img-fluid rounded z-depth-1" %}</swiper-slide>
 </swiper-container>
 
+
+Lee-Shi, J., & Ley, R. G. (2025, April). *The Double-Edged Sword of Social Support: Protective and Risk Factors in Trauma Recovery in Belize* [Oral presentation]. 22nd Hawai’i International Summit on Preventing, Assessing & Treating Trauma Across the Lifespan, Hawaii, USA.
+
+Lee-Shi, J., & Ley, R. G. (2025, March). *The Double-Edged Sword of Social Support: Protective and Risk Factors in Trauma Recovery in Belize* [Poster presentation]. JEDAI (Justice, Decolonizing, Reconciliation, Equity, Diversity, Accessibility, and Inclusion) Research Fair, Simon Fraser University, Burnaby, Canada.
+
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/JLS-JEDAI-2025.png" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-<div class="caption">
-    Lee-Shi, J., & Ley, R. G. (2025, April). The Double-Edged Sword of Social Support: Protective and Risk Factors in Trauma Recovery in Belize [Oral presentation]. 22nd Hawai’i International Summit on Preventing, Assessing & Treating Trauma Across the Lifespan, Hawaii, USA.
 
-    Lee-Shi, J., & Ley, R. G. (2025, March). The Double-Edged Sword of Social Support: Protective and Risk Factors in Trauma Recovery in Belize [Poster presentation]. JEDAI (Justice, Decolonizing, Reconciliation, Equity, Diversity, Accessibility, and Inclusion) Research Fair, Simon Fraser University, Burnaby, Canada.
-</div>
 
 
