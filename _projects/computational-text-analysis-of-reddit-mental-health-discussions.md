@@ -20,10 +20,10 @@ This page serves as an archive of the analyses, methodological notes, code devel
 ## Table of Contents 
 
 - [Web-Scraping Reddit Data](#web-scraping-reddit-data)
-- [Exploratory Analysis of r/dpdr with R](#exploratory-analysis-of-rdpdr)
+- [Exploratory Analysis of r/dpdr with R](#exploratory-analysis-of-rdpdr-with-r)
 - [Topic Modeling of r/dpdr with TF-IDF and LDA](#topic-modeling-of-rdpdr-with-tf-idf-and-lda)
 - [Time-based Group Comparisons of Mental Health Disorder Discussions](#time-based-group-comparisons-of-mental-health-disorder-discussions)
-- [What is Sentiment Analysis?](#what-is-sentiment-analysis)
+- [What is Sentiment Analysis? Proposed Research](#what-is-sentiment-analysis-proposed-research)
 
 ## Web-Scraping Reddit Data
 
@@ -314,7 +314,7 @@ Using python, time series graphs are used to visualize the frequency of posts wi
     </div>
 </div>
 
-## What is sentiment analysis? Proposed Research
+## What is Sentiment Analysis? Proposed Research
 
 When humans read documents, we are able to infer the emotional valence behind words and phrases. It can be a generally negative or positive sentiment, such as: "I'm having a terrible day" or "My day was fantastic". More complex emotions can also be understood, i.e., surprise: "Oh wow!". Sentiment analysis allows one to programmatically analyse emotional sentiments within large amounts of text, quickly and without manual input or supervision {% cite silge2017text %}. In qualitative quantitative mixed methods studies, the application of this approach within the qualitative side may prove invaluable and significantly reduce time and resources spent. 
 
