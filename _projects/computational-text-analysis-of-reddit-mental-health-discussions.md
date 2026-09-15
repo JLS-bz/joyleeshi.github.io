@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Computational Text Analysis of Mental Health Discussions on Reddit 
-img: assets/img/dissociation.jpg
+img: assets/img/dissociation_edit.jpg
 importance: 5
 #category: work
 related_publications: true
