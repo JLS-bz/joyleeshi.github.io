@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Student Mental Health and Well-Being Study
-img: assets/img/belizean_students.png
+img: assets/img/belizean_students_cropped.png
 importance: 1
 #category: work
 related_publications: true

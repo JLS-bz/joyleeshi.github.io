@@ -8,7 +8,7 @@ profile:
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>Belize City</p>
+    <p>Belize City,</p>
     <p>Belize</p>
     <p>Central America</p>
 

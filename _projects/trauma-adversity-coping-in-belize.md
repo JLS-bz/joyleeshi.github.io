@@ -14,6 +14,8 @@ images:
 
 <link rel="stylesheet" href="{{ '/assets/css/student-mental-health-survey.css' | relative_url }}">
 
+<link rel="stylesheet" href="{{ '/assets/css/images.css' | relative_url }}">
+
 ## Project Overview
 
 **Investigator**:  

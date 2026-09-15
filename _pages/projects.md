@@ -8,14 +8,6 @@ nav_order: 3
 #horizontal: true
 ---
 
----
-layout: page
-title: projects
-permalink: /projects/
-nav: true
-nav_order: 3
----
-
 <style>
 .projects-list {
   display: flex;
