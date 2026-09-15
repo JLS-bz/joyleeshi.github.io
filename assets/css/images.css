@@ -104,6 +104,17 @@
   line-height: 1.4;
 }
 
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-list-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
 
 /* MOBILE */
 
