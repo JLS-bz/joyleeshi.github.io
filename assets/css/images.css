@@ -1,47 +1,52 @@
-.projects-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.project-list-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.project-list-link:hover {
-  text-decoration: none;
-  color: inherit;
-}
-
 .project-list-card {
   display: flex;
   align-items: center;
-
   width: 100%;
-  min-height: 200px;
+  min-height: 230px;
 
-  padding: 1.25rem;
+  padding: 0;
 
   border: 1px solid rgba(0, 0, 0, 0.10);
   border-radius: 6px;
+  overflow: hidden;
 
   background: var(--global-bg-color);
-
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.10);
-
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease;
 }
 
-.project-list-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+.project-list-image {
+  flex: 0 0 320px;
+  width: 320px;
+  height: 230px;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
 }
 
+.project-list-image figure,
+.project-list-image picture {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.project-list-image img {
+  width: 100% !important;
+  height: 100% !important;
+
+  object-fit: cover;
+  object-position: center;
+
+  display: block;
+}
+
+.project-list-content {
+  flex: 1;
+  padding: 1.5rem 2rem;
+}
 
 /* DESKTOP IMAGE */
 
