@@ -254,7 +254,6 @@
     app.innerHTML = `
       ${cfg.previewMode ? `<div class="survey-banner warning">Preview mode: submissions are disabled.</div>` : ""}
       <div class="survey-card">
-        <p>Thank you for your interest in this University of Belize research study.</p>
         <p><strong>Please select the option that applies to you:</strong></p>
 
         <div class="survey-question">
@@ -683,11 +682,16 @@
       state.permissionRequestId = result.permission_request_id || null;
       renderPermissionRequestConfirmation();
     } catch (error) {
-      console.error(error);
-      setStatus("The permission request could not be sent. Please check the email address and try again.", true);
-      button.disabled = false;
-      button.textContent = original;
-    }
+    console.error("Guardian permission request failed:", error);
+
+    setStatus(
+      `Permission request failed: ${error.message || error}`,
+      true
+    );
+
+  button.disabled = false;
+  button.textContent = original;
+}
   }
 
   async function verifyPermissionPin(pin, button) {
