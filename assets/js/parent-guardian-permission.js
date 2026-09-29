@@ -114,7 +114,7 @@
 
     app.innerHTML = `
       <div class="survey-card">
-        <h2>Parent/Guardian Permission</h2>
+        <h2>Parent/Guardian Permission Form</h2>
         <p>Checking your permission link...</p>
       </div>
     `;
@@ -150,8 +150,6 @@
   function renderPermissionForm() {
     app.innerHTML = `
       <div class="survey-card">
-        <h2>Parent/Guardian Study Information &amp; Permission Form</h2>
-
         <p><strong>Study Title:</strong> ${STUDY_TITLE}</p>
 
         <p><strong>Principal Investigators:</strong><br>
@@ -168,14 +166,12 @@
 
         <h3>Why am I receiving this?</h3>
         <p>Your teenager has expressed interest in participating in this research study and provided your email address so that permission could be requested from a parent or legal guardian.</p>
-        <p>Because your teenager is under 18 years of age, your permission is required before they can participate. Please read the information below carefully before deciding whether to give permission.</p>
-        <p>Even if you give permission, the student will still need to decide for themselves whether they wish to participate. They will be asked to review a consent form and voluntarily agree before they can access the study.</p>
 
         <h3>Purpose of the Study</h3>
         <p>The purpose of this study is to better understand tertiary-level students' experiences with mental health, coping skills, grit, and perceived stress. The study also aims to evaluate whether the instruments used are appropriate and valid for assessing these experiences among tertiary-level students in Belize.</p>
 
-        <h3>What will the student be asked to do?</h3>
-        <p>If you give permission and your teenager agrees to participate, they will complete an online survey containing questions about:</p>
+        <h3>What will your teenager be asked to do?</h3>
+        <p>If you give permission and your teen agrees to participate, they will complete an online survey containing questions about:</p>
         <ul>
           <li>demographic information;</li>
           <li>perceived stress;</li>
@@ -183,7 +179,7 @@
           <li>coping strategies; and</li>
           <li>perseverance or grit.</li>
         </ul>
-        <p>The survey is expected to take approximately <strong>10–20 minutes</strong> to complete.</p>
+        <p>The survey is expected to take approximately <strong>10-20 minutes</strong> to complete.</p>
         <p>Your teen may complete the survey using their own internet-enabled device from a location and time of their choosing.</p>
 
         <h3>Are there any risks or discomforts?</h3>
@@ -198,13 +194,12 @@
         <h3>How will privacy and confidentiality be protected?</h3>
         <p>Your teen's research responses will be treated as confidential. The study will not collect their name, IP addresses, or device identifiers.</p>
         <p>A randomly generated internal participant identifier will be used to associate the required parent/guardian permission and minor consent records with the student's research response. Parent/guardian identifying information, including your email address and electronic signature, will be stored separately from your teen's questionnaire responses and will not be included in the dataset used for research analysis.</p>
-        <p>Electronic permission and signature records will be stored in restricted Google Drive storage. A spreadsheet file linking your email address to your teen's study ID will be retained until May 1st 2027 and will then be permanently deleted. Access to individual-level study records will be limited to the Principal Investigators.</p>
-        <p>Research findings will be reported in aggregate form. Neither the student nor the parent/guardian will be identified in research reports, presentations, or publications.</p>
+        <p>Electronic permission and signature records will be stored in Google Drive storage with restricted access; only the Principal Investigators will have access. A spreadsheet file linking your email address to your teen's study ID will be retained until May 1st 2027 and will then be permanently deleted. Access to individual-level study records will be limited to the Principal Investigators.</p>
+        <p>Research findings will be reported in aggregate form. Neither you nor your teen will be identified in research reports, presentations, or publications.</p>
 
         <h3>What happens if I give permission?</h3>
         <ol>
-          <li>You will receive a one-time PIN.</li>
-          <li>Please provide this PIN directly to your teen.</li>
+          <li>You will receive a one-time PIN. Please provide this PIN directly to your teen.</li>
           <li>Your teen can return to the study website and enter the PIN.</li>
           <li>The system will verify that parent/guardian permission has been obtained before allowing your teen to continue.</li>
           <li>Your teen will then review a student consent form and decide whether they personally wish to participate.</li>
@@ -213,8 +208,8 @@
         <p>Even if you provide permission, your teen may choose not to participate. If they begin the survey, they may stop at any time without penalty and may skip any question they do not wish to answer.</p>
 
         <h3>What happens if I do not give permission?</h3>
-        <p>You are free to decline permission. If you do not give permission, no PIN will be issued and the student will not be able to proceed to the research survey through this permission request.</p>
-        <p>There is no penalty or negative consequence to you or the student for declining permission.</p>
+        <p>You are free to decline permission. If you do not give permission, no PIN will be issued and your teen will not be able to participate in the research survey.</p>
+        <p>There is no penalty or negative consequence to you or your teen for declining permission.</p>
 
         <h3>Questions About the Study</h3>
         <p>If you have questions about this study, please contact the Principal Investigators:</p>
@@ -272,11 +267,11 @@
           <legend><strong>Please indicate your decision below.</strong></legend>
           <label>
             <input type="radio" name="permission_decision" value="granted">
-            I GIVE permission for the student to participate in this research study.
+            I GIVE permission for my teen to participate in this research study.
           </label><br>
           <label>
             <input type="radio" name="permission_decision" value="declined">
-            I DO NOT GIVE permission for the student to participate in this research study.
+            I DO NOT GIVE permission for my teen to participate in this research study.
           </label>
         </fieldset>
 
@@ -436,23 +431,20 @@
   function renderGrantedConfirmation() {
     app.innerHTML = `
       <div class="survey-card">
-        <h2>Parent/Guardian Permission Confirmation</h2>
-        <h3>✓ Permission Successfully Recorded</h3>
-        <p>Thank you. Your permission has been successfully recorded for the study:</p>
-        <p><strong>${STUDY_TITLE}</strong></p>
+        <p>Thank you. Your permission has been successfully recorded. </p>
 
-        <h3>One-Time Use PIN</h3>
+        <h4>One-Time Use PIN</h4>
         <p>Please provide the following PIN directly to your teen:</p>
         <p style="font-size:1.6rem; font-weight:700; letter-spacing:.12em;">
           ${escapeHtml(state.pin)}
         </p>
 
         <p>Your teen should return to the study website and select <strong>Continue as a Minor</strong>. They will be asked to enter this PIN.</p>
-        <p>Once the PIN is successfully verified, the student will be able to review their own consent form. If the student agrees to participate, they may then proceed to the survey.</p>
+        <p>Once the PIN is successfully verified, your teen will be able to review their own consent form. If your teen agrees to participate, they may then proceed to the survey.</p>
         <p>This PIN can only be used once. It will remain valid until it is used or until data collection for this study closes.</p>
 
-        <h3>Keep a Copy of Your Permission Form</h3>
-        <p>Please keep this document for your records. It contains your parent/guardian permission decision and the participation PIN that must be provided to the student. The document also includes the study information you reviewed.</p>
+        <h4>Keep a Copy of Your Permission Form</h4>
+        <p>Please keep this document for your records. It contains your parent/guardian permission decision and the participation PIN that must be provided to your teen. The document also includes the study information you reviewed.</p>
 
         <button
           type="button"
@@ -473,10 +465,9 @@
     app.innerHTML = `
       <div class="survey-card">
         <h2>Parent/Guardian Permission Confirmation</h2>
-        <h3>Decision Successfully Recorded</h3>
         <p>Thank you. Your decision <strong>not to give permission</strong> has been recorded.</p>
-        <p>No participation PIN has been issued. The student will not be able to proceed to the research survey through this permission request.</p>
-        <p>There is no penalty or negative consequence to you or the student for declining permission.</p>
+        <p>No participation PIN has been issued. Your teen will not be able to proceed to the research survey through this permission request.</p>
+        <p>There is no penalty or negative consequence to you or your teen for declining permission.</p>
 
         <button
           type="button"
@@ -496,8 +487,8 @@
   function permissionPdfText() {
     const decisionText =
       state.decision === "granted"
-        ? "I GIVE permission for the student to participate in this research study."
-        : "I DO NOT GIVE permission for the student to participate in this research study.";
+        ? "I GIVE permission for my teen to participate in this research study."
+        : "I DO NOT GIVE permission for my teen to participate in this research study.";
 
     return [
       "Parent/Guardian Study Information & Permission Form",
@@ -514,13 +505,13 @@
       "Email: mvairez@ub.edu.bz",
       "",
       "Why am I receiving this?",
-      "Your teenager expressed interest in participating in this research study and provided your email address so that permission could be requested from a parent or legal guardian. Because your teenager is under 18 years of age, your permission is required before they can participate. Even if you give permission, the student will separately decide whether they wish to participate.",
+      "Your teenager expressed interest in participating in this research study and provided your email address so that permission could be requested from a parent or legal guardian.",
       "",
       "Purpose of the Study",
       "The purpose of this study is to better understand tertiary-level students' experiences with mental health, coping skills, grit, and perceived stress. The study also aims to evaluate whether the instruments used are appropriate and valid for assessing these experiences among tertiary-level students in Belize.",
       "",
-      "What will the student be asked to do?",
-      "If permission is given and the student agrees to participate, they will complete an online survey about demographic information, perceived stress, symptoms associated with anxiety and depression, coping strategies, and perseverance or grit. The survey is expected to take approximately 10–20 minutes.",
+      "What will your teen be asked to do?",
+      "If permission is given and your teen agrees to participate, they will complete an online survey about demographic information, perceived stress, symptoms associated with anxiety and depression, coping strategies, and perseverance or grit. The survey is expected to take approximately 10–20 minutes.",
       "",
       "Risks or discomforts",
       "Some questions address potentially sensitive topics, including stress, symptoms associated with anxiety and depression, mental health history, and coping behaviours. The student may skip questions and may stop participating before submitting the survey without penalty.",
@@ -529,10 +520,10 @@
       "There is no guaranteed direct benefit. The findings may contribute to understanding the mental health and well-being of tertiary-level students in Belize and to evaluating commonly used psychological questionnaires in this population.",
       "",
       "Privacy and confidentiality",
-      "The student's research responses will be treated as confidential. The study will not collect their name, IP addresses, or device identifiers. Parent/guardian identifying information, including email address and electronic signature, is stored separately from questionnaire responses. A spreadsheet file linking the parent/guardian email address to the student's study ID will be retained until May 1st 2027 and then permanently deleted. Access to individual-level study records is limited to the Principal Investigators.",
+      "Your teen's research responses will be treated as confidential. The study will not collect their name, IP addresses, or device identifiers. Parent/guardian identifying information, including email address and electronic signature, is stored separately from questionnaire responses. A spreadsheet file linking the parent/guardian email address to the student's study ID will be retained until May 1st 2027 and then permanently deleted. Access to individual-level study records is limited to the Principal Investigators.",
       "",
       "Voluntary participation",
-      "Providing permission does not require the student to participate. The student may decline, stop participating, or skip questions without penalty.",
+      "Providing permission does not require the your teen to participate. Your teen may decline, stop participating, or skip questions without penalty.",
       "",
       "Questions About the Study",
       "Joy Lee-Shi, MA — joy.lee-shi@ub.edu.bz",
@@ -601,7 +592,7 @@
         [
           "Why am I receiving this?",
           "Purpose of the Study",
-          "What will the student be asked to do?",
+          "What will your teen be asked to do?",
           "Risks or discomforts",
           "Benefits",
           "Privacy and confidentiality",

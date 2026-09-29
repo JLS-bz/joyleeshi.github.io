@@ -304,15 +304,13 @@
     app.innerHTML = `
       <div class="survey-card">
         <h2>Parent/Guardian Permission Required</h2>
-        <p>Because you are under 18, permission from a parent or legal guardian is required before you can participate in this study.
-        Please provide your parent or legal guardian's email address. We will use this contact information only to send them information about the study and request their permission for you to participate.</p>
+        <p>Because you are under 18, permission from a parent or legal guardian is required before you can participate in this study. Please provide your parent or legal guardian's email address. We will use this contact information only to send them information about the study and request their permission for you to participate.</p>
         <div class="survey-question">
           <label for="guardian_email"><strong>Parent/Guardian email address</strong></label>
           <input class="survey-text" id="guardian_email" name="guardian_email" type="email" autocomplete="email" inputmode="email" placeholder="name@example.com">
         </div>
-        <p>Your parent/guardian will receive a link to a separate permission form. </p>
+        <p>Your parent/guardian will receive a link to a permission form. </p>
         <p>If they give permission, they will receive a one-time PIN to provide to you. You will need this PIN before you can participate in the study.</p>
-        <p>You do not need to wait on this page. You may close the study website and return after your parent or guardian has completed the permission form.</p>
       </div>
       <div class="survey-actions">
         <button class="survey-nav-button survey-nav-back" type="button" data-action="permission-back">BACK</button>
@@ -326,8 +324,8 @@
     app.innerHTML = `
       <div class="survey-card">
         <h2>Parent/Guardian Permission Request Sent</h2>
-        <p>The permission request has been sent to the parent or legal guardian email address you provided.</p>
-        <p>You may close this page now. After your parent or guardian completes the permission form and gives you the PIN, return to the study website and select <strong>“I am under 18 and have received a PIN.”</strong></p>
+        <p>After your parent or guardian completes the permission form and gives you the PIN, return to the study website and select <strong>“I am under 18 and have received a PIN.”</strong></p>
+        <p> You may close this page now. </p>
         <button class="btn btn-primary" type="button" data-action="return-home">RETURN TO STUDY HOME</button>
       </div>
     `;
