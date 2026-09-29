@@ -304,13 +304,14 @@
     app.innerHTML = `
       <div class="survey-card">
         <h2>Parent/Guardian Permission Required</h2>
-        <p>Because you are under 18, permission from a parent or legal guardian is required before you can participate in this study.</p>
-        <p>Please provide your parent or legal guardian's email address. We will use this contact information only to send them information about the study and request their permission for you to participate.</p>
+        <p>Because you are under 18, permission from a parent or legal guardian is required before you can participate in this study.
+        Please provide your parent or legal guardian's email address. We will use this contact information only to send them information about the study and request their permission for you to participate.</p>
         <div class="survey-question">
           <label for="guardian_email"><strong>Parent/Guardian email address</strong></label>
           <input class="survey-text" id="guardian_email" name="guardian_email" type="email" autocomplete="email" inputmode="email" placeholder="name@example.com">
         </div>
-        <p>Your parent/guardian will receive a link to a separate permission form. If they give permission, they will receive a one-time PIN to provide to you. You will need this PIN before you can participate in the study.</p>
+        <p>Your parent/guardian will receive a link to a separate permission form. </p>
+        <p>If they give permission, they will receive a one-time PIN to provide to you. You will need this PIN before you can participate in the study.</p>
         <p>You do not need to wait on this page. You may close the study website and return after your parent or guardian has completed the permission form.</p>
       </div>
       <div class="survey-actions">
@@ -677,7 +678,14 @@
         })
       });
       const result = await response.json();
-      if (!result || result.ok !== true) throw new Error(result?.message || "Permission request failed.");
+      console.log("Guardian permission backend response:", result);
+      if (!result || result.ok !== true) {
+        throw new Error(
+          result?.error ||
+          result?.message ||
+          "Permission request failed."
+        );
+      }
       state.permissionRequestSent = true;
       state.permissionRequestId = result.permission_request_id || null;
       renderPermissionRequestConfirmation();
