@@ -23,6 +23,6 @@ permalink: /student-mental-health-and-well-being-survey/
   };
 </script>
 <script src="{{ '/assets/js/html2pdf.bundle.min.js' | relative_url }}"></script>
-<script src="{{ '/assets/js/student-mental-health-survey.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/student-mental-health-survey-v2.js' | relative_url }}"></script>
 
 

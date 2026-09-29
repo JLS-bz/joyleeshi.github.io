@@ -61,8 +61,6 @@ Participation involves completing an online survey about stress, emotional well-
 
 Participation is entirely voluntary. Before beginning the survey, you will be provided with detailed information about the study, including its purpose, procedures, potential risks and benefits, confidentiality protections, and your rights as a research participant. You can decide whether you wish to participate after reviewing this information.
 
-After completing the survey, you will receive a personalized summary of selected scores related to stress, psychological well-being, grit, and coping. These results are provided for informational and self-reflection purposes only and do not constitute a clinical diagnosis.
-
 <div class="text-center my-4">
   <a
     href="{{ '/student-mental-health-and-well-being-survey/' | relative_url }}"
