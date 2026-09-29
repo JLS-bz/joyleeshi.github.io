@@ -2,10 +2,11 @@
   const cfg = Object.assign(
     {
       submissionsEnabled: false,
-      submissionUrl: "",
-      permissionRequestUrl: "",
-      pinVerificationUrl: "",
-      previewMode: true
+      previewMode: true,
+      submissionUrl: "https://script.google.com/macros/s/AKfycbyZhyr22blhlFPBODMvJo8etKpcXy2cUOnXoNMGpNEPVwo6ApYqM__b9qsKjCnlv9Z_/exec",
+      permissionRequestUrl: "https://script.google.com/macros/s/AKfycbyZhyr22blhlFPBODMvJo8etKpcXy2cUOnXoNMGpNEPVwo6ApYqM__b9qsKjCnlv9Z_/exec",
+      pinVerificationUrl: "https://script.google.com/macros/s/AKfycbyZhyr22blhlFPBODMvJo8etKpcXy2cUOnXoNMGpNEPVwo6ApYqM__b9qsKjCnlv9Z_/exec"
+      
     },
     window.MH_SURVEY_CONFIG || {}
   );
@@ -253,20 +254,19 @@
     app.innerHTML = `
       ${cfg.previewMode ? `<div class="survey-banner warning">Preview mode: submissions are disabled.</div>` : ""}
       <div class="survey-card">
-        <h2>${STUDY_TITLE}</h2>
         <p>Thank you for your interest in this University of Belize research study.</p>
         <p><strong>Please select the option that applies to you:</strong></p>
 
         <div class="survey-question">
-          <h3>I am starting the survey</h3>
+          <h4>I am starting the survey</h4>
           <p>Choose this option if you are visiting the study for the first time. You will first receive information about the study and answer two brief questions to determine whether you are eligible to participate.</p>
-          <button class="btn btn-primary" type="button" data-action="start-survey">START SURVEY</button>
+          <button class="survey-download-button" type="button" data-action="start-survey">START SURVEY</button>
         </div>
 
         <div class="survey-question">
-          <h3>I am under 18 and have received a PIN</h3>
+          <h4>I am under 18 and have received a PIN</h4>
           <p>Choose this option if your parent or legal guardian has already completed the Parent/Guardian Permission Form and given you a participation PIN.</p>
-          <button class="btn btn-primary" type="button" data-action="continue-with-pin">CONTINUE WITH PIN</button>
+          <button class="survey-download-button" type="button" data-action="continue-with-pin">CONTINUE WITH PIN</button>
         </div>
       </div>
     `;
@@ -276,7 +276,6 @@
   function renderEligibility() {
     app.innerHTML = `
       <div class="survey-card">
-        <h2>Eligibility Screening</h2>
         <p><strong>Study Title:</strong> ${STUDY_TITLE}</p>
         <h3>Purpose of the Study</h3>
         <p>You are invited to participate in a research study about student mental health and well-being. The purpose of this study is to better understand tertiary level students' experiences with mental health, coping skills, grit, and perceived stress. This study also aims to evaluate whether the instruments used are appropriate and valid for assessing these experiences among tertiary-level students in Belize.</p>
@@ -295,8 +294,8 @@
         </div>
       </div>
       <div class="survey-actions">
-        <button class="btn btn-outline-secondary" type="button" data-action="entry-back">Back</button>
-        <button class="btn btn-primary" type="button" data-action="eligibility-next">NEXT</button>
+        <button class="survey-nav-button survey-nav-back" type="button" data-action="entry-back">BACK</button>
+        <button class="survey-nav-button survey-nav-next" type="button" data-action="eligibility-next">NEXT</button>
       </div>
     `;
     bindEntryActions();
@@ -307,7 +306,7 @@
       <div class="survey-card">
         <h2>Parent/Guardian Permission Required</h2>
         <p>Because you are under 18, permission from a parent or legal guardian is required before you can participate in this study.</p>
-        <p>Please provide your parent or legal guardian’s email address. We will use this contact information only to send them information about the study and request their permission for you to participate.</p>
+        <p>Please provide your parent or legal guardian's email address. We will use this contact information only to send them information about the study and request their permission for you to participate.</p>
         <div class="survey-question">
           <label for="guardian_email"><strong>Parent/Guardian email address</strong></label>
           <input class="survey-text" id="guardian_email" name="guardian_email" type="email" autocomplete="email" inputmode="email" placeholder="name@example.com">
@@ -316,8 +315,8 @@
         <p>You do not need to wait on this page. You may close the study website and return after your parent or guardian has completed the permission form.</p>
       </div>
       <div class="survey-actions">
-        <button class="btn btn-outline-secondary" type="button" data-action="permission-back">Back</button>
-        <button class="btn btn-primary" type="button" data-action="request-permission">SUBMIT</button>
+        <button class="survey-nav-button survey-nav-back" type="button" data-action="permission-back">BACK</button>
+        <button class="survey-nav-button survey-nav-next" type="button" data-action="request-permission">SUBMIT</button>
       </div>
     `;
     bindEntryActions();
@@ -339,7 +338,6 @@
     app.innerHTML = `
       <div class="survey-card">
         <h2>Parent/Guardian Permission Verification</h2>
-        <h3>Parent/Guardian Permission</h3>
         <p>Because you are under 18 years old, permission from a parent or legal guardian is required before you can participate in this study.</p>
         <p>If your parent or legal guardian has completed the Parent/Guardian Permission Form, they will have received a one-time-use PIN to give to you.</p>
         <div class="survey-question">
@@ -350,8 +348,8 @@
         <div id="pin-result" class="mt-3"></div>
       </div>
       <div class="survey-actions">
-        <button class="btn btn-outline-secondary" type="button" data-action="entry-back">Back</button>
-        <button class="btn btn-primary" type="button" data-action="pin-next" ${state.guardianPermissionVerified ? "" : "disabled"}>NEXT</button>
+        <button class="survey-nav-button survey-nav-back" type="button" data-action="entry-back">BACK</button>
+        <button class="survey-nav-button survey-nav-next" type="button" data-action="pin-next" ${state.guardianPermissionVerified ? "" : "disabled"}>NEXT</button>
       </div>
     `;
     bindEntryActions();
@@ -362,8 +360,8 @@
       ${cfg.previewMode ? `<div class="survey-banner warning">Preview mode: submissions are disabled.</div>` : ""}
       <div class="survey-card">${consentHtml}</div>
       <div class="survey-actions">
-        <button class="btn btn-outline-secondary" type="button" data-action="consent-back">Back</button>
-        <button class="btn btn-primary" type="button" data-action="consent-next">NEXT</button>
+        <button class="survey-nav-button survey-nav-back" type="button" data-action="consent-back">BACK</button>
+        <button class="survey-nav-button survey-nav-next" type="button" data-action="consent-next">NEXT</button>
       </div>
     `;
     setupSignaturePad("participant_signature", "participantSignature", "participantSignedAt");
@@ -440,8 +438,8 @@
       </div>
       <div class="survey-card">${step.render()}</div>
       <div class="survey-actions">
-        ${state.currentStep > 0 ? `<button class="btn btn-outline-secondary" type="button" data-action="survey-back">Back</button>` : `<span></span>`}
-        <button class="btn btn-primary" type="button" data-action="survey-next">${nextLabel}</button>
+        ${state.currentStep > 0 ? `<button class="survey-nav-button survey-nav-back" type="button" data-action="survey-back">BACK</button>` : `<span></span>`}
+        <button class="survey-nav-button survey-nav-next" type="button" data-action="survey-next">${nextLabel}</button>
       </div>
     `;
     bindSurveyActions();
@@ -559,7 +557,7 @@
           state.screeningAge = age;
 
           if (enrolled !== "Yes") {
-            return renderEnded("Thank you for your interest in this study. This research is currently open only to students enrolled at a tertiary-level institution in Belize. You are therefore not eligible to participate. No survey responses will be collected.");
+            return renderEnded("Thank you for your interest in this study. This research is currently open only to students enrolled at a tertiary-level institution in Belize. ");
           }
 
           if (age >= 18) {
@@ -697,7 +695,7 @@
     const nextButton = app.querySelector('[data-action="pin-next"]');
 
     if (!cfg.pinVerificationUrl) {
-      if (resultEl) resultEl.innerHTML = `<div class="survey-banner warning"><strong>PIN verification is not available in this preview build.</strong></div>`;
+      if (resultEl) resultEl.innerHTML = `<div class="survey-banner warning"><strong>PIN verification is not currently available.</strong></div>`;
       return;
     }
 

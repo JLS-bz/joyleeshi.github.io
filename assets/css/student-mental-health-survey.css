@@ -438,3 +438,24 @@
     transform: translateX(320%);
   }
 }
+
+/* Survey navigation buttons */
+.survey-nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 110px;
+  padding: 0.7rem 1.25rem;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.survey-nav-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
