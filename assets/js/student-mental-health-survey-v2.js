@@ -1,8 +1,8 @@
 (() => {
   const cfg = Object.assign(
     {
-      submissionsEnabled: false,
-      previewMode: true,
+      submissionsEnabled: true,
+      previewMode: false,
       submissionUrl: "https://script.google.com/macros/s/AKfycbyZhyr22blhlFPBODMvJo8etKpcXy2cUOnXoNMGpNEPVwo6ApYqM__b9qsKjCnlv9Z_/exec",
       permissionRequestUrl: "https://script.google.com/macros/s/AKfycbyZhyr22blhlFPBODMvJo8etKpcXy2cUOnXoNMGpNEPVwo6ApYqM__b9qsKjCnlv9Z_/exec",
       pinVerificationUrl: "https://script.google.com/macros/s/AKfycbyZhyr22blhlFPBODMvJo8etKpcXy2cUOnXoNMGpNEPVwo6ApYqM__b9qsKjCnlv9Z_/exec"
@@ -178,7 +178,7 @@
     <p>The survey is expected to take about <strong>10 to 20 minutes</strong> to complete.</p>
 
     <h3>Risks or Discomforts</h3>
-    <p>Some questions may ask about personal experiences related to stress or mental health. You may feel uncomfortable, upset, or emotional when answering some questions.</p>
+    <p>Some questions may ask about personal experiences related to stress, mental health, and substance use. You may feel uncomfortable, upset, or emotional when answering some questions.</p>
     <p>You may skip any question you do not wish to answer, and you may stop participating at any time without penalty.</p>
 
     <h3>Potential Benefits</h3>

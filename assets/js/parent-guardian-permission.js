@@ -176,7 +176,7 @@
           <li>demographic information;</li>
           <li>perceived stress;</li>
           <li>symptoms associated with anxiety and depression;</li>
-          <li>coping strategies; and</li>
+          <li>coping strategies, including substance use; and</li>
           <li>perseverance or grit.</li>
         </ul>
         <p>The survey is expected to take approximately <strong>10-20 minutes</strong> to complete.</p>
