@@ -30,4 +30,4 @@ Joy Lee-Shi holds a Master of Arts in Psychology (Quantitative, Qualitative, and
 
 She currently teaches research methods at University of Belize and provides statistical consulting for research teams and postgraduate dissertation research. She serves as a Board Member of the Mental Health Association, Belize. Her research interests span trauma and adversity, resilience, the health inequities and needs of vulnerable populations, and the cross-cultural application of psychological constructs. 
 
-In her free time, she is a musician.
+In her free time, she plays music for fun.

@@ -1,8 +1,8 @@
 (() => {
   const cfg = Object.assign(
     {
-      submissionsEnabled: true,
-      previewMode: false,
+      submissionsEnabled: false,
+      previewMode: true,
       submissionUrl: "https://script.google.com/macros/s/AKfycbyZhyr22blhlFPBODMvJo8etKpcXy2cUOnXoNMGpNEPVwo6ApYqM__b9qsKjCnlv9Z_/exec",
       permissionRequestUrl: "https://script.google.com/macros/s/AKfycbyZhyr22blhlFPBODMvJo8etKpcXy2cUOnXoNMGpNEPVwo6ApYqM__b9qsKjCnlv9Z_/exec",
       pinVerificationUrl: "https://script.google.com/macros/s/AKfycbyZhyr22blhlFPBODMvJo8etKpcXy2cUOnXoNMGpNEPVwo6ApYqM__b9qsKjCnlv9Z_/exec"
@@ -200,6 +200,7 @@
     <p>There is no financial compensation for participating in this study.</p>
 
     <h3>Questions About the Study</h3>
+    <p>If you have any questions about this study, please contact the Principal Investigators:</p> <br>
     <p>Joy Lee-Shi, MA<br>Faculty of Management &amp; Social Sciences, University of Belize<br>
     <a href="mailto:joy.lee-shi@ub.edu.bz">joy.lee-shi@ub.edu.bz</a></p>
     <p>Mathias R. Vairez Jr., PhD<br>Department of Education, University of Belize<br>
@@ -841,16 +842,24 @@
         <h3>Emotional Well-being and Support</h3>
         <p>In this study, we asked about your experiences relating to mental health, coping, grit, and perceived stress, which may have brought up strong emotions. We encourage you to reach out to a friend, family member, or a mental health professional if you feel distressed.</p>
         <p>Online Directory of Mental Health Professionals in Belize: <a href="https://www.mindhealthconnect.com/professionals-in-the-field/" target="_blank" rel="noopener noreferrer">Mind Health Connect</a></p>
-        <p>Free or affordable mental health support can also be found at the Community Counseling Center branches:</p>
+        <p>Free or affordable mental health support can also be found at the following locations (please note that this is not an exhaustive list):</p>
         <ul>
-          <li>Belize District: Lake Independence Blvd (Chetumal St.). Phone: 227-1406 / 227-4003</li>
-          <li>Corozal District. Phone: 402-2120</li>
-          <li>Cayo District. Phone: 804-2098</li>
-          <li>Orange Walk District: Betias Lane. Phone: 302-2058</li>
-          <li>Stann Creek District: 8 Pen Road. Phone: 502-0038</li>
-          <li>Toledo District. Phone: 702-2021</li>
+          <li>Corozal District: Corozal Community Hospital, Corozal Town — 480-2076 (24/7 availability)</li>
+          <li>Belize District: Cleopatra White Polyclinic II, Belize City — 224-5213 (Mon-Fri, business hours)</li>
+          <li>Orange Walk District: Northern Regional Hospital, Orange Walk Town — 380-1560 (24/7)</li>
+          <li>Cayo District: Western Regional Hospital, Belmopan — 880-2263 (24/7)</li>
+          <li>Cayo District: San Ignacio Hospital, San Ignacio — 804-2761 / 802-066 (24/7)</li>
+          <li>Stann Creek District: Independence Polyclinic, Independence — 780-0819 (Mon-Fri, business hours)</li>
+          <li>Toledo District: Punta Gorda Hospital, Punta Gorda — 780-2161</li>
+          <li>Toledo District: San Antonio Polyclinic, San Antonio — 722-2021 (Mon-Fri, business hours)</li>
         </ul>
-        <p>If you believe you are in immediate danger or may harm yourself or someone else, please contact your local emergency services or go to the nearest emergency department.</p>
+        <p>If you believe that you are in immediate danger, or that you may harm yourself or someone else, <strong>please seek help immediately</strong>. Contact or go directly to your nearest hospital or health facility, including one of the facilities listed above, or reach out to a trusted person who can assist you in accessing emergency support.</p> <br>
+        <p> If you would prefer to seek support online, the following services provide access to online qualified peer-counselling:</p>
+        <ul>
+          <li>7 Cups: <a href="https://www.7cups.com/" target="_blank" rel="noopener noreferrer">https://www.7cups.com/</a></li>
+          <li>HeyPeers: <a href="https://www.heypeers.com/" target="_blank" rel="noopener noreferrer">https://www.heypeers.com/</a></li>
+        </ul>
+
 
         <h3>Confidentiality and Privacy</h3>
         <p>Your research data will be kept confidential. Survey responses are stored separately from optional email contact information and linked only by a randomly generated participant ID. Access to the research files will be restricted to the Principal Investigators. When findings are shared, they will be presented as general patterns and summaries across participants. Identifying information will not be included in presentations, reports, or publications.</p>
@@ -864,7 +873,7 @@
         <p>Institutional Review Board (IRB)<br>The Research Office, University of Belize<br><a href="mailto:researchoffice@ub.edu.bz">researchoffice@ub.edu.bz</a><br>(501) 822-1000</p>
 
         <div class="text-center my-4">
-          <button type="button" class="survey-download-button" id="download-debrief-pdf">Download this Debriefing Form (PDF)</button>
+          <button type="button" class="survey-download-button" id="download-debrief-pdf">Download this Report (PDF)</button>
         </div>
 
         <p><strong>Thank you for your participation and for contributing to research on student mental health and well-being.</strong></p>
