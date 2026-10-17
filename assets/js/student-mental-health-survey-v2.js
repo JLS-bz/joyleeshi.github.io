@@ -327,7 +327,7 @@
         <h2>Parent/Guardian Permission Request Sent</h2>
         <p>After your parent or guardian completes the permission form and gives you the PIN, return to the study website and select <strong>“I am under 18 and have received a PIN.”</strong></p>
         <p> You may close this page now. </p>
-        <button class="btn btn-primary" type="button" data-action="return-home">RETURN TO STUDY HOME</button>
+        <button class="survey-download-button" type="button" data-action="return-home">RETURN TO STUDY HOME</button>
       </div>
     `;
     bindEntryActions();
@@ -343,7 +343,7 @@
           <label for="permission_pin"><strong>Parent/Guardian Permission PIN:</strong></label>
           <input class="survey-text" id="permission_pin" name="permission_pin" type="text" inputmode="text" autocomplete="one-time-code" maxlength="20">
         </div>
-        <button class="btn btn-primary" type="button" data-action="verify-pin">VERIFY PIN</button>
+        <button class="survey-download-button" type="button" data-action="verify-pin">VERIFY PIN</button>
         <div id="pin-result" class="mt-3"></div>
       </div>
       <div class="survey-actions">
