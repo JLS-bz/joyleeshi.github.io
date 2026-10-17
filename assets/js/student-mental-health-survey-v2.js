@@ -200,7 +200,7 @@
     <p>There is no financial compensation for participating in this study.</p>
 
     <h3>Questions About the Study</h3>
-    <p>If you have any questions about this study, please contact the Principal Investigators:</p> <br>
+    <p>If you have any questions about this study, please contact the Principal Investigators:</p>
     <p>Joy Lee-Shi, MA<br>Faculty of Management &amp; Social Sciences, University of Belize<br>
     <a href="mailto:joy.lee-shi@ub.edu.bz">joy.lee-shi@ub.edu.bz</a></p>
     <p>Mathias R. Vairez Jr., PhD<br>Department of Education, University of Belize<br>
@@ -831,13 +831,13 @@
       <div class="survey-card">
         <h2>Debriefing Form</h2>
         <p><strong>Study Title:</strong> ${STUDY_TITLE}</p>
-        <p>The purpose of this research is to better understand tertiary-level students’ experiences with mental health, coping skills, grit, and perceived stress. The study also aims to examine whether the questionnaires used are reliable and appropriate for use with tertiary-level students.</p>
+        <p>The purpose of this research is to better understand tertiary-level students' experiences with mental health, coping skills, grit, and perceived stress. The study also aims to examine whether the questionnaires used are reliable and appropriate for use with tertiary-level students.</p>
 
         <h3>About the questionnaires</h3>
-        <p><strong>Perceived Stress Scale (PSS-10):</strong> asks about how stressful, unpredictable, or overwhelming you have found situations in your life recently. <a href="https://www.cmu.edu/dietrich/psychology/stress-immunity-disease-lab/scales/index.html" target="_blank" rel="noopener noreferrer">Find out more</a>.</p>
-        <p><strong>Patient Health Questionnaire-4 (PHQ-4):</strong> asks about symptoms related to anxiety and depression. It is a brief screening tool and does not provide a clinical diagnosis. <a href="https://www.phqscreeners.com/" target="_blank" rel="noopener noreferrer">Find out more</a>.</p>
-        <p><strong>Short Grit Scale (Grit-S):</strong> assesses perseverance of effort and consistency of interest toward long-term goals. <a href="https://angeladuckworth.com/grit-scale/" target="_blank" rel="noopener noreferrer">Find out more</a>.</p>
-        <p><strong>Brief COPE:</strong> explores 14 coping strategies: active coping, planning, positive reframing, acceptance, emotional support, instrumental support, self-distraction, venting, denial, behavioural disengagement, self-blame, humour, religion, and substance use. <a href="https://local.psy.miami.edu/faculty/ccarver/sclBrCOPE.phtml" target="_blank" rel="noopener noreferrer">Find out more</a>.</p>
+        <p><strong>Perceived Stress Scale (PSS-10):</strong> asks about how stressful, unpredictable, or overwhelming you have found situations in your life recently. Find out more <a href="https://db.arabpsychology.com/scales/perceived-stress-scale-10-item/" target="_blank" rel="noopener noreferrer">[here]</a>.</p>
+        <p><strong>Patient Health Questionnaire-4 (PHQ-4):</strong> asks about symptoms related to anxiety and depression. It is a brief screening tool and does not provide a clinical diagnosis. Find out more <a href="https://companion.soep.de/Survey Design/Patient Health Questionnaire %E2%80%93 4 %28PHQ-4%29.html" target="_blank" rel="noopener noreferrer">[here]</a>.</p>
+        <p><strong>Short Grit Scale (Grit-S):</strong> assesses perseverance of effort and consistency of interest toward long-term goals. Find out more <a href="https://www.angeladuckworth.com/grit#scale" target="_blank" rel="noopener noreferrer">[here]</a>.</p>
+        <p><strong>Brief COPE:</strong> explores 14 coping strategies: active coping, planning, positive reframing, acceptance, emotional support, instrumental support, self-distraction, venting, denial, behavioural disengagement, self-blame, humour, religion, and substance use. Find out more <a href="https://db.arabpsychology.com/scales/brief-cope-questionnaire-brief-cope/" target="_blank" rel="noopener noreferrer">[here]</a>.</p>
 
         <h3>Emotional Well-being and Support</h3>
         <p>In this study, we asked about your experiences relating to mental health, coping, grit, and perceived stress, which may have brought up strong emotions. We encourage you to reach out to a friend, family member, or a mental health professional if you feel distressed.</p>
@@ -853,7 +853,7 @@
           <li>Toledo District: Punta Gorda Hospital, Punta Gorda — 780-2161</li>
           <li>Toledo District: San Antonio Polyclinic, San Antonio — 722-2021 (Mon-Fri, business hours)</li>
         </ul>
-        <p>If you believe that you are in immediate danger, or that you may harm yourself or someone else, <strong>please seek help immediately</strong>. Contact or go directly to your nearest hospital or health facility, including one of the facilities listed above, or reach out to a trusted person who can assist you in accessing emergency support.</p> <br>
+        <p>If you believe that you are in immediate danger, or that you may harm yourself or someone else, <strong>please seek help immediately</strong>. Contact or go directly to your nearest hospital or health facility, including one of the facilities listed above, or reach out to a trusted person who can assist you in accessing emergency support.</p>
         <p> If you would prefer to seek support online, the following services provide access to online qualified peer-counselling:</p>
         <ul>
           <li>7 Cups: <a href="https://www.7cups.com/" target="_blank" rel="noopener noreferrer">https://www.7cups.com/</a></li>
