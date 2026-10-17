@@ -441,7 +441,7 @@
 
         <p>Your teen should return to the study website and select <strong>Continue as a Minor</strong>. They will be asked to enter this PIN.</p>
         <p>Once the PIN is successfully verified, your teen will be able to review their own consent form. If your teen agrees to participate, they may then proceed to the survey.</p>
-        <p>This PIN can only be used once. It will remain valid until it is used or until data collection for this study closes.</p>
+        <p><strong>This PIN can only be used once. </strong> It will remain valid until it is used or until data collection for this study closes.</p>
 
         <h4>Keep a Copy of Your Permission Form</h4>
         <p>Please keep this document for your records. It contains your parent/guardian permission decision and the participation PIN that must be provided to your teen. The document also includes the study information you reviewed.</p>
