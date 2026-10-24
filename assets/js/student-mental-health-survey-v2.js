@@ -72,12 +72,14 @@
         "Sacred Heart Junior College", "San Pedro Junior College", "St John's College Junior College",
         "St John's College University Division", "University of Belize - Belize City Campus", 
         "University of Belize - Belmopan Campus", "University of Belize - Punta Gorda Campus", 
+        "University of Belize - Central Farm Campus",
         "UWI Global Campus Belize", "Wesley Junior CCollege", "Other"] },
     { id: "institution_other", text: "If Other, please specify:", type: "text" },
     { id: "area_of_study", text: "10. What is your main area of study?", type: "radio", options: ["Arts and Humanities", "Business and Management", "Education", "Health Sciences", "Science, Technology, Engineering, and Mathematics", "Social and Behavioural Sciences", "Technical or Vocational Studies", "Other"] },
     { id: "area_of_study_other", text: "If Other, please specify:", type: "text" },
-    { id: "employment", text: "11. Are you currently employed while attending school?", type: "radio", options: ["No", "Yes, part-time", "Yes, full-time"] },
-    { id: "financial_situation", text: "12. How would you describe your current household or family financial situation?", type: "radio", options: ["Very difficult to meet basic expenses", "Somewhat difficult to meet basic expenses", "Able to meet basic expenses, but with little money left over", "Comfortable, with some money available beyond basic expenses", "Very comfortable financially"] }
+    { id: "year_of_study", text: "11. What year of study are you currently in, for your current program?", type: "radio", options: ["1st year", "2nd year", "3rd year", "4th year", "5th year or higher"] },
+    { id: "employment", text: "12. Are you currently employed while attending school?", type: "radio", options: ["No", "Yes, part-time", "Yes, full-time"] },
+    { id: "financial_situation", text: "13. How would you describe your current household or family financial situation?", type: "radio", options: ["Very difficult to meet basic expenses", "Somewhat difficult to meet basic expenses", "Able to meet basic expenses, but with little money left over", "Comfortable, with some money available beyond basic expenses", "Very comfortable financially"] }
   ];
 
   const pssItems = [
