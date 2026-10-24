@@ -21,6 +21,13 @@ Mathias R. Vairez Jr., PhD
 Department of Education, University of Belize  
 Email: [mvairez@ub.edu.bz](mailto:mvairez@ub.edu.bz)
 
+**Research Collaborators**: 
+Olga Manzanero, M.Ed.  
+Faculty of Education & Arts, University of Belize  
+
+Janeen Quiroz, Ph.D.  
+Faculty of Education & Arts, University of Belize  
+
 **Status**: Data Collection in Progress
 
 **Population**: Tertiary-level students in Belize
