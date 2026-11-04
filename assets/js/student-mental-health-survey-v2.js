@@ -284,7 +284,7 @@
         <h3>Eligibility Screening</h3>
         <p>Before continuing, please answer the following questions to determine whether you are eligible to participate in this study.</p>
         <fieldset class="survey-question">
-          <legend>1. Are you currently enrolled at a tertiary-level institution in Belize?</legend>
+          <legend>1. Are you currently enrolled at a tertiary-level institution in Belize? This includes sixth forms, junior colleges, and universities.</legend>
           <div class="survey-options">
             ${radio("screening_enrolled", "Yes", "Yes", state.screeningEnrolled === "Yes")}
             ${radio("screening_enrolled", "No", "No", state.screeningEnrolled === "No")}
