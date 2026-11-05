@@ -63,7 +63,7 @@
     { id: "district", text: "5. Where are you based at?", type: "radio", options: ["Corozal", "Orange Walk", "Belize", "Cayes", "Cayo", "Stann Creek", "Toledo"] },
     { id: "area", text: "6. How would you describe your area?", type: "radio", options: ["Rural", "Urban"] },
     { id: "study_level", text: "7. What is your current level of study?", type: "radio", options: ["Certificate", "Associate's degree", "Bachelor's degree", "Master's degree", "PhD"] },
-    { id: "enrolment_status", text: "8. What is your current enrolment status?", type: "radio", options: ["Full-time student", "Part-time student", "Other"] },
+    { id: "enrolment_status", text: "8. What is your current enrolment status?", type: "radio", options: ["Full-time student", "Part-time student", "I am enrolled buthave not started my first semester yet","Other"] },
     { id: "enrolment_status_other", text: "If Other, please specify:", type: "text" },
     { id: "institution", text: "9. At which institution are you currently enrolled?", type: "radio", options: 
       ["Belize Adventist Junior College", "Centro Escolar Mexico Junior College", 
