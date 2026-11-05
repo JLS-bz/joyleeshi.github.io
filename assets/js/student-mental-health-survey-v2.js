@@ -73,7 +73,7 @@
         "St John's College University Division", "University of Belize - Belize City Campus", 
         "University of Belize - Belmopan Campus", "University of Belize - Punta Gorda Campus", 
         "University of Belize - Central Farm Campus",
-        "UWI Global Campus Belize", "Wesley Junior CCollege", "Other"] },
+        "UWI Global Campus Belize", "Wesley Junior College", "Other"] },
     { id: "institution_other", text: "If Other, please specify:", type: "text" },
     { id: "area_of_study", text: "10. What is your main area of study?", type: "radio", options: ["Arts and Humanities", "Business and Management", "Education", "Health Sciences", "Science, Technology, Engineering, and Mathematics", "Social and Behavioural Sciences", "Technical or Vocational Studies", "Other"] },
     { id: "area_of_study_other", text: "If Other, please specify:", type: "text" },
